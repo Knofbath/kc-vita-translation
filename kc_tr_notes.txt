@@ -1,0 +1,156 @@
+1. get app and patch
+2. decrypt both <url>
+3. copy app, then patch into dir "original", overwriting as necessary
+4. copy dir "original" to dir "translation", overwrite with contents of translation patch
+
+next up, unityex unpacking, sadly gameobjects tree view cannot be unpacked from command line, and ui unpack doesn't create nested trees
+
+first task though should be creating a script to create translation from original using the repo
+
+the unity asset manipulations tools <url> are not great, so they'll mostly be used manually and then binary patches created, i think (xdelta)
+
+dds files extracted via conversion from asset files don'd loat in faststone, but irfanview can handle them. support contacted
+
+
+assembly-csharp was unpacked with jetbrains c# decompiler but not yet repackable. binary patch?
+
+wtf is a monobehavior, is the file format described? found mention that it's a base class of unity objects and the exact type is clarified by the ids. needs more research.
+
+quest descriptions have space for 4 lines, seem to need newlines as they break below ui elements otherwise,
+fit about this much: "Have 2 ships in your main fleet. Mmmmmmm mmm"
+
+ship greeting texts have space for 4 lines and auto-break,
+fit about this much: "mmm mmmmmm mmmmmm mmmmm mmmmmm", 630 px
+
+font for both appears to be A-OTF-ShinGoPro-Regular.ttf, 18, line leading setting of -5
+
+
+選択 6 "Select"
+提督コマンド 18 "Admiral Command   "
+戦略へ 9 "Strategy "
+決定 6 "Choose"
+戻る 6 "Return"
+
+wrote a script to inject english versions of jp strings via raw string-matching
+
+wrote a script to inject modified binary files back into .asset files in bulk
+
+
+
+=head1 Assembly-CSharp.dll
+
+Contains mostly strings in UCS-2 LE. But however a FEW strings (enums) are also UTF8.
+No idea if the latter show up ingame.
+
+> "Most tutorials like this, that I've seen,
+> always use .NET Reflector with the Reflexil plugin.
+> However, I'm going to be using ILSpy,
+> which is a free alternative, with the Reflexil plugin."
+
+https://github.com/icsharpcode/ILSpy/releases
+https://github.com/sailro/Reflexil/releases
+https://github.com/0xd4d/dnSpy/releases
+jetbrains c# decompiler
+
+None of these that i tried were able to recompile the dll into something that doesn't
+crash the vita, so i went the way of binary modding the dll.
+
+Sadly due to the strings being in UTF16 and binary modding not allowing
+changes to the byte length, it's necessary to mod the fonts in order to
+show more characters per byte than usually possible.
+
+A-OTF-ShinGoPro-Regular.ttf in assets 2, used for quest name texts, ship greetings, ...
+A-OTF-UDShinGoPro-Regular.ttf in assets 3, used for the popup button guide at the bottom, ...
+
+online font tester: http://torinak.com/font/lsfont.html
+
+For modding fonts i use FontForge. When using it there might be
+an error window in the taskbar but not actually visible,
+click on that and hit esc once.
+
+Detailed steps from start to finish:
+
+- put unityex in ../unity_tools
+- put the decrypted game in ../kc_original
+- run `unpack_original_files.pl`
+- open ../kc_original\Media\Managed\Assembly-CSharp.dll in JetBrains dotPeek
+  - right-click Assembly-CSharp, export to project (might need two clicks (???))
+  - ..\kc_original_unpack\Media\Managed\
+  - progress bar in bottom right
+
+<dll dictionary updater here>
+
+But first it makes sense to run translate_utf16_binary.pl to regenerate
+Assembly-CSharp.dll. It might complain, depending on whether the
+translation dictionary has changed, that pairs are missing. Add them
+judiciously to the font_mod_character_pairs file until it stops
+complaining about that.
+
+The following steps set up a font to prepare it for injecting character pairs.
+
+- do this with:
+  - ..\kc_original_unpack\Media\Unity_Assets_Files\sharedassets2\A-OTF-ShinGoPro-Regular.ttf
+  - ..\kc_original_unpack\Media\Unity_Assets_Files\sharedassets3\A-OTF-UDShinGoPro-Regular.ttf
+    - open the ttf file in font forge
+      - CID > flatten
+      - save as directory in d:\vita\
+      - close
+      - open font dir in font forge
+      - save (wait a little)
+      - close
+      - open font file in font forge
+      - TODO: explain how to add a char for "space"
+      - copy text from unifraktur-maguntia/set_new_glyphs_as_unicode.txt
+      - ctrl+end, file > execute script, paste, select FF, OK (this'll take a while)
+      - save (wait a little)
+      - close
+
+
+
+Now we have a directory with the specification of the font that contains
+5000+ prepared glyphs in the first "Private Use Area". In the following
+steps we make a copy of that and inject multi-character pairs into the
+prepared glyphs.
+
+After that, these steps will take a copy of the earlier prepared directory
+and add the glyphs with the character pairs in the pairs file.
+
+- # cd unifraktur-maguntia
+- # python mod_kc_font.py
+- open this directory in fontforge: unifraktur-maguntia/A-OTF-UDShinGoPro-Regular.sfdir
+- file > generate fonts > opentype (cff)
+- close ff
+
+And these steps inject them into the assets file,
+ready for sending to the vita.
+
+- # cp unifraktur-maguntia/UDShinGoPro-Regular.otf d:\vita\kc_translation_mod_candidate\Media\Unity_Assets_Files\sharedassets3\A-OTF-UDShinGoPro-Regular.ttf
+- # cd d:\vita\kc_translation_mod_candidate\Media\
+- # ..\..\unity_tools\UnityEX.exe import sharedassets3.assets
+- copy to vita
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+start = 0xE000
+chars_to_add = 5822
+# would prefer to add 6400 and use up the entire PUA,
+# but UDShinGoPro-Regular.otf already has a char at F6BE
+
+# copy this so we can add a shape to the new chars so ff will save them
+Select("#")
+Copy()
+
+# add the new slots
+oldsize = CharCnt()
+SetCharCnt(oldsize + chars_to_add)
+
+# select all the newly added slots
+Select(oldsize, oldsize + chars_to_add - 1)
+
+# add the "e" shape, set the correct unicode value and increase the counter
+foreach
+    Paste()
+    SetUnicodeValue(start)
+    start++
+endloop
