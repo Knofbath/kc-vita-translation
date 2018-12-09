@@ -72,7 +72,7 @@ Detailed steps from start to finish:
 
 - put unityex in ../unity_tools
 - put the decrypted game in ../kc_original
-- run `unpack_original_files.pl`
+- # unpack_original_files.pl
 - open ../kc_original\Media\Managed\Assembly-CSharp.dll in JetBrains dotPeek
   - right-click Assembly-CSharp, export to project (might need two clicks (???))
   - ..\kc_original_unpack\Media\Managed\
@@ -101,13 +101,10 @@ rebuilt.
 
 - # perl modify_fonts_and_inject.pl
 
-And these steps inject them into the assets file,
-ready for sending to the vita.
+And this injects the fonts into the assets files, and copies those and the dll
+to the vita mounted on E:.
 
-- # cp unifraktur-maguntia/UDShinGoPro-Regular.otf d:\vita\kc_translation_mod_candidate\Media\Unity_Assets_Files\sharedassets3\A-OTF-UDShinGoPro-Regular.ttf
-- # cd d:\vita\kc_translation_mod_candidate\Media\
-- # ..\..\unity_tools\UnityEX.exe import sharedassets3.assets
-- copy to vita
+- # perl mini_vita_copy.pl
 
 
 
