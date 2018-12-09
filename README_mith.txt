@@ -70,6 +70,8 @@ click on that and hit esc once.
 
 Detailed steps from start to finish:
 
+The following stuff doesn't need to be done everytime, it's just preparation.
+
 - put unityex in ../unity_tools
 - put the decrypted game in ../kc_original
 - # unpack_original_files.pl
@@ -80,6 +82,9 @@ Detailed steps from start to finish:
 
 <dll dictionary updater here (not even sure if we'll need this or just build the
 dictionary manually)>
+
+- edit the file `csharp_translations.pm` to add new japanese strings to modify,
+and their translations.
 
 The next script then will do all of this:
 
