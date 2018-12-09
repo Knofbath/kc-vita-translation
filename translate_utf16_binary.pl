@@ -20,28 +20,19 @@ sub get_hits {
 
 sub map_str_to_multi_chars {
     my ( $tr, %prepared ) = @_;
+    my $orig = $tr;
     my @mapped;
-    my @chars = split //, $tr;
-    my @pair;
-    while (@chars) {
-        push @pair, shift @chars;
-        next if @pair < 3;
-        my $combination = join "", @pair;
-        my $mapped = $prepared{$combination};
-        if ( !$mapped and $combination ne lc $combination ) {
-            say "combination missing: '$combination', lower-casing";
-            $combination = lc $combination;
-            $mapped      = $prepared{$combination};
+    while ( my $l = length $tr ) {
+        my $work = $tr;
+        my $hit;
+        while ( my $wl = length $work ) {
+            last if $prepared{$work} or $wl == 1;
+            say "combination missing: '$work' in '$orig'" if $wl <= 3;
+            $work = substr $work, 0, $wl - 1;
         }
-        if ( !$mapped ) {
-            say "combination missing: '$combination'";
-            push @mapped, encode "UTF-16LE", shift @pair;
-            next;
-        }
-        push @mapped, $mapped;
-        @pair = ();
+        push @mapped, $prepared{$work} // $work;
+        $tr = substr $tr, length $work;
     }
-    push @mapped, shift @pair if @pair;
     return encode "UTF-16LE", join "", @mapped;
 }
 
@@ -86,7 +77,7 @@ sub run {
             ]
         },
         "提督コマンド" => {
-            tr   => "Admiral Cmd",                                                           # quick menu?
+            tr   => "Admiral Command",                                                       # quick menu?
             desc => "usually opens quick menu or changes the buttons to an alternate set",
             ok   => [ 4518854, 4682604 ]
         },

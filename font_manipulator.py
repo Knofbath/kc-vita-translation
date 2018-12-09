@@ -19,6 +19,8 @@ def glyph_nach_datei(glyph):
 		return glyph + ".glyph"
 	elif glyph == " ":
 		return "space.glyph"
+	elif glyph == "-":
+		return "uni2010.glyph"
 	else:
 		chars = list(glyph)
 		i = 0
@@ -65,24 +67,19 @@ class Schrift:
 	def __init__(self, name, quellordner, zielordner):
 		self.name = name
 		self.ordner = zielordner
-		if self.ordner in os.listdir("."):
-			raise Exception("Fehler: Zielordner existiert bereits.")
-			return None 
-		else:
+		if not os.path.isdir(self.ordner):
 			os.mkdir(self.ordner)
-		
+			for datei in os.listdir(quellordner):
+				if os.path.isfile(quellordner + "/" + datei):
+					shutil.copy(quellordner + "/" + datei, self.ordner)
+
 		self.props = []
-		
-		for datei in os.listdir(quellordner):
-			if os.path.isfile(quellordner + "/" + datei):
-				shutil.copy(quellordner + "/" + datei, self.ordner)
-		
 		self.props_oeffnen()
 		for i,zeile in enumerate(self.props):
 			for nameString in ["FontName:", "FullName:", "FamilyName:"]:
 				if zeile.startswith(nameString):
 					self.props[i] = nameString + " " + self.name + "\n"
-	
+
 	def __del__(self):
 		self.props_schliessen()
 	

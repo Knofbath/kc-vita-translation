@@ -80,46 +80,26 @@ Detailed steps from start to finish:
 
 <dll dictionary updater here>
 
-But first it makes sense to run translate_utf16_binary.pl to regenerate
-Assembly-CSharp.dll. It might complain, depending on whether the
-translation dictionary has changed, that pairs are missing. Add them
-judiciously to the font_mod_character_pairs file until it stops
-complaining about that.
+First we need to to regenerate Assembly-CSharp.dll. It might complain, depending
+on whether the translation dictionary has changed, that pairs are missing. Add
+them judiciously to the font_mod_character_pairs file until it stops
+complaining.
+
+- # perl translate_utf16_binary.pl
 
 The following steps set up a font to prepare it for injecting character pairs.
 
-- do this with:
-  - ..\kc_original_unpack\Media\Unity_Assets_Files\sharedassets2\A-OTF-ShinGoPro-Regular.ttf
-  - ..\kc_original_unpack\Media\Unity_Assets_Files\sharedassets3\A-OTF-UDShinGoPro-Regular.ttf
-    - open the ttf file in font forge
-      - CID > flatten
-      - save as directory in d:\vita\
-      - close
-      - open font dir in font forge
-      - save (wait a little)
-      - close
-      - open font file in font forge
-      - TODO: explain how to add a char for "space"
-      - copy text from unifraktur-maguntia/set_new_glyphs_as_unicode.txt
-      - ctrl+end, file > execute script, paste, select FF, OK (this'll take a while)
-      - save (wait a little)
-      - close
+First directories are created with copies of the fonts that contain 5000+
+prepared glyphs in the first "Private Use Area". Then copies of these
+directories are made and multi-character strings injected into the prepared
+glyphs. After that those mod directories are converted into fonts which are
+stored in the appropriate translation candidate sub-directories.
 
+The script caches font directories in ../fonts to speed things up. If you
+suspect something went wrong, deleting either of them will cause them to be
+rebuilt.
 
-
-Now we have a directory with the specification of the font that contains
-5000+ prepared glyphs in the first "Private Use Area". In the following
-steps we make a copy of that and inject multi-character pairs into the
-prepared glyphs.
-
-After that, these steps will take a copy of the earlier prepared directory
-and add the glyphs with the character pairs in the pairs file.
-
-- # cd unifraktur-maguntia
-- # python mod_kc_font.py
-- open this directory in fontforge: unifraktur-maguntia/A-OTF-UDShinGoPro-Regular.sfdir
-- file > generate fonts > opentype (cff)
-- close ff
+- # perl modify_fonts_and_inject.pl
 
 And these steps inject them into the assets file,
 ready for sending to the vita.

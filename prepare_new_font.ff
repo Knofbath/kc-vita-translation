@@ -1,0 +1,58 @@
+infile = $1
+dirname = $2
+
+Print( "log: loading for saving to dir" )
+Open(infile)                       # flatten if necessary, then save to a dir
+if ($iscid)
+  Print( "log: flattening CID font" )
+  CIDFlatten()
+endif
+Print( "log: saving to dir" )
+Save(dirname)
+Close()
+
+Print( "log: loading for resave" )
+Open(dirname)                      # force the font through the load/save loop
+Print( "log: resaving" )           # as a dir in case ff decides to change some
+Save(dirname)                      # values again
+Close()
+
+Print( "log: loading for processing" )
+Open(dirname)
+Print( "log: processing" )
+
+Print( "log: preparing PUA filling" )
+start = 0xE000
+chars_to_add = 5000
+# would prefer to add 6400 and use up the entire PUA, but UDShinGoPro-Regular
+# already has a char at F6BE and i guess now that we can add multiple chars per
+# glyph using less is fine
+
+Select("#") # copy this so we can add a shape to new chars so ff will save them
+Copy()
+
+oldsize = CharCnt()                         # add the new slots
+SetCharCnt(oldsize + chars_to_add)
+
+Select(oldsize, oldsize + chars_to_add - 2) # select all the newly added slots
+
+Print( "log: filling PUA" )
+foreach
+   Paste()                 # add the "#" shape
+   SetUnicodeValue(start)  # set the correct unicode value
+   start++
+endloop
+
+Print( "log: ensuring there's a space char" )
+if (!InFont("space"))
+  oldsize = CharCnt()
+  SetCharCnt(oldsize + 1)
+  Select(oldsize - 1)
+  Print("log: adding space glyph"+GlyphInfo("Name")+" "+GlyphInfo("Unicode")+" "+GlyphInfo("Encoding"))
+  SetUnicodeValue(0x0020)
+  SetWidth(333)
+  SetGlyphName("space")
+endif
+
+Print( "log: saving changes" )
+Save(dirname)
