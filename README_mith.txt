@@ -78,56 +78,38 @@ Detailed steps from start to finish:
   - ..\kc_original_unpack\Media\Managed\
   - progress bar in bottom right
 
-<dll dictionary updater here>
+<dll dictionary updater here (not even sure if we'll need this or just build the
+dictionary manually)>
 
-First we need to to regenerate Assembly-CSharp.dll. It might complain, depending
-on whether the translation dictionary has changed, that pairs are missing. Add
-them judiciously to the font_mod_character_pairs file until it stops
-complaining.
+The next script then will do all of this:
 
-- # perl translate_utf16_binary.pl
+It attempts to replace strings in Assembly-CSharp.dll with their translations.
+It might complain, depending on whether the translation dictionary has changed,
+that tuples are missing. Add them judiciously to the `font_mod_character_pairs`
+file until it stops complaining. Tuples can probably be very long. The
+translation will be padded if more bytes are necessary. However shorter tuples
+might be useful for reusing things. (Then again we have 5000 glyphs available.)
 
-The following steps set up a font to prepare it for injecting character pairs.
+Then it sets up the fonts to prepare them for injecting character tuples:
 
-First directories are created with copies of the fonts that contain 5000+
-prepared glyphs in the first "Private Use Area". Then copies of these
-directories are made and multi-character strings injected into the prepared
-glyphs. After that those mod directories are converted into fonts which are
-stored in the appropriate translation candidate sub-directories.
+- Directories are created with copies of the fonts that contain 5000+
+prepared glyphs in the first "Private Use Area".
+- Then copies of these directories are made and multi-character strings injected
+into the prepared glyphs according to `font_mod_character_pairs`.
+- After that those mod directories are converted into fonts which are placed in
+the appropriate translation candidate sub-directories.
 
-The script caches font directories in ../fonts to speed things up. If you
+(The script caches font directories in ../fonts to speed things up. If you
 suspect something went wrong, deleting either of them will cause them to be
-rebuilt.
+rebuilt.)
 
 - # perl modify_fonts_and_inject.pl
 
-And this injects the fonts into the assets files, and copies those and the dll
-to the vita mounted on E:.
+And this injects the fonts into the assets files, then copies those and the dll
+to the vita mounted on E:. (Note that this simply adds the files to existing
+.assets files, so those will need to be copied to
+`../kc_translation_mod_candidate/Media`. For the moment you'll want to use the
+ones from the last release of the translation patch. Later on those will be
+automatically generated.)
 
 - # perl mini_vita_copy.pl
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
