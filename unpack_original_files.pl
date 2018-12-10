@@ -9,10 +9,9 @@ sub run {
     my $target = "../kc_original_unpack/Media";
     io($target)->mkpath;
     chdir "../kc_original_unpack/Media";
-    my @files = qw( sharedassets2.assets sharedassets3.assets );
-    io->file("../../kc_original/Media/$_")->copy(".") for @files;
+    $_->copy(".") for grep !/resources\.resource/, io("../../kc_original/Media/")->all_files;
     my $unity_ex = io("../../unity_tools/UnityEX.exe")->absolute->pathname;
-    for my $file (@files) {
+    for my $file ( io(".")->all_files ) {
         my ( $out, $err, $res ) = capture { system qq["$unity_ex" export $file] };
         warn "\n$out" if $out;
         warn "\n$err" if $err;
