@@ -2,6 +2,7 @@ use 5.020;
 use strictures 2;
 use IO::All -binary;
 use List::Util 'sum';
+use Encode 'encode';
 use lib '.';
 use binary_translations;
 
@@ -9,12 +10,16 @@ run();
 
 sub run {
     $|++;
+    binmode STDOUT, ":encoding(UTF-8)";
     my %tr = binary_translations->data;
 
     for my $key ( keys %tr ) {
         my $l = length $key;
         die "translation too long for $key, $tr{$key}" if length $tr{$key} > $l;
-        $tr{$key} = sprintf "%-${l}s", $tr{$key};
+        while ( my $diff = $l - length $tr{$key} ) { # null width spaces help with formatting, but require 3 bytes
+            $tr{$key} .= $diff < 3 ? " " : encode "UTF-8", "\x{200B}";
+        }
+        die "translation too long for $key, $tr{$key}" if length $tr{$key} > $l;
     }
     my @list = io("../kc_original_unpack_to_mod")->All_Files;
     say "prepped";
@@ -41,10 +46,11 @@ sub run {
             next;
         }
         my ($to_translate) = keys %found;
-        $content =~ s/\0$to_translate\0/\0$tr{$to_translate}\0/;
+        my $translation = $tr{$to_translate};
+        $content =~ s/\0$to_translate\0/\0$translation\0/;
         io( io->file($target)->filepath )->mkpath;
         io($target)->print($content);
-        say $file->filename . " done - $tr{$to_translate}";
+        say $file->filename . " done - $translation";
     }
     say "done";
     return;
