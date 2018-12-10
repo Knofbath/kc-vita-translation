@@ -10,6 +10,8 @@ sub run {
     say "you might want to run this to enable kanji: chcp 65001";
     say "your terminal's font will need to support kanji too (e.g. MS Gothic, MS Mincho)\n";
 
+    system qq[perl translate_utf8_binary.pl];
+
     while (1) {
         system qq[perl translate_utf16_binary.pl];
         print "do you wish to repeat the CSharp translation build? [n]";
@@ -23,7 +25,7 @@ sub run {
     return if $in and $in !~ /^y/;
 
     my $ff            = "C:/Program Files (x86)/FontForgeBuilds/bin/fontforge.exe";
-    my $candidate_dir = "../kc_translation_mod_candidate";
+    my $candidate_dir = "../kc_original_unpack_modded";
     my @fonts         = (
         {
             name        => "A-OTF-UDShinGoPro-Regular",
@@ -38,6 +40,7 @@ sub run {
     );
     io("../fonts")->mkdir if !-d "../fonts";
     mod_font( $ff, $candidate_dir, $_->%* ) for @fonts;
+    system qq[perl import_files_to_assets.pl];
     say "all done";
     return;
 }
@@ -45,6 +48,15 @@ sub run {
 sub mod_font {
     my ( $ff, $candidate_dir, %font ) = @_;
     say "processing font '$font{name}'";
+
+    my $target_path = "$candidate_dir/$font{target_path}";
+    my $target_body = "$target_path/$font{name}";
+    my $target_age  = ( stat "$target_body.ttf" )[9];
+    my $source_age  = ( stat "font_mod_character_pairs" )[9];
+    if ( $target_age and $target_age > $source_age ) {
+        say "font was generated after last change to char tuples, skipping";
+        return;
+    }
 
     if ( !-e "../fonts/$font{name}.sfdir" ) {
         say "preparing font from source with empty PUA glyphs and guaranteed space glyph";
@@ -62,9 +74,7 @@ sub mod_font {
     die "error:\nout:\n$out\nerr:\n$err\nres: $res\n" if $out or $err or $res;
 
     say "generating font file from mod dir";
-    my $target_path = "$candidate_dir/$font{target_path}";
     io($target_path)->mkpath;
-    my $target_body = "$target_path/$font{name}";
     my $temp_target = "$target_body.otf";
     my $mod_dir     = "../fonts/$font{name}_mod.sfdir";
     my ( $out2, $err2, $res2 ) = tee { system(qq["$ff" -script generate_font_from_dir.ff "$mod_dir" "$temp_target"]) };

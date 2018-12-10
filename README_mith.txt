@@ -83,10 +83,13 @@ The following stuff doesn't need to be done everytime, it's just preparation.
 <dll dictionary updater here (not even sure if we'll need this or just build the
 dictionary manually)>
 
-- edit the file `csharp_translations.pm` to add new japanese strings to modify,
-and their translations.
+- edit the files `binary_translations.pm` and `csharp_translations.pm` to add
+new japanese strings to modify, and their translations.
 
 The next script then will do all of this:
+
+It attempts to replace strings in unpacked binary files from the units asset
+files.
 
 It attempts to replace strings in Assembly-CSharp.dll with their translations.
 It might complain, depending on whether the translation dictionary has changed,
@@ -108,13 +111,11 @@ the appropriate translation candidate sub-directories.
 suspect something went wrong, deleting either of them will cause them to be
 rebuilt.)
 
+Then it injects the fonts and other asset files from the directory
+`kc_original_unpack_modded` into asset files in `kc_translation_mod_candidate`.
+
 - # perl modify_fonts_and_inject.pl
 
-And this injects the fonts into the assets files, then copies those and the dll
-to the vita mounted on E:. (Note that this simply adds the files to existing
-.assets files, so those will need to be copied to
-`../kc_translation_mod_candidate/Media`. For the moment you'll want to use the
-ones from the last release of the translation patch. Later on those will be
-automatically generated.)
+And this copies everything onto the vita mounted at E:.
 
-- # perl mini_vita_copy.pl
+- # perl vita_copy.pl

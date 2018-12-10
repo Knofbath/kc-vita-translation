@@ -81,7 +81,7 @@ sub run {
 
     my $rel_path = "Media/Managed/Assembly-CSharp.dll";
     my $src      = "../kc_original/$rel_path";
-    my $tgt      = "../kc_translation_mod_candidate/$rel_path";
+    my $tgt      = "../kc_original_unpack_modded/$rel_path";
 
     io($tgt)->unlink if -f $tgt;
 
@@ -113,6 +113,7 @@ sub run {
         }
     }
 
+    io( io->file($tgt)->filepath )->mkpath;
     io($tgt)->print($content);
     say "done";
     return;
