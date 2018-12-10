@@ -13,6 +13,7 @@ sub run {
 
     for my $key ( keys %tr ) {
         my $l = length $key;
+        die "translation too long for $key, $tr{$key}" if length $tr{$key} > $l;
         $tr{$key} = sprintf "%-${l}s", $tr{$key};
     }
     my @list = io("../kc_original_unpack_to_mod")->All_Files;
@@ -43,7 +44,7 @@ sub run {
         $content =~ s/\0$to_translate\0/\0$tr{$to_translate}\0/;
         io( io->file($target)->filepath )->mkpath;
         io($target)->print($content);
-        say $file->filename . " done";
+        say $file->filename . " done - $tr{$to_translate}";
     }
     say "done";
     return;

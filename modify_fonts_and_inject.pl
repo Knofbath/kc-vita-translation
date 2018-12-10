@@ -1,7 +1,7 @@
 use 5.010;
 use strictures 2;
 use IO::All -binary;
-use Capture::Tiny 'tee';
+use Capture::Tiny 'capture';
 
 run();
 
@@ -41,7 +41,18 @@ sub run {
     io("../fonts")->mkdir if !-d "../fonts";
     mod_font( $ff, $candidate_dir, $_->%* ) for @fonts;
     system qq[perl import_files_to_assets.pl];
+    try_copy();
     say "all done";
+    return;
+}
+
+sub try_copy {
+    print "ready to copy? [y]";
+    my $in .= <>; # i have no idea why i need to do this twice
+    $in .= <>;
+    $in =~ s/[\r\n]//g;
+    return if $in and $in !~ /^y/;
+    system qq[perl vita_copy.pl];
     return;
 }
 
@@ -60,7 +71,7 @@ sub mod_font {
 
     if ( !-e "../fonts/$font{name}.sfdir" ) {
         say "preparing font from source with empty PUA glyphs and guaranteed space glyph";
-        my ( $out, $err, $res ) = tee { system(qq["$ff" -script prepare_new_font.ff "$font{src}" "../fonts/$font{name}.sfdir"]) };
+        my ( $out, $err, $res ) = capture { system(qq["$ff" -script prepare_new_font.ff "$font{src}" "../fonts/$font{name}.sfdir"]) };
         $err =~ s/^Copyright.*\n(^ .*\n)+//m;
         $err =~ s/^The following table.*ignored.*\n(^ .*\n)+//m;
         $err =~ s/^Warning:.*\n(^ .*\n)+//mg;
@@ -70,14 +81,14 @@ sub mod_font {
     }
 
     say "modding font with multi-glyphs";
-    my ( $out, $err, $res ) = tee { system(qq[python font_mod_run.py "$font{name}"]) };
+    my ( $out, $err, $res ) = capture { system(qq[python font_mod_run.py "$font{name}"]) };
     die "error:\nout:\n$out\nerr:\n$err\nres: $res\n" if $out or $err or $res;
 
     say "generating font file from mod dir";
     io($target_path)->mkpath;
     my $temp_target = "$target_body.otf";
     my $mod_dir     = "../fonts/$font{name}_mod.sfdir";
-    my ( $out2, $err2, $res2 ) = tee { system(qq["$ff" -script generate_font_from_dir.ff "$mod_dir" "$temp_target"]) };
+    my ( $out2, $err2, $res2 ) = capture { system(qq["$ff" -script generate_font_from_dir.ff "$mod_dir" "$temp_target"]) };
     $err2 =~ s/^Copyright.*\n(^ .*\n)+//m;
     $err2 =~ s/^Lookup sub table.*is too big.*\n//m;
     $err2 =~ s/^Lookup .* has an\n(^  .*\n)+//m;

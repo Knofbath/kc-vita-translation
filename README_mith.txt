@@ -114,8 +114,6 @@ rebuilt.)
 Then it injects the fonts and other asset files from the directory
 `kc_original_unpack_modded` into asset files in `kc_translation_mod_candidate`.
 
+And lastly it copies everything onto the vita mounted at E:.
+
 - # perl modify_fonts_and_inject.pl
-
-And this copies everything onto the vita mounted at E:.
-
-- # perl vita_copy.pl
