@@ -1104,7 +1104,7 @@
 	<Id>45</Id>
 	<Maparea_id>5</Maparea_id>
 	<Name>Tokyo Express</Name>
-	<Details>Load a torpedo division with Drum Canisters \n(Transport Use) and initialte Tokyo express \nto friendly troops to the south!</Details>
+	<Details>Load a torpedo division with Drum Canisters \n(Transport Use) and initiate Tokyo Express \nto friendly troops to the south!</Details>
 	<Mission_type>1</Mission_type>
 	<Time>3</Time>
 	<Rp_sub>1</Rp_sub>
@@ -1129,7 +1129,7 @@
 	<Id>46</Id>
 	<Maparea_id>5</Maparea_id>
 	<Name>Tokyo Express (II)</Name>
-	<Details>Load a destroyer division with as many \nDrum Canisters (Transport Use) as possible, \nand continue southern Tokyo express!</Details>
+	<Details>Load a destroyer division with as many \nDrum Canisters (Transport Use) as possible, \nand continue southern Tokyo Express!</Details>
 	<Mission_type>1</Mission_type>
 	<Time>4</Time>
 	<Rp_sub>1</Rp_sub>
@@ -1854,7 +1854,7 @@
 	<Id>75</Id>
 	<Maparea_id>3</Maparea_id>
 	<Name>Northern Feign Attack \nOperation</Name>
-	<Details>Deploy a carrier mobile fleet with a \nCVL as the flagship to the Northern Sea \nand carry out a feign attack \ntoward the enemy!</Details>
+	<Details>Deploy a carrier mobile fleet with a \nCVL as the flagship to the Northern Sea \nand carry out a feint attack \ntoward the enemy!</Details>
 	<Mission_type>1</Mission_type>
 	<Time>4</Time>
 	<Rp_sub>2</Rp_sub>
@@ -3029,7 +3029,7 @@
 	<Id>122</Id>
 	<Maparea_id>16</Maparea_id>
 	<Name>Submarine Blockade Operation \non Enemy Canal</Name>
-	<Details>Commence blocade of the Canal Area of \nthe Deep Sea with a submarine fleet of 4 \nor more SSs and supportive vessels!</Details>
+	<Details>Commence blockade of the Canal Area of \nthe Deep Sea with a submarine fleet of 4 \nor more SSs and supportive vessels!</Details>
 	<Mission_type>1</Mission_type>
 	<Time>8</Time>
 	<Rp_sub>3</Rp_sub>
