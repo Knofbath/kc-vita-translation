@@ -1367,7 +1367,7 @@
 	<Type>6</Type>
 	<Torigger>254</Torigger>
 	<Name>Deploy the "Submarine Fleet"!</Name>
-	<Details>Deploy a fleet with only three or more \nSubmarines to world V6-1 in the Central Sea \nand score a S? rank or better at the \nBoss node 3 times.</Details>
+	<Details>Deploy a fleet with only 3 or more Submarines \nto world V6-1 in the Central Sea \nand score an S rank at the Boss node \n3 times.</Details>
 	<Get_1>13,1,59</Get_1>
 	<Get_2>3,1,12</Get_2>
 	<Mat>0,600,0,0</Mat>
