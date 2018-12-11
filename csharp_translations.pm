@@ -29,5 +29,7 @@ sub data {
         "見ゅ"                               => { desc => "" },
         "見ゆ"                               => { desc => "" },
         "被弾回避率補正"                => { desc => "" },
+        "タイトルに戻る"                => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
+        "提督名入力"                      => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
     );
 }
