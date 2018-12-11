@@ -11,7 +11,6 @@ sub run {
     say "copying and converting images";
     my @images = io("en/Unity_Assets_Files")->All_Files;
     for my $image (@images) {
-        print "  " . $image->filename;
         my @file_parts = split /\/|\\/, $image;
         my $source_tex = "../kc_original_unpack/Media/Unity_Assets_Files/$file_parts[2]/$file_parts[4]";
         my $target_tex = "../kc_original_unpack_modded/Media/Unity_Assets_Files/$file_parts[2]/$file_parts[4]";
@@ -25,6 +24,7 @@ sub run {
                 next;
             }
         }
+        print "  " . $image->filename;
         io( io->file($target_tex)->filepath )->mkpath;
         io->file($source_tex)->copy($target_tex);
         my $cmd = qq[UnityTexTool/UnityTexTool-x64.exe -c -i "$image" -o "$target_tex"];
@@ -32,6 +32,6 @@ sub run {
         die "texture conversion error:\n$cmd\n$out\n$err\n$res" if $err or $res;
         die "weird texture conversion result:\n$cmd\n$out\n$err\n$res" if $out !~ /File Created\.\.\./;
     }
-    say "  skipped $skipped texes that were newer than their translated source png";
+    say "\n  skipped $skipped texes that were newer than their translated source png";
     return;
 }
