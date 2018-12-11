@@ -528,7 +528,7 @@
 <mst_mission2>
 	<Id>22</Id>
 	<Maparea_id>8</Maparea_id>
-	<Name>Northern Area Force Recon \nOperaion</Name>
+	<Name>Northern Area Force Recon \nOperation</Name>
 	<Details>Sortie with an elite northern fleet led by \na highly proficient CA and \ncarry out force recon on the area!</Details>
 	<Mission_type>1</Mission_type>
 	<Time>5</Time>
