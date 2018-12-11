@@ -5,13 +5,13 @@ use strictures 2;
 
 sub data {
     return (
-        "選択"                         => "Select",
-        "提督コマンド"             => "Admiral Cmd",
-        "戦略へ"                      => "Strategy",
-        "戦略へ	"                     => "Strategy",
-        "決定"                         => "Choose",
-        "戻る"                         => "Return",
-        "戻る　　決定"             => "Return  Choose",
-        "選択　　戻る　　決定" => "Select  Return  Choose",
+        "選択"                                     => { tr => "Select",                                  desc => "explains numpad", },
+        "提督コマンド"                         => { tr => "Admiral Cmd",                             desc => "", },
+        "戦略へ"                                  => { tr => "Strategy",                                desc => "", },
+        "戦略へ	"                                 => { tr => "Strategy",                                desc => "", },
+        "決定"                                     => { tr => "Choose",                                  desc => "" },
+        "戻る"                                     => { tr => "Return",                                  desc => "" },
+        "戻る　　決定"                         => { tr => "Return  Choose",                          desc => "", },
+        "選択　　戻る　　決定"             => { tr => "Select  Return  Choose",                  desc => "", },
     );
 }
