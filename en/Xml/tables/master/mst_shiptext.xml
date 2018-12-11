@@ -118,7 +118,7 @@
 	<mst_shiptext>
 		<Id>24</Id>
 		<Getmes>Hello. I'm Light Cruiser Ooi. Pleased\nto make your acquaintance.</Getmes>
-		<Sinfo>I'm Ooi, fourth ship in the Kuma-class light\ncruisers. I was born in Kobe. I'm an active\npractice ship at the Navy School, you know?\nOf course, I'll change into a torpedo cruiser\nif I need to fight for real. Nice to meet you!</Sinfo>
+		<Sinfo>I'm Ooi, fourth ship in the Kuma-class light\ncruisers. I was born in Kobe. I'm an active\npractice ship at the Navy School, you know?\nOf course, I'll change into a torpedo\ncruiser if I need to fight for real.\nNice to meet you!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>25</Id>
@@ -353,7 +353,7 @@
 	<mst_shiptext>
 		<Id>71</Id>
 		<Getmes>I am Tone! With my addition to the fleet,\nthere will be no problems searching out\nthe enemy!</Getmes>
-		<Sinfo>The last completed heavy cruiser of the\nJapanese Navy, oldest sister of the\nTone-class, Tone. At Pearl Harbor\nand Midway, as the eye for the fleet,\nI unceasingly watched the length and\nbreadth of the ocean. I ended out the\nwar protecting the Kure Naval Yards as\na floating fortress, fighting until my blades\nwere broken, arrows were depleted.</Sinfo>
+		<Sinfo>The last completed heavy cruiser of the\nJapanese Navy, oldest sister of the\nTone-class, Tone. At Pearl Harbor\nand Midway, as the eye for the fleet,\nI unceasingly watched the length and\nbreadth of the ocean. I ended out the\nwar protecting the Kure Naval Yards as\na floating fortress, fighting until my \nblades were broken, arrows were depleted.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>72</Id>
@@ -368,7 +368,7 @@
 	<mst_shiptext>
 		<Id>74</Id>
 		<Getmes>I'm the light aircraft carrier, Shouhou.\nYes, I'm a little small, but please make\na place for me on your fleet!</Getmes>
-		<Sinfo>First of the Shouhou-class aircraft carriers.\nOriginally, a submarine tender. If it's not\nthe flagship or the main fleet but a small\ntask-force, then by all means use me!\nIf you make use of me,\nI'll surely get good results!</Sinfo>
+		<Sinfo>First of the Shouhou-class aircraft\ncarriers. Originally, a submarine tender. If it's\nnot the flagship or the main fleet but a\nsmall task-force, then by all means use\nme! If you make use of me,\nI'll surely get good results!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>75</Id>
@@ -378,7 +378,7 @@
 	<mst_shiptext>
 		<Id>76</Id>
 		<Getmes>Light aircraft carrier, Ryuujou! Ain't my\nsilhouette distinctive? But, launching\ncarrier planes one-after-another makes\nme a proper carrier, ya know!\nYou can count on me!</Getmes>
-		<Sinfo>I'm a light aircraft carrier, but with a long\nrecord, ya' know? Oh, that Fourth Fleet\nincident thing, off Iwate? That was tough.\nThe waves made my bridge collapse...\nMan, I just couldn't believe it.</Sinfo>
+		<Sinfo>I'm a light aircraft carrier, but with a\nlong record, ya' know? Oh, that Fourth\nFleet incident thing, off Iwate? That was\ntough. The waves made my bridge\ncollapse... Man, I just couldn't believe it.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>77</Id>
@@ -418,7 +418,7 @@
 	<mst_shiptext>
 		<Id>84</Id>
 		<Getmes>I'm aircraft carrier, Kaga. Are you my\nAdmiral?... I have fairly high expectations\nof you.</Getmes>
-		<Sinfo>I, Kaga, was built as the third ship of the\neight-eight fleet. After being played by fate,\ntime after time, I was completed as\na large aircraft carrier. Along with\nAkagi-san, we are main force of the\nglorious first air carrier division.</Sinfo>
+		<Sinfo>I, Kaga, was built as the third ship of the\neight-eight fleet. After being played by\nfate, time after time, I was completed\nas a large aircraft carrier. Along with\nAkagi-san, we are main force of the\nglorious first air carrier division.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>85</Id>
@@ -458,7 +458,7 @@
 	<mst_shiptext>
 		<Id>92</Id>
 		<Getmes>Ex-merchant ship aircraft carrier, Jun'yo!\nWoohoo!</Getmes>
-		<Sinfo>Wartime remodeling based on the Luxury\nliner, Kashiwara Maru. The renovated\nappearance is the aircraft carrier, Jun'you.\nI fought properly, and survived until the end.\nAin't I surprisingly capable?</Sinfo>
+		<Sinfo>Wartime remodeling based on the\nLuxury liner, Kashiwara Maru. The renovated\nappearance is the aircraft carrier, Jun'you.\nI fought properly, and survived until the\nend. Ain't I surprisingly capable?</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>93</Id>
@@ -508,7 +508,7 @@
 	<mst_shiptext>
 		<Id>102</Id>
 		<Getmes>I'm Chitose. I'm the the first Japanese\nseaplane tender. Nice to meet you!</Getmes>
-		<Sinfo>I'm the Seaplane Tender, Chitose.\nAlthough I'm an exceptional ship\ncapable of making use of seaplanes a lot,\nI was used as an oiler and supplied fuel to\nother ships. In the latter stages of the war,\nI was remodeled into an aircraft carrier and\nfought in the frontlines.</Sinfo>
+		<Sinfo>I'm the Seaplane Tender, Chitose.\nAlthough I'm an exceptional ship\ncapable of making use of seaplanes a lot,\nI was used as an oiler and supplied fuel to\nother ships. In the latter stages of the\nwar, nI was remodeled into an aircraft carrier\nand fought in the frontlines.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>103</Id>
@@ -563,7 +563,7 @@
 	<mst_shiptext>
 		<Id>113</Id>
 		<Getmes>Yeah, yeah, yeah!\nFinally, Kinu has arrived!</Getmes>
-		<Sinfo>Born in Kobe, I'm Kinu! I trained well at the\nMaizuru School. After lots of dangerous\nthings happened, I did my best in the\nSouthwest... Well, that was bad too.\nKuma-chan was suprisingly helpful too.\nBut... Panay Island was seriously panai!</Sinfo>
+		<Sinfo>Born in Kobe, I'm Kinu! I trained well at\nMaizuru School. After lots of dangerous\nthings happened, I did my best in the\nSouthwest... Well, that was bad too.\nKuma-chan was suprisingly helpful too.\nBut... Panay Island was seriously panai!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>114</Id>
@@ -778,7 +778,7 @@
 	<mst_shiptext>
 		<Id>156</Id>
 		<Getmes>Good morning! It's the remodelled Taihou!\nReinforced deck armour! Even higher\ndefense! An increase in open-air planes\nto boost capacity just for you, Admiral!</Getmes>
-		<Sinfo>I am aircraft carrier Taihou. State-of-the-art\ncarrier with reinforced armour all round,\nincluding the flight deck. My enclosed\nhangers and Hurricane Bow look good,\ndon't they? My armored flight deck has\nalso been redecorated. How does it look?\nDo you think it suits me?</Sinfo>
+		<Sinfo>I am aircraft carrier Taihou. State-of-the-\nart carrier with reinforced armour all round,\nincluding the flight deck. My enclosed\nhangers and Hurricane Bow look good,\ndon't they? My armored flight deck has\nalso been redecorated. How does it look?\nDo you think it suits me?</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>157</Id>
@@ -998,7 +998,7 @@
 	<mst_shiptext>
 		<Id>202</Id>
 		<Getmes>I'm Shirayuki.\nThanks for having me.</Getmes>
-		<Sinfo>Special-type destroyer, 2nd ship, Shirayuki.\nAt the start of the war, I participated in\nmany operations. After that, I was the\nflagship of the escort in Operation 81\nthat transported troop reinforcements.</Sinfo>
+		<Sinfo>Special-type destroyer, 2nd ship Shirayuki.\nAt the start of the war, I participated in\nmany operations. After that, I was the\nflagship of the escort in Operation 81\nthat transported troop reinforcements.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>203</Id>
@@ -1073,12 +1073,12 @@
 	<mst_shiptext>
 		<Id>217</Id>
 		<Getmes>I'm Kiso. I'll bestow upon you\nthe absolute best victory.</Getmes>
-		<Sinfo>5500 ton light cruiser, Kuma-class 'Kiso'.\nMy regards. Runways and catapults, nah,\nI don't need those. Battle is all about\nbringing it right to the enemy! Right?</Sinfo>
+		<Sinfo>5500 ton light cruiser, Kuma-class Kiso.\nMy regards. Runways and catapults, nah,\nI don't need those. Battle is all about\nbringing it right to the enemy! Right?</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>218</Id>
 		<Getmes>Light Cruiser Nagara!\nPlease take good care of me!</Getmes>
-		<Sinfo>Weighing in as a 5500 ton light cruiser, first\nship of the Nagara-class, Nagara! I'm a bit\nof an old model, but I'm a high-speed\ntorpedo-armed team-leading machine,\nso I'm just perfect to command destroyers,\nyou know? I even fought hard in the difficult\nBattle of the Solomons!</Sinfo>
+		<Sinfo>Weighing in as a 5500 ton light cruiser,\nfirst ship of the Nagara-class, Nagara! I'm\ma bit of an old model, but I'm a high-speed\ntorpedo-armed team-leading machine,\nso I'm just perfect to command destroyers,\nyou know? I even fought hard in the\ndifficult Battle of the Solomons!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>219</Id>
@@ -1088,7 +1088,7 @@
 	<mst_shiptext>
 		<Id>220</Id>
 		<Getmes>Fourth ship of the Nagara-class Light\nCruisers, 'Yura'. Pleased to make your\nacquaintance!</Getmes>
-		<Sinfo>I'm Yura, the fourth ship of the Nagara-type\nLight Cruisers. I was the first out of all of\nus to be equipped with seaplanes. I've\nserved as the flagship of torpedo and\nsubmarine squadrons. I'm not so good\nwith Dauntless and B17 planes.</Sinfo>
+		<Sinfo>I'm Yura, the fourth ship of the Nagara-type\nLight Cruisers. I was the first out of all\nof us to be equipped with seaplanes. I've\nserved as the flagship of torpedo and\nsubmarine squadrons. I'm not so good\nwith Dauntless and B17 planes.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>221</Id>
@@ -1143,7 +1143,7 @@
 	<mst_shiptext>
 		<Id>231</Id>
 		<Getmes>Special-type destroyer, 'Akebono'. Hey!\nDon't look at me, you shitty Admiral!</Getmes>
-		<Sinfo>Special-type destroyer number 18,\n8th of the Ayanami-class, Akebono.\nI'm not a sumo wrestler. Remember that.\nI participated in the first naval air battle,\nthe Coral Sea! But, I'm a bit\nuneasy around subs...</Sinfo>
+		<Sinfo>Special-type destroyer number 18,\n8th of the Ayanami-class, Akebono.\nI'm not a sumo wrestler. Remember that.\nI participated in the first naval air\nbattle, the Coral Sea! But, I'm a bit\nuneasy around subs...</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>232</Id>
@@ -1233,7 +1233,7 @@
 	<mst_shiptext>
 		<Id>249</Id>
 		<Getmes>Destroyer class, Ooshio! A small body\nwith large torpedoes! Leave it to me.</Getmes>
-		<Sinfo>Second of the Asashio-class destroyers,\nOoshio! After being sent into the frontlines,\nI've mobilized to Guadalcanal for\nevacuation missions three times.\nI'll support you!</Sinfo>
+		<Sinfo>Second of the Asashio-class destroyers,\nOoshio! After being sent into the\nfrontlines, I've mobilized to Guadalcanal\nfor evacuation missions three times.\nI'll support you!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>250</Id>
@@ -1283,12 +1283,12 @@
 	<mst_shiptext>
 		<Id>259</Id>
 		<Getmes>I'm Kikuzuki, let's move out together.</Getmes>
-		<Sinfo>I'm Kikuzuki, 9th of the Mutsuki-class\nDestroyers. In the very early part of\nthe war, I participated in lots of capture\noperations. And in the latter part, I engaged\nin fleet-guard. It may not look so, but\nfleet-guard is an important mission for\ncertain.</Sinfo>
+		<Sinfo>I'm Kikuzuki, 9th of the Mutsuki-class\nDestroyers. In the very early part of\nthe war, I participated in lots of capture\noperations. And in the latter part, I\nengaged in fleet-guard. It may not look so,\nbut fleet-guard is an important mission\nfor certain.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>260</Id>
 		<Getmes>You're the commander, right? I'm Mikazuki.\nI hope you welcome me warmly into your fleet.</Getmes>
-		<Sinfo>I am Mikazuki, the Mutsuki class destroyer\nthat participated in escorting light carriers\nand other fleets. I even sortied to that\nfierce battle of the Solomon Islands.\nAlthough I'm an old model, utilizing my fast\nspeed I even participated in some transport\nmissions.</Sinfo>
+		<Sinfo>I am Mikazuki, the Mutsuki class destroyer\nthat participated in escorting light\ncarriers and other fleets. I even sortied to\nthat fierce battle of the Solomon Islands.\nAlthough I'm an old model, utilizing my fast\nspeed I even participated in some transport\nmissions.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>261</Id>
@@ -1298,7 +1298,7 @@
 	<mst_shiptext>
 		<Id>262</Id>
 		<Getmes>I'm Furutaka. I'll be happy to show\nall the good points of heavy cruisers.</Getmes>
-		<Sinfo>Heavy cruiser, Furutaka. Selected by\nVice Admiral Mikawa to be a member\nof the 8th fleet, I took out a lot of\nenemies at the 1st Battle of Solomon!\nThis is what a heavy cruiser can do!</Sinfo>
+		<Sinfo>Heavy cruiser, Furutaka. Selected by\nVice Admiral Mikawa to be a\nmember of the 8th fleet, I took out a lot of\nenemies at the 1st Battle of Solomon!\nThis is what a heavy cruiser can do!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>263</Id>
@@ -1813,7 +1813,7 @@
 	<mst_shiptext>
 		<Id>407</Id>
 		<Getmes>I'm Special-type Destroyer... Ayanami-class 'Ushio'.\nIt would be nice to be dismissed soon...</Getmes>
-		<Sinfo>I'm the 10th of the Ayanami-class, Ushio.\nI survived the Battle of Leyte Gulf and many other fierce battles. After that fateful day at Leyte, I fought on dutifully till the end of the war at Yokosuka.\nU-um...to all the enemy ships that that were sunk... I really wanted to spare you. Really!</Sinfo>
+		<Sinfo>I'm the 10th of the Ayanami-class, Ushio.\nI survived the Battle of Leyte Gulf and many other fierce battles. After that fateful day at Leyte, I fought on dutifully till the \nend of the war at Yokosuka. U-um...to all the \nenemy ships that that were sunk... I really \nwanted to spare you. Really!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>408</Id>
@@ -1838,7 +1838,7 @@
 	<mst_shiptext>
 		<Id>412</Id>
 		<Getmes>Of the two Fusou-class super-dreadnought battleships, I am the younger sister, Yamashiro.\nUmm, have you seen Fusou-onee-sama?</Getmes>
-		<Sinfo>The second of the Fusou-class battleships, Yamashiro.\nA 'faulty battleship', or 'an unusual thing to be in the fleet'... Everyone said things like that...\nBut that's okay, so long as I can fight alongside Fusou-neesama until the end...</Sinfo>
+		<Sinfo>The second of the Fusou-class battleships, Yamashiro.\nA 'faulty battleship', or 'an unusual thing to be in the fleet'... \nEveryone said things like that... \nBut that's okay, so long as I can fight \nalongside Fusou-neesama until the end...</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>413</Id>
@@ -1863,7 +1863,7 @@
 	<mst_shiptext>
 		<Id>417</Id>
 		<Getmes>Second Furutaka Class Heavy Cruiser, name's Kako! Nice to meetcha!</Getmes>
-		<Sinfo>I'm the Second Furutaka Class Heavy Cruiser, Kako.\nI achieved quite a feat during the Battle of Savo Islands!\nAh, the way back? Well, the verse "Going in is easy, but returning is scary" was no joke!</Sinfo>
+		<Sinfo>I'm the Second Furutaka Class Heavy Cruiser,\nKako.I achieved quite a feat during the\nBattle of Savo Islands! Ah, the way back? Well,\nthe verse "Going in is easy, but returning\nis scary" was no joke!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>418</Id>
@@ -1873,7 +1873,7 @@
 	<mst_shiptext>
 		<Id>419</Id>
 		<Getmes>Fourth ship of the Hatsuharu class, Hatsushimo.\nEveryone, I'm very pleased to meet you!</Getmes>
-		<Sinfo>Fourth of the Hatsuharu-class destroyers, Hatsushimo.\nI was in lots of hard battles like the Operation AL, the Battle of the Komandorski Islands, the occupation of Kiska, the Battle of the Philippine Sea, Operation Hoku-Go and Ten-Ichi-Go!\nI really did my best!</Sinfo>
+		<Sinfo>Fourth of the Hatsuharu-class destroyers,\nHatsushimo. I was in lots of hard battles like the\nOperation AL, the Battle of the\nKomandorski Islands, the occupation of Kiska,\nthe Battle of the Philippine Sea, Operation\nHoku-Go and Ten-Ichi-Go!\nI really did my best!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>420</Id>
@@ -1908,7 +1908,7 @@
 	<mst_shiptext>
 		<Id>426</Id>
 		<Getmes>はじめまして吹雪です。\nThanks for having me today as well.</Getmes>
-		<Sinfo>I am Fubuki, the first ship of the Special Type destroyers designed under the Washington Naval Treaty.\nBased on our design, many following fleet-type destroyers were built.\nYes sir, I'll do my best!</Sinfo>
+		<Sinfo>I am Fubuki, the first ship of the Special\nType destroyers designed under the\nWashington Naval Treaty.\nBased on our design, many following\nfleet-type destroyers were built.\nYes sir, I'll do my best!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>427</Id>
@@ -1918,7 +1918,7 @@
 	<mst_shiptext>
 		<Id>428</Id>
 		<Getmes>Yo! Name's Maya, nice to meet you.</Getmes>
-		<Sinfo>Third of the Takao-class heavy cruisers, Maya-sama!\nKobe-built. I went hard in the Southern Ops and Solomon battles!\nHaah? Leyte? Nah, I'm not great with subs.</Sinfo>
+		<Sinfo>Third of the Takao-class heavy cruisers,\nMaya-sama! Kobe-built. I went hard in the\nSouthern Ops and Solomon battles!\nHaah? Leyte? Nah, I'm not great with subs.</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>429</Id>
@@ -1963,7 +1963,7 @@
 	<mst_shiptext>
 		<Id>437</Id>
 		<Getmes>I'm Akatsuki!\nTreat me like the fully-fledged lady I am!</Getmes>
-		<Sinfo>I'm the first of the Special Type-III destroyers, Akatsuki.\nI was based on the Fubuki-class, with improved cruising efficiency and range. I'm the most refined of destroyers!\nI'm quite the lady, as you can see! I-I really am...!</Sinfo>
+		<Sinfo>I'm the first of the Special Type-III\ndestroyers, Akatsuki. I was based on the\nFubuki-class, with improved cruising efficiency and range.\nI'm the most refined of destroyers!\nI'm quite the lady, as you can see!\nI-I really am...!</Sinfo>
 	</mst_shiptext>
 	<mst_shiptext>
 		<Id>438</Id>

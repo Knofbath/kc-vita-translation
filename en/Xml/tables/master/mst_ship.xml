@@ -2056,7 +2056,7 @@
 		<Id>57</Id>
 		<Sortno>97</Sortno>
 		<Bookno>97</Bookno>
-		<Name>大井改</Name>
+		<Name>Ooi Kai</Name>
 		<Yomi>おおい</Yomi>
 		<Stype>4</Stype>
 		<Ctype>4</Ctype>
@@ -2095,7 +2095,7 @@
 		<Id>58</Id>
 		<Sortno>98</Sortno>
 		<Bookno>98</Bookno>
-		<Name>北上改</Name>
+		<Name>Kitakami Kai</Name>
 		<Yomi>きたかみ</Yomi>
 		<Stype>4</Stype>
 		<Ctype>4</Ctype>
@@ -2680,7 +2680,7 @@
 		<Id>73</Id>
 		<Sortno>101</Sortno>
 		<Bookno>101</Bookno>
-		<Name>最上改</Name>
+		<Name>Mogami Kai</Name>
 		<Yomi>もがみ</Yomi>
 		<Stype>6</Stype>
 		<Ctype>9</Ctype>
@@ -3030,7 +3030,7 @@
 		<Id>82</Id>
 		<Sortno>102</Sortno>
 		<Bookno>102</Bookno>
-		<Name>伊勢改</Name>
+		<Name>Ise Kai</Name>
 		<Yomi>いせ</Yomi>
 		<Stype>10</Stype>
 		<Ctype>2</Ctype>
@@ -3263,7 +3263,7 @@
 		<Id>88</Id>
 		<Sortno>103</Sortno>
 		<Bookno>103</Bookno>
-		<Name>日向改</Name>
+		<Name>Hyuuga Kai</Name>
 		<Yomi>ひゅうが</Yomi>
 		<Stype>10</Stype>
 		<Ctype>2</Ctype>
@@ -3886,7 +3886,7 @@
 		<Id>104</Id>
 		<Sortno>95</Sortno>
 		<Bookno>95</Bookno>
-		<Name>千歳改</Name>
+		<Name>Chitose Kai</Name>
 		<Yomi>ちとせ</Yomi>
 		<Stype>16</Stype>
 		<Ctype>15</Ctype>
@@ -3925,7 +3925,7 @@
 		<Id>105</Id>
 		<Sortno>96</Sortno>
 		<Bookno>96</Bookno>
-		<Name>千代田改</Name>
+		<Name>Chiyoda Kai</Name>
 		<Yomi>ちよだ</Yomi>
 		<Stype>16</Stype>
 		<Ctype>15</Ctype>
@@ -3964,7 +3964,7 @@
 		<Id>106</Id>
 		<Sortno>99</Sortno>
 		<Bookno>99</Bookno>
-		<Name>千歳甲</Name>
+		<Name>Chitose A</Name>
 		<Yomi>ちとせ</Yomi>
 		<Stype>16</Stype>
 		<Ctype>15</Ctype>
@@ -4003,7 +4003,7 @@
 		<Id>107</Id>
 		<Sortno>100</Sortno>
 		<Bookno>100</Bookno>
-		<Name>千代田甲</Name>
+		<Name>Chiyoda A</Name>
 		<Yomi>ちよだ</Yomi>
 		<Stype>16</Stype>
 		<Ctype>15</Ctype>
@@ -4198,7 +4198,7 @@
 		<Id>112</Id>
 		<Sortno>108</Sortno>
 		<Bookno>108</Bookno>
-		<Name>瑞鶴改</Name>
+		<Name>Zuikaku Kai</Name>
 		<Yomi>ずいかく</Yomi>
 		<Stype>11</Stype>
 		<Ctype>33</Ctype>
@@ -4393,7 +4393,7 @@
 		<Id>117</Id>
 		<Sortno>113</Sortno>
 		<Bookno>113</Bookno>
-		<Name>瑞鳳改</Name>
+		<Name>Zuihou Kai</Name>
 		<Yomi>ずいほう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>11</Ctype>
@@ -4431,7 +4431,7 @@
 		<Id>118</Id>
 		<Sortno>114</Sortno>
 		<Bookno>114</Bookno>
-		<Name>大井改二</Name>
+		<Name>Ooi Kai Ni</Name>
 		<Yomi>おおい</Yomi>
 		<Stype>4</Stype>
 		<Ctype>4</Ctype>
@@ -4469,7 +4469,7 @@
 		<Id>119</Id>
 		<Sortno>115</Sortno>
 		<Bookno>115</Bookno>
-		<Name>北上改二</Name>
+		<Name>Kitakami Kai Ni</Name>
 		<Yomi>きたかみ</Yomi>
 		<Stype>4</Stype>
 		<Ctype>4</Ctype>
@@ -4546,7 +4546,7 @@
 		<Id>121</Id>
 		<Sortno>117</Sortno>
 		<Bookno>117</Bookno>
-		<Name>三隈改</Name>
+		<Name>Mikuma Kai</Name>
 		<Yomi>みくま</Yomi>
 		<Stype>6</Stype>
 		<Ctype>9</Ctype>
@@ -4857,7 +4857,7 @@
 		<Id>129</Id>
 		<Sortno>129</Sortno>
 		<Bookno>129</Bookno>
-		<Name>鈴谷改</Name>
+		<Name>Suzuya Kai</Name>
 		<Yomi>すずや</Yomi>
 		<Stype>6</Stype>
 		<Ctype>9</Ctype>
@@ -4895,7 +4895,7 @@
 		<Id>130</Id>
 		<Sortno>130</Sortno>
 		<Bookno>130</Bookno>
-		<Name>熊野改</Name>
+		<Name>Kumano Kai</Name>
 		<Yomi>くまの</Yomi>
 		<Stype>6</Stype>
 		<Ctype>9</Ctype>
@@ -5128,7 +5128,7 @@
 		<Id>136</Id>
 		<Sortno>136</Sortno>
 		<Bookno>136</Bookno>
-		<Name>大和改</Name>
+		<Name>Yamato Kai</Name>
 		<Yomi>やまと</Yomi>
 		<Stype>9</Stype>
 		<Ctype>37</Ctype>
@@ -5322,7 +5322,7 @@
 		<Id>141</Id>
 		<Sortno>141</Sortno>
 		<Bookno>141</Bookno>
-		<Name>五十鈴改二</Name>
+		<Name>Isuzu Kai Ni</Name>
 		<Yomi>いすず</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -5360,7 +5360,7 @@
 		<Id>142</Id>
 		<Sortno>142</Sortno>
 		<Bookno>142</Bookno>
-		<Name>衣笠改二</Name>
+		<Name>Kinugasa Kai Ni</Name>
 		<Yomi>きぬがさ</Yomi>
 		<Stype>5</Stype>
 		<Ctype>13</Ctype>
@@ -5437,7 +5437,7 @@
 		<Id>144</Id>
 		<Sortno>144</Sortno>
 		<Bookno>144</Bookno>
-		<Name>夕立改二</Name>
+		<Name>Yuudachi Kai Ni</Name>
 		<Yomi>ゆうだち</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -5475,7 +5475,7 @@
 		<Id>145</Id>
 		<Sortno>145</Sortno>
 		<Bookno>145</Bookno>
-		<Name>時雨改二</Name>
+		<Name>Shigure Kai Ni</Name>
 		<Yomi>しぐれ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -5513,7 +5513,7 @@
 		<Id>146</Id>
 		<Sortno>146</Sortno>
 		<Bookno>146</Bookno>
-		<Name>木曾改二</Name>
+		<Name>Kiso Kai Ni</Name>
 		<Yomi>きそ</Yomi>
 		<Stype>4</Stype>
 		<Ctype>4</Ctype>
@@ -5589,7 +5589,7 @@
 		<Id>148</Id>
 		<Sortno>148</Sortno>
 		<Bookno>148</Bookno>
-		<Name>武蔵改</Name>
+		<Name>Musashi Kai</Name>
 		<Yomi>むさし</Yomi>
 		<Stype>9</Stype>
 		<Ctype>37</Ctype>
@@ -5627,7 +5627,7 @@
 		<Id>149</Id>
 		<Sortno>149</Sortno>
 		<Bookno>149</Bookno>
-		<Name>金剛改二</Name>
+		<Name>Kongou Kai Ni</Name>
 		<Yomi>こんごう</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -5665,7 +5665,7 @@
 		<Id>150</Id>
 		<Sortno>150</Sortno>
 		<Bookno>150</Bookno>
-		<Name>比叡改二</Name>
+		<Name>Hiei Kai Ni</Name>
 		<Yomi>ひえい</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -5703,7 +5703,7 @@
 		<Id>151</Id>
 		<Sortno>151</Sortno>
 		<Bookno>151</Bookno>
-		<Name>榛名改二</Name>
+		<Name>Haruna Kai Ni</Name>
 		<Yomi>はるな</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -5741,7 +5741,7 @@
 		<Id>152</Id>
 		<Sortno>152</Sortno>
 		<Bookno>152</Bookno>
-		<Name>霧島改二</Name>
+		<Name>Kirishima Kai Ni</Name>
 		<Yomi>きりしま</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -5896,7 +5896,7 @@
 		<Id>156</Id>
 		<Sortno>156</Sortno>
 		<Bookno>156</Bookno>
-		<Name>大鳳改</Name>
+		<Name>Taihou Kai</Name>
 		<Yomi>たいほう</Yomi>
 		<Stype>18</Stype>
 		<Ctype>43</Ctype>
@@ -5934,7 +5934,7 @@
 		<Id>157</Id>
 		<Sortno>157</Sortno>
 		<Bookno>157</Bookno>
-		<Name>龍驤改二</Name>
+		<Name>Ryuujou Kai Ni</Name>
 		<Yomi>りゅうじょう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>32</Ctype>
@@ -5972,7 +5972,7 @@
 		<Id>158</Id>
 		<Sortno>158</Sortno>
 		<Bookno>158</Bookno>
-		<Name>川内改二</Name>
+		<Name>Sendai Kai Ni</Name>
 		<Yomi>せんだい</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -6010,7 +6010,7 @@
 		<Id>159</Id>
 		<Sortno>159</Sortno>
 		<Bookno>159</Bookno>
-		<Name>神通改二</Name>
+		<Name>Jintsuu Kai Ni</Name>
 		<Yomi>じんつう</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -6048,7 +6048,7 @@
 		<Id>160</Id>
 		<Sortno>160</Sortno>
 		<Bookno>160</Bookno>
-		<Name>那珂改二</Name>
+		<Name>Naka Kai Ni</Name>
 		<Yomi>なか</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -6248,7 +6248,7 @@
 		<Id>166</Id>
 		<Sortno>166</Sortno>
 		<Bookno>166</Bookno>
-		<Name>あきつ丸改</Name>
+		<Name>Akitsumaru Kai</Name>
 		<Yomi>あきつまる</Yomi>
 		<Stype>17</Stype>
 		<Ctype>45</Ctype>
@@ -6481,7 +6481,7 @@
 		<Id>172</Id>
 		<Sortno>172</Sortno>
 		<Bookno>172</Bookno>
-		<Name>Bismarck改</Name>
+		<Name>Bismarck Kai</Name>
 		<Yomi>ビスマルク</Yomi>
 		<Stype>8</Stype>
 		<Ctype>47</Ctype>
@@ -6676,7 +6676,7 @@
 		<Id>177</Id>
 		<Sortno>177</Sortno>
 		<Bookno>177</Bookno>
-		<Name>Prinz Eugen改</Name>
+		<Name>Prinz Eugen Kai</Name>
 		<Yomi>プリンツ・オイゲン</Yomi>
 		<Stype>5</Stype>
 		<Ctype>55</Ctype>
@@ -7062,7 +7062,7 @@
 		<Id>187</Id>
 		<Sortno>187</Sortno>
 		<Bookno>187</Bookno>
-		<Name>明石改</Name>
+		<Name>Akashi Kai</Name>
 		<Yomi>あかし</Yomi>
 		<Stype>19</Stype>
 		<Ctype>49</Ctype>
@@ -7100,7 +7100,7 @@
 		<Id>188</Id>
 		<Sortno>188</Sortno>
 		<Bookno>188</Bookno>
-		<Name>利根改二</Name>
+		<Name>Tone Kai Ni</Name>
 		<Yomi>とね</Yomi>
 		<Stype>6</Stype>
 		<Ctype>31</Ctype>
@@ -7138,7 +7138,7 @@
 		<Id>189</Id>
 		<Sortno>189</Sortno>
 		<Bookno>189</Bookno>
-		<Name>筑摩改二</Name>
+		<Name>Chikuma Kai Ni</Name>
 		<Yomi>ちくま</Yomi>
 		<Stype>6</Stype>
 		<Ctype>31</Ctype>
@@ -7254,7 +7254,7 @@
 		<Id>192</Id>
 		<Sortno>192</Sortno>
 		<Bookno>192</Bookno>
-		<Name>那智改二</Name>
+		<Name>Nachi Kai Ni</Name>
 		<Yomi>なち</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -7292,7 +7292,7 @@
 		<Id>193</Id>
 		<Sortno>193</Sortno>
 		<Bookno>193</Bookno>
-		<Name>足柄改二</Name>
+		<Name>Ashigara Kai Ni</Name>
 		<Yomi>あしがら</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -7330,7 +7330,7 @@
 		<Id>194</Id>
 		<Sortno>194</Sortno>
 		<Bookno>194</Bookno>
-		<Name>羽黒改二</Name>
+		<Name>Haguro Kai Ni</Name>
 		<Yomi>はぐろ</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -7368,7 +7368,7 @@
 		<Id>195</Id>
 		<Sortno>195</Sortno>
 		<Bookno>195</Bookno>
-		<Name>綾波改二</Name>
+		<Name>Ayanami Kai Ni</Name>
 		<Yomi>あやなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -7406,7 +7406,7 @@
 		<Id>196</Id>
 		<Sortno>196</Sortno>
 		<Bookno>196</Bookno>
-		<Name>飛龍改二</Name>
+		<Name>Hiryuu Kai Ni</Name>
 		<Yomi>ひりゅう</Yomi>
 		<Stype>11</Stype>
 		<Ctype>25</Ctype>
@@ -7444,7 +7444,7 @@
 		<Id>197</Id>
 		<Sortno>197</Sortno>
 		<Bookno>197</Bookno>
-		<Name>蒼龍改二</Name>
+		<Name>Souryuu Kai Ni</Name>
 		<Yomi>そうりゅう</Yomi>
 		<Stype>11</Stype>
 		<Ctype>17</Ctype>
@@ -7482,7 +7482,7 @@
 		<Id>200</Id>
 		<Sortno>200</Sortno>
 		<Bookno>200</Bookno>
-		<Name>阿武隈改二</Name>
+		<Name>Abukuma Kai Ni</Name>
 		<Yomi>あぶくま</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -7520,7 +7520,7 @@
 		<Id>201</Id>
 		<Sortno>301</Sortno>
 		<Bookno>1301</Bookno>
-		<Name>吹雪改</Name>
+		<Name>Fubuki Kai</Name>
 		<Yomi>ふぶき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -7559,7 +7559,7 @@
 		<Id>202</Id>
 		<Sortno>302</Sortno>
 		<Bookno>1302</Bookno>
-		<Name>白雪改</Name>
+		<Name>Shirayuki Kai</Name>
 		<Yomi>しらゆき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -7597,7 +7597,7 @@
 		<Id>203</Id>
 		<Sortno>303</Sortno>
 		<Bookno>1303</Bookno>
-		<Name>初雪改</Name>
+		<Name>Hatsuyuki Kai</Name>
 		<Yomi>はつゆき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -7635,7 +7635,7 @@
 		<Id>204</Id>
 		<Sortno>304</Sortno>
 		<Bookno>1304</Bookno>
-		<Name>深雪改</Name>
+		<Name>Miyuki Kai</Name>
 		<Yomi>みゆき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -7673,7 +7673,7 @@
 		<Id>205</Id>
 		<Sortno>305</Sortno>
 		<Bookno>1305</Bookno>
-		<Name>叢雲改</Name>
+		<Name>Murakumo Kai</Name>
 		<Yomi>むらくも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -7712,7 +7712,7 @@
 		<Id>206</Id>
 		<Sortno>306</Sortno>
 		<Bookno>1306</Bookno>
-		<Name>磯波改</Name>
+		<Name>Isonami Kai</Name>
 		<Yomi>いそなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -7750,7 +7750,7 @@
 		<Id>207</Id>
 		<Sortno>307</Sortno>
 		<Bookno>1307</Bookno>
-		<Name>綾波改</Name>
+		<Name>Ayanami Kai</Name>
 		<Yomi>あやなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -7789,7 +7789,7 @@
 		<Id>208</Id>
 		<Sortno>308</Sortno>
 		<Bookno>1308</Bookno>
-		<Name>敷波改</Name>
+		<Name>Shikinami Kai</Name>
 		<Yomi>しきなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -7827,7 +7827,7 @@
 		<Id>209</Id>
 		<Sortno>309</Sortno>
 		<Bookno>1309</Bookno>
-		<Name>金剛改</Name>
+		<Name>Kongou Kai</Name>
 		<Yomi>こんごう</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -7866,7 +7866,7 @@
 		<Id>210</Id>
 		<Sortno>310</Sortno>
 		<Bookno>1310</Bookno>
-		<Name>比叡改</Name>
+		<Name>Hiei Kai</Name>
 		<Yomi>ひえい</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -7905,7 +7905,7 @@
 		<Id>211</Id>
 		<Sortno>311</Sortno>
 		<Bookno>1311</Bookno>
-		<Name>榛名改</Name>
+		<Name>Haruna Kai</Name>
 		<Yomi>はるな</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -7944,7 +7944,7 @@
 		<Id>212</Id>
 		<Sortno>312</Sortno>
 		<Bookno>1312</Bookno>
-		<Name>霧島改</Name>
+		<Name>Kirishima Kai</Name>
 		<Yomi>きりしま</Yomi>
 		<Stype>8</Stype>
 		<Ctype>6</Ctype>
@@ -7983,7 +7983,7 @@
 		<Id>213</Id>
 		<Sortno>313</Sortno>
 		<Bookno>1313</Bookno>
-		<Name>天龍改</Name>
+		<Name>Tenryuu Kai</Name>
 		<Yomi>てんりゅう</Yomi>
 		<Stype>3</Stype>
 		<Ctype>21</Ctype>
@@ -8021,7 +8021,7 @@
 		<Id>214</Id>
 		<Sortno>314</Sortno>
 		<Bookno>1314</Bookno>
-		<Name>龍田改</Name>
+		<Name>Tatsuta Kai</Name>
 		<Yomi>たつた</Yomi>
 		<Stype>3</Stype>
 		<Ctype>21</Ctype>
@@ -8059,7 +8059,7 @@
 		<Id>215</Id>
 		<Sortno>315</Sortno>
 		<Bookno>1315</Bookno>
-		<Name>球磨改</Name>
+		<Name>Kuma Kai</Name>
 		<Yomi>くま</Yomi>
 		<Stype>3</Stype>
 		<Ctype>4</Ctype>
@@ -8097,7 +8097,7 @@
 		<Id>216</Id>
 		<Sortno>316</Sortno>
 		<Bookno>1316</Bookno>
-		<Name>多摩改</Name>
+		<Name>Tama Kai</Name>
 		<Yomi>たま</Yomi>
 		<Stype>3</Stype>
 		<Ctype>4</Ctype>
@@ -8135,7 +8135,7 @@
 		<Id>217</Id>
 		<Sortno>317</Sortno>
 		<Bookno>1317</Bookno>
-		<Name>木曾改</Name>
+		<Name>Kiso Kai</Name>
 		<Yomi>きそ</Yomi>
 		<Stype>3</Stype>
 		<Ctype>4</Ctype>
@@ -8174,7 +8174,7 @@
 		<Id>218</Id>
 		<Sortno>318</Sortno>
 		<Bookno>1318</Bookno>
-		<Name>長良改</Name>
+		<Name>Nagara Kai</Name>
 		<Yomi>ながら</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -8212,7 +8212,7 @@
 		<Id>219</Id>
 		<Sortno>319</Sortno>
 		<Bookno>1319</Bookno>
-		<Name>五十鈴改</Name>
+		<Name>Isuzu Kai</Name>
 		<Yomi>いすず</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -8251,7 +8251,7 @@
 		<Id>220</Id>
 		<Sortno>320</Sortno>
 		<Bookno>1320</Bookno>
-		<Name>由良改</Name>
+		<Name>Yura Kai</Name>
 		<Yomi>ゆら</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -8289,7 +8289,7 @@
 		<Id>221</Id>
 		<Sortno>321</Sortno>
 		<Bookno>1321</Bookno>
-		<Name>名取改</Name>
+		<Name>Natori Kai</Name>
 		<Yomi>なとり</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -8327,7 +8327,7 @@
 		<Id>222</Id>
 		<Sortno>322</Sortno>
 		<Bookno>1322</Bookno>
-		<Name>川内改</Name>
+		<Name>Sendai Kai</Name>
 		<Yomi>せんだい</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -8366,7 +8366,7 @@
 		<Id>223</Id>
 		<Sortno>323</Sortno>
 		<Bookno>1323</Bookno>
-		<Name>神通改</Name>
+		<Name>Jintsuu Kai</Name>
 		<Yomi>じんつう</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -8405,7 +8405,7 @@
 		<Id>224</Id>
 		<Sortno>324</Sortno>
 		<Bookno>1324</Bookno>
-		<Name>那珂改</Name>
+		<Name>Naka Kai</Name>
 		<Yomi>なか</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -8444,7 +8444,7 @@
 		<Id>225</Id>
 		<Sortno>325</Sortno>
 		<Bookno>1325</Bookno>
-		<Name>陽炎改</Name>
+		<Name>Kagerou Kai</Name>
 		<Yomi>かげろう</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -8482,7 +8482,7 @@
 		<Id>226</Id>
 		<Sortno>326</Sortno>
 		<Bookno>1326</Bookno>
-		<Name>不知火改</Name>
+		<Name>Shiranui Kai</Name>
 		<Yomi>しらぬい</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -8520,7 +8520,7 @@
 		<Id>227</Id>
 		<Sortno>327</Sortno>
 		<Bookno>1327</Bookno>
-		<Name>黒潮改</Name>
+		<Name>Kuroshio Kai</Name>
 		<Yomi>くろしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -8558,7 +8558,7 @@
 		<Id>228</Id>
 		<Sortno>328</Sortno>
 		<Bookno>1328</Bookno>
-		<Name>雪風改</Name>
+		<Name>Yukikaze Kai</Name>
 		<Yomi>ゆきかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -8596,7 +8596,7 @@
 		<Id>229</Id>
 		<Sortno>329</Sortno>
 		<Bookno>1329</Bookno>
-		<Name>島風改</Name>
+		<Name>Shimakaze Kai</Name>
 		<Yomi>しまかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>22</Ctype>
@@ -8634,7 +8634,7 @@
 		<Id>230</Id>
 		<Sortno>330</Sortno>
 		<Bookno>1330</Bookno>
-		<Name>朧改</Name>
+		<Name>Oboro Kai</Name>
 		<Yomi>おぼろ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -8672,7 +8672,7 @@
 		<Id>231</Id>
 		<Sortno>331</Sortno>
 		<Bookno>1331</Bookno>
-		<Name>曙改</Name>
+		<Name>Akebono Kai</Name>
 		<Yomi>あけぼの</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -8710,7 +8710,7 @@
 		<Id>232</Id>
 		<Sortno>332</Sortno>
 		<Bookno>1332</Bookno>
-		<Name>漣改</Name>
+		<Name>Sazanami Kai</Name>
 		<Yomi>さざなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -8748,7 +8748,7 @@
 		<Id>233</Id>
 		<Sortno>333</Sortno>
 		<Bookno>1333</Bookno>
-		<Name>潮改</Name>
+		<Name>Ushio Kai</Name>
 		<Yomi>うしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -8787,7 +8787,7 @@
 		<Id>234</Id>
 		<Sortno>334</Sortno>
 		<Bookno>1334</Bookno>
-		<Name>暁改</Name>
+		<Name>Akatsuki Kai</Name>
 		<Yomi>あかつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -8826,7 +8826,7 @@
 		<Id>235</Id>
 		<Sortno>335</Sortno>
 		<Bookno>1335</Bookno>
-		<Name>響改</Name>
+		<Name>Hibiki Kai</Name>
 		<Yomi>ひびき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -8865,7 +8865,7 @@
 		<Id>236</Id>
 		<Sortno>336</Sortno>
 		<Bookno>1336</Bookno>
-		<Name>雷改</Name>
+		<Name>Ikazuchi Kai</Name>
 		<Yomi>いかづち</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -8903,7 +8903,7 @@
 		<Id>237</Id>
 		<Sortno>337</Sortno>
 		<Bookno>1337</Bookno>
-		<Name>電改</Name>
+		<Name>Inazuma Kai</Name>
 		<Yomi>いなづま</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -8941,7 +8941,7 @@
 		<Id>238</Id>
 		<Sortno>338</Sortno>
 		<Bookno>1338</Bookno>
-		<Name>初春改</Name>
+		<Name>Hatsuharu Kai</Name>
 		<Yomi>はつはる</Yomi>
 		<Stype>2</Stype>
 		<Ctype>10</Ctype>
@@ -8980,7 +8980,7 @@
 		<Id>239</Id>
 		<Sortno>339</Sortno>
 		<Bookno>1339</Bookno>
-		<Name>子日改</Name>
+		<Name>Nenohi Kai</Name>
 		<Yomi>ねのひ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>10</Ctype>
@@ -9018,7 +9018,7 @@
 		<Id>240</Id>
 		<Sortno>340</Sortno>
 		<Bookno>1340</Bookno>
-		<Name>若葉改</Name>
+		<Name>Wakaba Kai</Name>
 		<Yomi>わかば</Yomi>
 		<Stype>2</Stype>
 		<Ctype>10</Ctype>
@@ -9056,7 +9056,7 @@
 		<Id>241</Id>
 		<Sortno>341</Sortno>
 		<Bookno>1341</Bookno>
-		<Name>初霜改</Name>
+		<Name>Hatsushimo Kai</Name>
 		<Yomi>はつしも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>10</Ctype>
@@ -9095,7 +9095,7 @@
 		<Id>242</Id>
 		<Sortno>342</Sortno>
 		<Bookno>1342</Bookno>
-		<Name>白露改</Name>
+		<Name>Shiratsuyu Kai</Name>
 		<Yomi>しらつゆ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -9133,7 +9133,7 @@
 		<Id>243</Id>
 		<Sortno>343</Sortno>
 		<Bookno>1343</Bookno>
-		<Name>時雨改</Name>
+		<Name>Shigure Kai</Name>
 		<Yomi>しぐれ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -9172,7 +9172,7 @@
 		<Id>244</Id>
 		<Sortno>344</Sortno>
 		<Bookno>1344</Bookno>
-		<Name>村雨改</Name>
+		<Name>Murasame Kai</Name>
 		<Yomi>むらさめ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -9210,7 +9210,7 @@
 		<Id>245</Id>
 		<Sortno>345</Sortno>
 		<Bookno>1345</Bookno>
-		<Name>夕立改</Name>
+		<Name>Yuudachi Kai</Name>
 		<Yomi>ゆうだち</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -9249,7 +9249,7 @@
 		<Id>246</Id>
 		<Sortno>346</Sortno>
 		<Bookno>1346</Bookno>
-		<Name>五月雨改</Name>
+		<Name>Samidare Kai</Name>
 		<Yomi>さみだれ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -9287,7 +9287,7 @@
 		<Id>247</Id>
 		<Sortno>347</Sortno>
 		<Bookno>1347</Bookno>
-		<Name>涼風改</Name>
+		<Name>Suzukaze Kai</Name>
 		<Yomi>すずかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -9325,7 +9325,7 @@
 		<Id>248</Id>
 		<Sortno>348</Sortno>
 		<Bookno>1348</Bookno>
-		<Name>朝潮改</Name>
+		<Name>Asashio Kai</Name>
 		<Yomi>あさしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -9363,7 +9363,7 @@
 		<Id>249</Id>
 		<Sortno>349</Sortno>
 		<Bookno>1349</Bookno>
-		<Name>大潮改</Name>
+		<Name>Ooshio Kai</Name>
 		<Yomi>おおしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -9401,7 +9401,7 @@
 		<Id>250</Id>
 		<Sortno>350</Sortno>
 		<Bookno>1350</Bookno>
-		<Name>満潮改</Name>
+		<Name>Michishio Kai</Name>
 		<Yomi>みちしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -9439,7 +9439,7 @@
 		<Id>251</Id>
 		<Sortno>351</Sortno>
 		<Bookno>1351</Bookno>
-		<Name>荒潮改</Name>
+		<Name>Arashio Kai</Name>
 		<Yomi>あらしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -9477,7 +9477,7 @@
 		<Id>252</Id>
 		<Sortno>352</Sortno>
 		<Bookno>1352</Bookno>
-		<Name>霰改</Name>
+		<Name>Arare Kai</Name>
 		<Yomi>あられ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -9515,7 +9515,7 @@
 		<Id>253</Id>
 		<Sortno>353</Sortno>
 		<Bookno>1353</Bookno>
-		<Name>霞改</Name>
+		<Name>Kasumi Kai</Name>
 		<Yomi>かすみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -9553,7 +9553,7 @@
 		<Id>254</Id>
 		<Sortno>354</Sortno>
 		<Bookno>1354</Bookno>
-		<Name>睦月改</Name>
+		<Name>Mutsuki Kai</Name>
 		<Yomi>むつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9592,7 +9592,7 @@
 		<Id>255</Id>
 		<Sortno>355</Sortno>
 		<Bookno>1355</Bookno>
-		<Name>如月改</Name>
+		<Name>Kisaragi Kai</Name>
 		<Yomi>きさらぎ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9631,7 +9631,7 @@
 		<Id>256</Id>
 		<Sortno>356</Sortno>
 		<Bookno>1356</Bookno>
-		<Name>皐月改</Name>
+		<Name>Satsuki Kai</Name>
 		<Yomi>さつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9669,7 +9669,7 @@
 		<Id>257</Id>
 		<Sortno>357</Sortno>
 		<Bookno>1357</Bookno>
-		<Name>文月改</Name>
+		<Name>Fumizuki Kai</Name>
 		<Yomi>ふみづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9707,7 +9707,7 @@
 		<Id>258</Id>
 		<Sortno>358</Sortno>
 		<Bookno>1358</Bookno>
-		<Name>長月改</Name>
+		<Name>Nagatsuki Kai</Name>
 		<Yomi>ながつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9745,7 +9745,7 @@
 		<Id>259</Id>
 		<Sortno>359</Sortno>
 		<Bookno>1359</Bookno>
-		<Name>菊月改</Name>
+		<Name>Kikuzuki Kai</Name>
 		<Yomi>きくづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9783,7 +9783,7 @@
 		<Id>260</Id>
 		<Sortno>360</Sortno>
 		<Bookno>1360</Bookno>
-		<Name>三日月改</Name>
+		<Name>Mikazuki Kai</Name>
 		<Yomi>みかづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9821,7 +9821,7 @@
 		<Id>261</Id>
 		<Sortno>361</Sortno>
 		<Bookno>1361</Bookno>
-		<Name>望月改</Name>
+		<Name>Mochizuki Kai</Name>
 		<Yomi>もちづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -9859,7 +9859,7 @@
 		<Id>262</Id>
 		<Sortno>362</Sortno>
 		<Bookno>1362</Bookno>
-		<Name>古鷹改</Name>
+		<Name>Furutaka Kai</Name>
 		<Yomi>ふるたか</Yomi>
 		<Stype>5</Stype>
 		<Ctype>7</Ctype>
@@ -9898,7 +9898,7 @@
 		<Id>263</Id>
 		<Sortno>363</Sortno>
 		<Bookno>1363</Bookno>
-		<Name>加古改</Name>
+		<Name>Kako Kai</Name>
 		<Yomi>かこ</Yomi>
 		<Stype>5</Stype>
 		<Ctype>7</Ctype>
@@ -9937,7 +9937,7 @@
 		<Id>264</Id>
 		<Sortno>364</Sortno>
 		<Bookno>1364</Bookno>
-		<Name>青葉改</Name>
+		<Name>Aoba Kai</Name>
 		<Yomi>あおば</Yomi>
 		<Stype>5</Stype>
 		<Ctype>13</Ctype>
@@ -9975,7 +9975,7 @@
 		<Id>265</Id>
 		<Sortno>365</Sortno>
 		<Bookno>1365</Bookno>
-		<Name>妙高改</Name>
+		<Name>Myoukou Kai</Name>
 		<Yomi>みょうこう</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -10014,7 +10014,7 @@
 		<Id>266</Id>
 		<Sortno>366</Sortno>
 		<Bookno>1366</Bookno>
-		<Name>那智改</Name>
+		<Name>Nachi Kai</Name>
 		<Yomi>なち</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -10053,7 +10053,7 @@
 		<Id>267</Id>
 		<Sortno>367</Sortno>
 		<Bookno>1367</Bookno>
-		<Name>足柄改</Name>
+		<Name>Ashigara Kai</Name>
 		<Yomi>あしがら</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -10092,7 +10092,7 @@
 		<Id>268</Id>
 		<Sortno>368</Sortno>
 		<Bookno>1368</Bookno>
-		<Name>羽黒改</Name>
+		<Name>Haguro Kai</Name>
 		<Yomi>はぐろ</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -10131,7 +10131,7 @@
 		<Id>269</Id>
 		<Sortno>369</Sortno>
 		<Bookno>1369</Bookno>
-		<Name>高雄改</Name>
+		<Name>Takao Kai</Name>
 		<Yomi>たかお</Yomi>
 		<Stype>5</Stype>
 		<Ctype>8</Ctype>
@@ -10169,7 +10169,7 @@
 		<Id>270</Id>
 		<Sortno>370</Sortno>
 		<Bookno>1370</Bookno>
-		<Name>愛宕改</Name>
+		<Name>Atago Kai</Name>
 		<Yomi>あたご</Yomi>
 		<Stype>5</Stype>
 		<Ctype>8</Ctype>
@@ -10207,7 +10207,7 @@
 		<Id>271</Id>
 		<Sortno>371</Sortno>
 		<Bookno>1371</Bookno>
-		<Name>摩耶改</Name>
+		<Name>Maya Kai</Name>
 		<Yomi>まや</Yomi>
 		<Stype>5</Stype>
 		<Ctype>8</Ctype>
@@ -10246,7 +10246,7 @@
 		<Id>272</Id>
 		<Sortno>372</Sortno>
 		<Bookno>1372</Bookno>
-		<Name>鳥海改</Name>
+		<Name>Choukai Kai</Name>
 		<Yomi>ちょうかい</Yomi>
 		<Stype>5</Stype>
 		<Ctype>8</Ctype>
@@ -10285,7 +10285,7 @@
 		<Id>273</Id>
 		<Sortno>373</Sortno>
 		<Bookno>1373</Bookno>
-		<Name>利根改</Name>
+		<Name>Tone Kai</Name>
 		<Yomi>とね</Yomi>
 		<Stype>5</Stype>
 		<Ctype>31</Ctype>
@@ -10324,7 +10324,7 @@
 		<Id>274</Id>
 		<Sortno>374</Sortno>
 		<Bookno>1374</Bookno>
-		<Name>筑摩改</Name>
+		<Name>Chikuma Kai</Name>
 		<Yomi>ちくま</Yomi>
 		<Stype>5</Stype>
 		<Ctype>31</Ctype>
@@ -10363,7 +10363,7 @@
 		<Id>275</Id>
 		<Sortno>375</Sortno>
 		<Bookno>1375</Bookno>
-		<Name>長門改</Name>
+		<Name>Nagato Kai</Name>
 		<Yomi>ながと</Yomi>
 		<Stype>9</Stype>
 		<Ctype>19</Ctype>
@@ -10401,7 +10401,7 @@
 		<Id>276</Id>
 		<Sortno>376</Sortno>
 		<Bookno>1376</Bookno>
-		<Name>陸奥改</Name>
+		<Name>Mutsu Kai</Name>
 		<Yomi>むつ</Yomi>
 		<Stype>9</Stype>
 		<Ctype>19</Ctype>
@@ -10439,7 +10439,7 @@
 		<Id>277</Id>
 		<Sortno>377</Sortno>
 		<Bookno>1377</Bookno>
-		<Name>赤城改</Name>
+		<Name>Akagi Kai</Name>
 		<Yomi>あかぎ</Yomi>
 		<Stype>11</Stype>
 		<Ctype>14</Ctype>
@@ -10477,7 +10477,7 @@
 		<Id>278</Id>
 		<Sortno>378</Sortno>
 		<Bookno>1378</Bookno>
-		<Name>加賀改</Name>
+		<Name>Kaga Kai</Name>
 		<Yomi>かが</Yomi>
 		<Stype>11</Stype>
 		<Ctype>3</Ctype>
@@ -10515,7 +10515,7 @@
 		<Id>279</Id>
 		<Sortno>379</Sortno>
 		<Bookno>1379</Bookno>
-		<Name>蒼龍改</Name>
+		<Name>Souryuu Kai</Name>
 		<Yomi>そうりゅう</Yomi>
 		<Stype>11</Stype>
 		<Ctype>17</Ctype>
@@ -10554,7 +10554,7 @@
 		<Id>280</Id>
 		<Sortno>380</Sortno>
 		<Bookno>1380</Bookno>
-		<Name>飛龍改</Name>
+		<Name>Hiryuu Kai</Name>
 		<Yomi>ひりゅう</Yomi>
 		<Stype>11</Stype>
 		<Ctype>25</Ctype>
@@ -10593,7 +10593,7 @@
 		<Id>281</Id>
 		<Sortno>381</Sortno>
 		<Bookno>1381</Bookno>
-		<Name>龍驤改</Name>
+		<Name>Ryuujou Kai</Name>
 		<Yomi>りゅうじょう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>32</Ctype>
@@ -10632,7 +10632,7 @@
 		<Id>282</Id>
 		<Sortno>382</Sortno>
 		<Bookno>1382</Bookno>
-		<Name>祥鳳改</Name>
+		<Name>Shouhou Kai</Name>
 		<Yomi>しょうほう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>11</Ctype>
@@ -10670,7 +10670,7 @@
 		<Id>283</Id>
 		<Sortno>383</Sortno>
 		<Bookno>1383</Bookno>
-		<Name>飛鷹改</Name>
+		<Name>Hiyou Kai</Name>
 		<Yomi>ひよう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>24</Ctype>
@@ -10708,7 +10708,7 @@
 		<Id>284</Id>
 		<Sortno>384</Sortno>
 		<Bookno>1384</Bookno>
-		<Name>隼鷹改</Name>
+		<Name>Junyou Kai</Name>
 		<Yomi>じゅんよう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>24</Ctype>
@@ -10747,7 +10747,7 @@
 		<Id>285</Id>
 		<Sortno>385</Sortno>
 		<Bookno>1385</Bookno>
-		<Name>鳳翔改</Name>
+		<Name>Houshou Kai</Name>
 		<Yomi>ほうしょう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>27</Ctype>
@@ -10785,7 +10785,7 @@
 		<Id>286</Id>
 		<Sortno>386</Sortno>
 		<Bookno>1386</Bookno>
-		<Name>扶桑改</Name>
+		<Name>Fusou Kai</Name>
 		<Yomi>ふそう</Yomi>
 		<Stype>10</Stype>
 		<Ctype>26</Ctype>
@@ -10824,7 +10824,7 @@
 		<Id>287</Id>
 		<Sortno>387</Sortno>
 		<Bookno>1387</Bookno>
-		<Name>山城改</Name>
+		<Name>Yamashiro Kai</Name>
 		<Yomi>やましろ</Yomi>
 		<Stype>10</Stype>
 		<Ctype>26</Ctype>
@@ -10863,7 +10863,7 @@
 		<Id>288</Id>
 		<Sortno>388</Sortno>
 		<Bookno>1388</Bookno>
-		<Name>翔鶴改</Name>
+		<Name>Shoukaku Kai</Name>
 		<Yomi>しょうかく</Yomi>
 		<Stype>11</Stype>
 		<Ctype>33</Ctype>
@@ -10902,7 +10902,7 @@
 		<Id>289</Id>
 		<Sortno>389</Sortno>
 		<Bookno>1389</Bookno>
-		<Name>鬼怒改</Name>
+		<Name>Kinu Kai</Name>
 		<Yomi>きぬ</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -10940,7 +10940,7 @@
 		<Id>290</Id>
 		<Sortno>390</Sortno>
 		<Bookno>1390</Bookno>
-		<Name>阿武隈改</Name>
+		<Name>Abukuma Kai</Name>
 		<Yomi>あぶくま</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -10979,7 +10979,7 @@
 		<Id>291</Id>
 		<Sortno>391</Sortno>
 		<Bookno>1391</Bookno>
-		<Name>千歳航改</Name>
+		<Name>Chitose-Kou Kai</Name>
 		<Yomi>ちとせ</Yomi>
 		<Stype>7</Stype>
 		<Ctype>15</Ctype>
@@ -11018,7 +11018,7 @@
 		<Id>292</Id>
 		<Sortno>392</Sortno>
 		<Bookno>1392</Bookno>
-		<Name>千代田航改</Name>
+		<Name>Chiyoda-Kou Kai</Name>
 		<Yomi>ちよだ</Yomi>
 		<Stype>7</Stype>
 		<Ctype>15</Ctype>
@@ -11057,7 +11057,7 @@
 		<Id>293</Id>
 		<Sortno>393</Sortno>
 		<Bookno>1393</Bookno>
-		<Name>夕張改</Name>
+		<Name>Yuubari Kai</Name>
 		<Yomi>ゆうばり</Yomi>
 		<Stype>3</Stype>
 		<Ctype>34</Ctype>
@@ -11095,7 +11095,7 @@
 		<Id>294</Id>
 		<Sortno>394</Sortno>
 		<Bookno>1394</Bookno>
-		<Name>舞風改</Name>
+		<Name>Maikaze Kai</Name>
 		<Yomi>まいかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11133,7 +11133,7 @@
 		<Id>295</Id>
 		<Sortno>395</Sortno>
 		<Bookno>1395</Bookno>
-		<Name>衣笠改</Name>
+		<Name>Kinugasa Kai</Name>
 		<Yomi>きぬがさ</Yomi>
 		<Stype>5</Stype>
 		<Ctype>13</Ctype>
@@ -11172,7 +11172,7 @@
 		<Id>296</Id>
 		<Sortno>121</Sortno>
 		<Bookno>121</Bookno>
-		<Name>千歳航改二</Name>
+		<Name>Chitose-Kou Kai Ni</Name>
 		<Yomi>ちとせ</Yomi>
 		<Stype>7</Stype>
 		<Ctype>15</Ctype>
@@ -11210,7 +11210,7 @@
 		<Id>297</Id>
 		<Sortno>122</Sortno>
 		<Bookno>122</Bookno>
-		<Name>千代田航改二</Name>
+		<Name>Chiyoda-Kou Kai Ni</Name>
 		<Yomi>ちよだ</Yomi>
 		<Stype>7</Stype>
 		<Ctype>15</Ctype>
@@ -11248,7 +11248,7 @@
 		<Id>300</Id>
 		<Sortno>396</Sortno>
 		<Bookno>1396</Bookno>
-		<Name>初風改</Name>
+		<Name>Hatsukaze Kai</Name>
 		<Yomi>はつかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11286,7 +11286,7 @@
 		<Id>301</Id>
 		<Sortno>397</Sortno>
 		<Bookno>1397</Bookno>
-		<Name>秋雲改</Name>
+		<Name>Akigumo Kai</Name>
 		<Yomi>あきぐも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11324,7 +11324,7 @@
 		<Id>302</Id>
 		<Sortno>398</Sortno>
 		<Bookno>1398</Bookno>
-		<Name>夕雲改</Name>
+		<Name>Yuugumo Kai</Name>
 		<Yomi>ゆうぐも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -11362,7 +11362,7 @@
 		<Id>303</Id>
 		<Sortno>399</Sortno>
 		<Bookno>1399</Bookno>
-		<Name>巻雲改</Name>
+		<Name>Makigumo Kai</Name>
 		<Yomi>まきぐも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -11400,7 +11400,7 @@
 		<Id>304</Id>
 		<Sortno>400</Sortno>
 		<Bookno>1400</Bookno>
-		<Name>長波改</Name>
+		<Name>Naganami Kai</Name>
 		<Yomi>ながなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -11438,7 +11438,7 @@
 		<Id>305</Id>
 		<Sortno>401</Sortno>
 		<Bookno>1401</Bookno>
-		<Name>阿賀野改</Name>
+		<Name>Agano Kai</Name>
 		<Yomi>あがの</Yomi>
 		<Stype>3</Stype>
 		<Ctype>41</Ctype>
@@ -11476,7 +11476,7 @@
 		<Id>306</Id>
 		<Sortno>402</Sortno>
 		<Bookno>1402</Bookno>
-		<Name>能代改</Name>
+		<Name>Noshiro Kai</Name>
 		<Yomi>のしろ</Yomi>
 		<Stype>3</Stype>
 		<Ctype>41</Ctype>
@@ -11514,7 +11514,7 @@
 		<Id>307</Id>
 		<Sortno>403</Sortno>
 		<Bookno>1403</Bookno>
-		<Name>矢矧改</Name>
+		<Name>Yahagi Kai</Name>
 		<Yomi>やはぎ</Yomi>
 		<Stype>3</Stype>
 		<Ctype>41</Ctype>
@@ -11552,7 +11552,7 @@
 		<Id>308</Id>
 		<Sortno>404</Sortno>
 		<Bookno>1404</Bookno>
-		<Name>弥生改</Name>
+		<Name>Yayoi Kai</Name>
 		<Yomi>やよい</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -11590,7 +11590,7 @@
 		<Id>309</Id>
 		<Sortno>405</Sortno>
 		<Bookno>1405</Bookno>
-		<Name>卯月改</Name>
+		<Name>Uzuki Kai</Name>
 		<Yomi>うづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -11628,7 +11628,7 @@
 		<Id>310</Id>
 		<Sortno>406</Sortno>
 		<Bookno>1406</Bookno>
-		<Name>Z1改</Name>
+		<Name>Z1 Kai</Name>
 		<Yomi>レーベレヒト・マース</Yomi>
 		<Stype>2</Stype>
 		<Ctype>48</Ctype>
@@ -11667,7 +11667,7 @@
 		<Id>311</Id>
 		<Sortno>407</Sortno>
 		<Bookno>1407</Bookno>
-		<Name>Z3改</Name>
+		<Name>Z3 Kai</Name>
 		<Yomi>マックス・シュルツ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>48</Ctype>
@@ -11706,7 +11706,7 @@
 		<Id>312</Id>
 		<Sortno>408</Sortno>
 		<Bookno>1408</Bookno>
-		<Name>浜風改</Name>
+		<Name>Hamakaze Kai</Name>
 		<Yomi>はまかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11744,7 +11744,7 @@
 		<Id>313</Id>
 		<Sortno>409</Sortno>
 		<Bookno>1409</Bookno>
-		<Name>谷風改</Name>
+		<Name>Tanikaze Kai</Name>
 		<Yomi>たにかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11782,7 +11782,7 @@
 		<Id>314</Id>
 		<Sortno>410</Sortno>
 		<Bookno>1410</Bookno>
-		<Name>酒匂改</Name>
+		<Name>Sakawa Kai</Name>
 		<Yomi>さかわ</Yomi>
 		<Stype>3</Stype>
 		<Ctype>41</Ctype>
@@ -11826,7 +11826,7 @@
 		<Id>316</Id>
 		<Sortno>411</Sortno>
 		<Bookno>1411</Bookno>
-		<Name>天津風改</Name>
+		<Name>Amatsukaze Kai</Name>
 		<Yomi>あまつかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11864,7 +11864,7 @@
 		<Id>317</Id>
 		<Sortno>412</Sortno>
 		<Bookno>1412</Bookno>
-		<Name>浦風改</Name>
+		<Name>Urakaze Kai</Name>
 		<Yomi>うらかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -11902,7 +11902,7 @@
 		<Id>318</Id>
 		<Sortno>190</Sortno>
 		<Bookno>190</Bookno>
-		<Name>龍鳳改</Name>
+		<Name>Ryuuhou Kai</Name>
 		<Yomi>たいげい・りゅうほう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>51</Ctype>
@@ -11940,7 +11940,7 @@
 		<Id>319</Id>
 		<Sortno>191</Sortno>
 		<Bookno>191</Bookno>
-		<Name>妙高改二</Name>
+		<Name>Myoukou Kai Ni</Name>
 		<Yomi>みょうこう</Yomi>
 		<Stype>5</Stype>
 		<Ctype>29</Ctype>
@@ -11978,7 +11978,7 @@
 		<Id>320</Id>
 		<Sortno>413</Sortno>
 		<Bookno>1413</Bookno>
-		<Name>磯風改</Name>
+		<Name>Isokaze Kai</Name>
 		<Yomi>いそかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -12016,7 +12016,7 @@
 		<Id>321</Id>
 		<Sortno>414</Sortno>
 		<Bookno>1414</Bookno>
-		<Name>大淀改</Name>
+		<Name>Ooyodo Kai</Name>
 		<Yomi>おおよど</Yomi>
 		<Stype>3</Stype>
 		<Ctype>52</Ctype>
@@ -12054,7 +12054,7 @@
 		<Id>322</Id>
 		<Sortno>415</Sortno>
 		<Bookno>1415</Bookno>
-		<Name>時津風改</Name>
+		<Name>Tokitsukaze Kai</Name>
 		<Yomi>ときつかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -12092,7 +12092,7 @@
 		<Id>323</Id>
 		<Sortno>416</Sortno>
 		<Bookno>1416</Bookno>
-		<Name>春雨改</Name>
+		<Name>Harusame Kai</Name>
 		<Yomi>はるさめ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -12130,7 +12130,7 @@
 		<Id>324</Id>
 		<Sortno>417</Sortno>
 		<Bookno>1417</Bookno>
-		<Name>早霜改</Name>
+		<Name>Hayashimo Kai</Name>
 		<Yomi>はやしも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -12168,7 +12168,7 @@
 		<Id>325</Id>
 		<Sortno>418</Sortno>
 		<Bookno>1418</Bookno>
-		<Name>清霜改</Name>
+		<Name>Kiyoshimo Kai</Name>
 		<Yomi>きよしも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -12206,7 +12206,7 @@
 		<Id>326</Id>
 		<Sortno>204</Sortno>
 		<Bookno>204</Bookno>
-		<Name>初春改二</Name>
+		<Name>Hatsuharu Kai Ni</Name>
 		<Yomi>はつはる</Yomi>
 		<Stype>2</Stype>
 		<Ctype>10</Ctype>
@@ -12244,7 +12244,7 @@
 		<Id>327</Id>
 		<Sortno>419</Sortno>
 		<Bookno>1419</Bookno>
-		<Name>朝雲改</Name>
+		<Name>Asagumo Kai</Name>
 		<Yomi>あさぐも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -12282,7 +12282,7 @@
 		<Id>328</Id>
 		<Sortno>420</Sortno>
 		<Bookno>1420</Bookno>
-		<Name>山雲改</Name>
+		<Name>Yamagumo Kai</Name>
 		<Yomi>やまぐも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>18</Ctype>
@@ -12320,7 +12320,7 @@
 		<Id>329</Id>
 		<Sortno>421</Sortno>
 		<Bookno>1421</Bookno>
-		<Name>野分改</Name>
+		<Name>Nowaki Kai</Name>
 		<Yomi>のわき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -12358,7 +12358,7 @@
 		<Id>330</Id>
 		<Sortno>422</Sortno>
 		<Bookno>1422</Bookno>
-		<Name>秋月改</Name>
+		<Name>Akizuki Kai</Name>
 		<Yomi>あきづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>54</Ctype>
@@ -12480,7 +12480,7 @@
 		<Id>334</Id>
 		<Sortno>504</Sortno>
 		<Bookno>1504</Bookno>
-		<Name>U-511改</Name>
+		<Name>U-511 Kai</Name>
 		<Yomi>ゆー511・ろ500</Yomi>
 		<Stype>13</Stype>
 		<Ctype>57</Ctype>
@@ -12567,7 +12567,7 @@
 		<Id>343</Id>
 		<Sortno>423</Sortno>
 		<Bookno>1423</Bookno>
-		<Name>香取改</Name>
+		<Name>Katori Kai</Name>
 		<Yomi>かとり</Yomi>
 		<Stype>21</Stype>
 		<Ctype>56</Ctype>
@@ -12605,7 +12605,7 @@
 		<Id>344</Id>
 		<Sortno>424</Sortno>
 		<Bookno>1424</Bookno>
-		<Name>朝霜改</Name>
+		<Name>Asashimo Kai</Name>
 		<Yomi>あさしも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -12643,7 +12643,7 @@
 		<Id>345</Id>
 		<Sortno>425</Sortno>
 		<Bookno>1425</Bookno>
-		<Name>高波改</Name>
+		<Name>Takanami Kai</Name>
 		<Yomi>たかなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -12681,7 +12681,7 @@
 		<Id>346</Id>
 		<Sortno>426</Sortno>
 		<Bookno>1426</Bookno>
-		<Name>照月改</Name>
+		<Name>Teruzuki Kai</Name>
 		<Yomi>てるづき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>54</Ctype>
@@ -12719,7 +12719,7 @@
 		<Id>347</Id>
 		<Sortno>427</Sortno>
 		<Bookno>1427</Bookno>
-		<Name>Libeccio改</Name>
+		<Name>Libeccio Kai</Name>
 		<Yomi>リベッチオ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>61</Ctype>
@@ -12757,7 +12757,7 @@
 		<Id>348</Id>
 		<Sortno>428</Sortno>
 		<Bookno>1428</Bookno>
-		<Name>瑞穂改</Name>
+		<Name>Mizuho Kai</Name>
 		<Yomi>みずほ</Yomi>
 		<Stype>16</Stype>
 		<Ctype>62</Ctype>
@@ -12795,7 +12795,7 @@
 		<Id>349</Id>
 		<Sortno>429</Sortno>
 		<Bookno>1429</Bookno>
-		<Name>風雲改</Name>
+		<Name>Kazagumo Kai</Name>
 		<Yomi>かざぐも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -12833,7 +12833,7 @@
 		<Id>350</Id>
 		<Sortno>430</Sortno>
 		<Bookno>1430</Bookno>
-		<Name>海風改</Name>
+		<Name>Umikaze Kai</Name>
 		<Yomi>うみかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -12871,7 +12871,7 @@
 		<Id>351</Id>
 		<Sortno>431</Sortno>
 		<Bookno>1431</Bookno>
-		<Name>江風改</Name>
+		<Name>Kawakaze Kai</Name>
 		<Yomi>かわかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -12909,7 +12909,7 @@
 		<Id>352</Id>
 		<Sortno>432</Sortno>
 		<Bookno>1432</Bookno>
-		<Name>速吸改</Name>
+		<Name>Hayasui Kai</Name>
 		<Yomi>はやすい</Yomi>
 		<Stype>22</Stype>
 		<Ctype>60</Ctype>
@@ -12947,7 +12947,7 @@
 		<Id>353</Id>
 		<Sortno>433</Sortno>
 		<Bookno>1433</Bookno>
-		<Name>Graf Zeppelin改</Name>
+		<Name>Graf Zeppelin Kai</Name>
 		<Yomi>グラーフ・ツェッペリン</Yomi>
 		<Stype>11</Stype>
 		<Ctype>63</Ctype>
@@ -12985,7 +12985,7 @@
 		<Id>354</Id>
 		<Sortno>434</Sortno>
 		<Bookno>1434</Bookno>
-		<Name>嵐改</Name>
+		<Name>Arashi Kai</Name>
 		<Yomi>あらし</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -13023,7 +13023,7 @@
 		<Id>355</Id>
 		<Sortno>435</Sortno>
 		<Bookno>1435</Bookno>
-		<Name>萩風改</Name>
+		<Name>Hagikaze Kai</Name>
 		<Yomi>はぎかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -13061,7 +13061,7 @@
 		<Id>356</Id>
 		<Sortno>436</Sortno>
 		<Bookno>1436</Bookno>
-		<Name>鹿島改</Name>
+		<Name>Kashima Kai</Name>
 		<Yomi>かしま</Yomi>
 		<Stype>21</Stype>
 		<Ctype>56</Ctype>
@@ -13099,7 +13099,7 @@
 		<Id>357</Id>
 		<Sortno>437</Sortno>
 		<Bookno>1437</Bookno>
-		<Name>Iowa改</Name>
+		<Name>Iowa Kai</Name>
 		<Yomi>アイオワ</Yomi>
 		<Stype>8</Stype>
 		<Ctype>64</Ctype>
@@ -13137,7 +13137,7 @@
 		<Id>398</Id>
 		<Sortno>498</Sortno>
 		<Bookno>1498</Bookno>
-		<Name>伊168改</Name>
+		<Name>I-168 Kai</Name>
 		<Yomi>い168</Yomi>
 		<Stype>13</Stype>
 		<Ctype>35</Ctype>
@@ -13175,7 +13175,7 @@
 		<Id>399</Id>
 		<Sortno>499</Sortno>
 		<Bookno>1499</Bookno>
-		<Name>伊58改</Name>
+		<Name>I-58 Kai</Name>
 		<Yomi>い58</Yomi>
 		<Stype>14</Stype>
 		<Ctype>36</Ctype>
@@ -13213,7 +13213,7 @@
 		<Id>400</Id>
 		<Sortno>500</Sortno>
 		<Bookno>1500</Bookno>
-		<Name>伊8改</Name>
+		<Name>I-8 Kai</Name>
 		<Yomi>い8</Yomi>
 		<Stype>14</Stype>
 		<Ctype>40</Ctype>
@@ -13251,7 +13251,7 @@
 		<Id>401</Id>
 		<Sortno>501</Sortno>
 		<Bookno>1501</Bookno>
-		<Name>伊19改</Name>
+		<Name>I-19 Kai</Name>
 		<Yomi>い19</Yomi>
 		<Stype>14</Stype>
 		<Ctype>39</Ctype>
@@ -13289,7 +13289,7 @@
 		<Id>402</Id>
 		<Sortno>502</Sortno>
 		<Bookno>1502</Bookno>
-		<Name>まるゆ改</Name>
+		<Name>Maruyu Kai</Name>
 		<Yomi>まるゆ</Yomi>
 		<Stype>13</Stype>
 		<Ctype>46</Ctype>
@@ -13327,7 +13327,7 @@
 		<Id>403</Id>
 		<Sortno>503</Sortno>
 		<Bookno>1503</Bookno>
-		<Name>伊401改</Name>
+		<Name>I-401 Kai</Name>
 		<Yomi>い401</Yomi>
 		<Stype>14</Stype>
 		<Ctype>44</Ctype>
@@ -13443,7 +13443,7 @@
 		<Id>406</Id>
 		<Sortno>206</Sortno>
 		<Bookno>206</Bookno>
-		<Name>雲龍改</Name>
+		<Name>Unryuu Kai</Name>
 		<Yomi>うんりゅう</Yomi>
 		<Stype>11</Stype>
 		<Ctype>53</Ctype>
@@ -13481,7 +13481,7 @@
 		<Id>407</Id>
 		<Sortno>207</Sortno>
 		<Bookno>207</Bookno>
-		<Name>潮改二</Name>
+		<Name>Ushio Kai Ni</Name>
 		<Yomi>うしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -13519,7 +13519,7 @@
 		<Id>408</Id>
 		<Sortno>208</Sortno>
 		<Bookno>208</Bookno>
-		<Name>隼鷹改二</Name>
+		<Name>Junyou Kai Ni</Name>
 		<Yomi>じゅんよう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>24</Ctype>
@@ -13635,7 +13635,7 @@
 		<Id>411</Id>
 		<Sortno>211</Sortno>
 		<Bookno>211</Bookno>
-		<Name>扶桑改二</Name>
+		<Name>Fusou Kai Ni</Name>
 		<Yomi>ふそう</Yomi>
 		<Stype>10</Stype>
 		<Ctype>26</Ctype>
@@ -13673,7 +13673,7 @@
 		<Id>412</Id>
 		<Sortno>212</Sortno>
 		<Bookno>212</Bookno>
-		<Name>山城改二</Name>
+		<Name>Yamashiro Kai Ni</Name>
 		<Yomi>やましろ</Yomi>
 		<Stype>10</Stype>
 		<Ctype>26</Ctype>
@@ -13828,7 +13828,7 @@
 		<Id>416</Id>
 		<Sortno>216</Sortno>
 		<Bookno>216</Bookno>
-		<Name>古鷹改二</Name>
+		<Name>Furutaka Kai Ni</Name>
 		<Yomi>ふるたか</Yomi>
 		<Stype>5</Stype>
 		<Ctype>7</Ctype>
@@ -13866,7 +13866,7 @@
 		<Id>417</Id>
 		<Sortno>217</Sortno>
 		<Bookno>217</Bookno>
-		<Name>加古改二</Name>
+		<Name>Kako Kai Ni</Name>
 		<Yomi>かこ</Yomi>
 		<Stype>5</Stype>
 		<Ctype>7</Ctype>
@@ -13910,7 +13910,7 @@
 		<Id>419</Id>
 		<Sortno>219</Sortno>
 		<Bookno>219</Bookno>
-		<Name>初霜改二</Name>
+		<Name>Hatsushimo Kai Ni</Name>
 		<Yomi>はつしも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>10</Ctype>
@@ -13948,7 +13948,7 @@
 		<Id>420</Id>
 		<Sortno>220</Sortno>
 		<Bookno>220</Bookno>
-		<Name>叢雲改二</Name>
+		<Name>Murakumo Kai Ni</Name>
 		<Yomi>むらくも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -14148,7 +14148,7 @@
 		<Id>426</Id>
 		<Sortno>226</Sortno>
 		<Bookno>226</Bookno>
-		<Name>吹雪改二</Name>
+		<Name>Fubuki Kai Ni</Name>
 		<Yomi>ふぶき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -14186,7 +14186,7 @@
 		<Id>427</Id>
 		<Sortno>227</Sortno>
 		<Bookno>227</Bookno>
-		<Name>鳥海改二</Name>
+		<Name>Choukai Kai Ni</Name>
 		<Yomi>ちょうかい</Yomi>
 		<Stype>5</Stype>
 		<Ctype>8</Ctype>
@@ -14224,7 +14224,7 @@
 		<Id>428</Id>
 		<Sortno>228</Sortno>
 		<Bookno>228</Bookno>
-		<Name>摩耶改二</Name>
+		<Name>Maya Kai Ni</Name>
 		<Yomi>まや</Yomi>
 		<Stype>5</Stype>
 		<Ctype>8</Ctype>
@@ -14262,7 +14262,7 @@
 		<Id>429</Id>
 		<Sortno>229</Sortno>
 		<Bookno>229</Bookno>
-		<Name>天城改</Name>
+		<Name>Amagi Kai</Name>
 		<Yomi>あまぎ</Yomi>
 		<Stype>11</Stype>
 		<Ctype>53</Ctype>
@@ -14300,7 +14300,7 @@
 		<Id>430</Id>
 		<Sortno>230</Sortno>
 		<Bookno>230</Bookno>
-		<Name>葛城改</Name>
+		<Name>Katsuragi Kai</Name>
 		<Yomi>かつらぎ</Yomi>
 		<Stype>11</Stype>
 		<Ctype>53</Ctype>
@@ -14422,7 +14422,7 @@
 		<Id>434</Id>
 		<Sortno>198</Sortno>
 		<Bookno>198</Bookno>
-		<Name>睦月改二</Name>
+		<Name>Mutsuki Kai Ni</Name>
 		<Yomi>むつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -14460,7 +14460,7 @@
 		<Id>435</Id>
 		<Sortno>199</Sortno>
 		<Bookno>199</Bookno>
-		<Name>如月改二</Name>
+		<Name>Kisaragi Kai Ni</Name>
 		<Yomi>きさらぎ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -14536,7 +14536,7 @@
 		<Id>437</Id>
 		<Sortno>163</Sortno>
 		<Bookno>163</Bookno>
-		<Name>暁改二</Name>
+		<Name>Akatsuki Kai Ni</Name>
 		<Yomi>あかつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -14792,7 +14792,7 @@
 		<Id>447</Id>
 		<Sortno>239</Sortno>
 		<Bookno>239</Bookno>
-		<Name>Roma改</Name>
+		<Name>Roma Kai</Name>
 		<Yomi>ローマ</Yomi>
 		<Stype>8</Stype>
 		<Ctype>58</Ctype>
@@ -14842,7 +14842,7 @@
 		<Id>450</Id>
 		<Sortno>240</Sortno>
 		<Bookno>240</Bookno>
-		<Name>秋津洲改</Name>
+		<Name>Akitsushima Kai</Name>
 		<Yomi>あきつしま</Yomi>
 		<Stype>16</Stype>
 		<Ctype>59</Ctype>
@@ -15171,7 +15171,7 @@
 		<Id>461</Id>
 		<Sortno>242</Sortno>
 		<Bookno>242</Bookno>
-		<Name>翔鶴改二</Name>
+		<Name>Shoukaku Kai Ni</Name>
 		<Yomi>しょうかく</Yomi>
 		<Stype>11</Stype>
 		<Ctype>33</Ctype>
@@ -15210,7 +15210,7 @@
 		<Id>462</Id>
 		<Sortno>243</Sortno>
 		<Bookno>243</Bookno>
-		<Name>瑞鶴改二</Name>
+		<Name>Zuikaku Kai Ni</Name>
 		<Yomi>ずいかく</Yomi>
 		<Stype>11</Stype>
 		<Ctype>33</Ctype>
@@ -15333,7 +15333,7 @@
 		<Id>466</Id>
 		<Sortno>247</Sortno>
 		<Bookno>247</Bookno>
-		<Name>翔鶴改二甲</Name>
+		<Name>Shoukaku Kai Ni A</Name>
 		<Yomi>しょうかく</Yomi>
 		<Stype>18</Stype>
 		<Ctype>33</Ctype>
@@ -15372,7 +15372,7 @@
 		<Id>467</Id>
 		<Sortno>248</Sortno>
 		<Bookno>248</Bookno>
-		<Name>瑞鶴改二甲</Name>
+		<Name>Zuikaku Kai Ni A</Name>
 		<Yomi>ずいかく</Yomi>
 		<Stype>18</Stype>
 		<Ctype>33</Ctype>
@@ -16959,7 +16959,7 @@
 		<Id>544</Id>
 		<Sortno>0</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Armored Carrier Demon</Name>
+		<Name>装 A空母鬼</Name>
 		<Yomi />
 		<Stype>10</Stype>
 		<Ctype>1</Ctype>
@@ -16995,7 +16995,7 @@
 		<Id>545</Id>
 		<Sortno>0</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Armored Carrier Princess</Name>
+		<Name>装 A空母姫</Name>
 		<Yomi />
 		<Stype>10</Stype>
 		<Ctype>1</Ctype>
@@ -20343,7 +20343,7 @@
 		<Id>650</Id>
 		<Sortno>0</Sortno>
 		<Bookno>0</Bookno>
-		<Name>運河棲姫</Name>
+		<Name>Canal Princess</Name>
 		<Yomi />
 		<Stype>10</Stype>
 		<Ctype>1</Ctype>
@@ -20379,7 +20379,7 @@
 		<Id>651</Id>
 		<Sortno>0</Sortno>
 		<Bookno>0</Bookno>
-		<Name>運河棲姫</Name>
+		<Name>Canal Princess</Name>
 		<Yomi />
 		<Stype>10</Stype>
 		<Ctype>1</Ctype>
@@ -20415,7 +20415,7 @@
 		<Id>652</Id>
 		<Sortno>0</Sortno>
 		<Bookno>0</Bookno>
-		<Name>運河棲姫</Name>
+		<Name>Canal Princess</Name>
 		<Yomi />
 		<Stype>10</Stype>
 		<Ctype>1</Ctype>
@@ -20559,7 +20559,7 @@
 		<Id>901</Id>
 		<Sortno>901</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Xmas那珂</Name>
+		<Name>Xmas Naka</Name>
 		<Yomi>なか</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -20597,7 +20597,7 @@
 		<Id>902</Id>
 		<Sortno>902</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Xmas那珂改二</Name>
+		<Name>Xmas Naka Kai Ni</Name>
 		<Yomi>なか</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -20635,7 +20635,7 @@
 		<Id>903</Id>
 		<Sortno>903</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Xmas時雨改二</Name>
+		<Name>Xmas Shigure Kai Ni</Name>
 		<Yomi>しぐれ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -20673,7 +20673,7 @@
 		<Id>904</Id>
 		<Sortno>904</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Xmas龍驤</Name>
+		<Name>Xmas Ryuujou</Name>
 		<Yomi>りゅうじょう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>32</Ctype>
@@ -20711,7 +20711,7 @@
 		<Id>905</Id>
 		<Sortno>905</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Xmas龍驤改二</Name>
+		<Name>Xmas Ryuujou Kai Ni</Name>
 		<Yomi>りゅうじょう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>32</Ctype>
@@ -20749,7 +20749,7 @@
 		<Id>906</Id>
 		<Sortno>906</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Xmas漣</Name>
+		<Name>Xmas Sazanami</Name>
 		<Yomi>さざなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -20787,7 +20787,7 @@
 		<Id>907</Id>
 		<Sortno>907</Sortno>
 		<Bookno>0</Bookno>
-		<Name>年末曙</Name>
+		<Name>Year-end Akebono</Name>
 		<Yomi>あけぼの</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -20825,7 +20825,7 @@
 		<Id>908</Id>
 		<Sortno>908</Sortno>
 		<Bookno>0</Bookno>
-		<Name>正月夕立改二</Name>
+		<Name>New Year Yuudachi Kai Ni</Name>
 		<Yomi>ゆうだち</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -20863,7 +20863,7 @@
 		<Id>909</Id>
 		<Sortno>909</Sortno>
 		<Bookno>0</Bookno>
-		<Name>正月明石</Name>
+		<Name>New Year Akashi</Name>
 		<Yomi>あかし</Yomi>
 		<Stype>19</Stype>
 		<Ctype>49</Ctype>
@@ -20901,7 +20901,7 @@
 		<Id>910</Id>
 		<Sortno>910</Sortno>
 		<Bookno>0</Bookno>
-		<Name>正月明石改</Name>
+		<Name>New Year Akashi Kai</Name>
 		<Yomi>あかし</Yomi>
 		<Stype>19</Stype>
 		<Ctype>49</Ctype>
@@ -20939,7 +20939,7 @@
 		<Id>911</Id>
 		<Sortno>911</Sortno>
 		<Bookno>0</Bookno>
-		<Name>正月大淀</Name>
+		<Name>New Year Ooyodo</Name>
 		<Yomi>おおよど</Yomi>
 		<Stype>3</Stype>
 		<Ctype>52</Ctype>
@@ -20977,7 +20977,7 @@
 		<Id>912</Id>
 		<Sortno>912</Sortno>
 		<Bookno>0</Bookno>
-		<Name>正月大淀改</Name>
+		<Name>New Year Ooyodo Kai</Name>
 		<Yomi>おおよど</Yomi>
 		<Stype>3</Stype>
 		<Ctype>52</Ctype>
@@ -21015,7 +21015,7 @@
 		<Id>913</Id>
 		<Sortno>913</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Valentine睦月</Name>
+		<Name>Valentine Mutsuki</Name>
 		<Yomi>むつき</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -21053,7 +21053,7 @@
 		<Id>914</Id>
 		<Sortno>914</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Valentine如月</Name>
+		<Name>Valentine Kisaragi</Name>
 		<Yomi>きさらぎ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>28</Ctype>
@@ -21091,7 +21091,7 @@
 		<Id>915</Id>
 		<Sortno>915</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Valentine叢雲</Name>
+		<Name>Valentine Murakumo</Name>
 		<Yomi>むらくも</Yomi>
 		<Stype>2</Stype>
 		<Ctype>12</Ctype>
@@ -21129,7 +21129,7 @@
 		<Id>916</Id>
 		<Sortno>916</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Valentine時雨改二</Name>
+		<Name>Valentine Shigure Kai Ni</Name>
 		<Yomi>しぐれ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -21167,7 +21167,7 @@
 		<Id>917</Id>
 		<Sortno>917</Sortno>
 		<Bookno>0</Bookno>
-		<Name>Valentine浜風</Name>
+		<Name>Valentine Hamakaze</Name>
 		<Yomi>はまかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -21205,7 +21205,7 @@
 		<Id>918</Id>
 		<Sortno>918</Sortno>
 		<Bookno>0</Bookno>
-		<Name>梅雨祥鳳</Name>
+		<Name>Rainy Season Shouhou</Name>
 		<Yomi>しょうほう</Yomi>
 		<Stype>7</Stype>
 		<Ctype>11</Ctype>
@@ -21243,7 +21243,7 @@
 		<Id>919</Id>
 		<Sortno>919</Sortno>
 		<Bookno>0</Bookno>
-		<Name>梅雨村雨改</Name>
+		<Name>Rainy Season Murasame Kai</Name>
 		<Yomi>むらさめ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -21281,7 +21281,7 @@
 		<Id>920</Id>
 		<Sortno>920</Sortno>
 		<Bookno>0</Bookno>
-		<Name>梅雨高波</Name>
+		<Name>Rainy Season Takanami</Name>
 		<Yomi>たかなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>38</Ctype>
@@ -21319,7 +21319,7 @@
 		<Id>921</Id>
 		<Sortno>921</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏朧</Name>
+		<Name>Summer Oboro</Name>
 		<Yomi>おぼろ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -21357,7 +21357,7 @@
 		<Id>922</Id>
 		<Sortno>922</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏曙</Name>
+		<Name>Summer Akebono</Name>
 		<Yomi>あけぼの</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -21395,7 +21395,7 @@
 		<Id>923</Id>
 		<Sortno>923</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏漣</Name>
+		<Name>Summer Sazanami</Name>
 		<Yomi>さざなみ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -21433,7 +21433,7 @@
 		<Id>924</Id>
 		<Sortno>924</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏潮</Name>
+		<Name>Summer Ushio</Name>
 		<Yomi>うしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -21471,7 +21471,7 @@
 		<Id>925</Id>
 		<Sortno>925</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏潮改二</Name>
+		<Name>Summer Ushio Kai Ni</Name>
 		<Yomi>うしお</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -21509,7 +21509,7 @@
 		<Id>926</Id>
 		<Sortno>926</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏白露改</Name>
+		<Name>Summer Shiratsuyu Kai</Name>
 		<Yomi>しらつゆ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -21547,7 +21547,7 @@
 		<Id>927</Id>
 		<Sortno>927</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏時雨改二</Name>
+		<Name>Summer Shigure Kai Ni</Name>
 		<Yomi>しぐれ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -21585,7 +21585,7 @@
 		<Id>928</Id>
 		<Sortno>928</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏夕立改二</Name>
+		<Name>Summer Yuudachi Kai Ni</Name>
 		<Yomi>ゆうだち</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -21623,7 +21623,7 @@
 		<Id>929</Id>
 		<Sortno>929</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏村雨改</Name>
+		<Name>Summer Murasame Kai</Name>
 		<Yomi>むらさめ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -21661,7 +21661,7 @@
 		<Id>930</Id>
 		<Sortno>930</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏天龍</Name>
+		<Name>Summer Tenryuu</Name>
 		<Yomi>てんりゅう</Yomi>
 		<Stype>3</Stype>
 		<Ctype>21</Ctype>
@@ -21699,7 +21699,7 @@
 		<Id>931</Id>
 		<Sortno>931</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏龍田</Name>
+		<Name>Summer Tatsuta</Name>
 		<Yomi>たつた</Yomi>
 		<Stype>3</Stype>
 		<Ctype>21</Ctype>
@@ -21737,7 +21737,7 @@
 		<Id>932</Id>
 		<Sortno>932</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏明石改</Name>
+		<Name>Summer Akashi Kai</Name>
 		<Yomi>あかし</Yomi>
 		<Stype>19</Stype>
 		<Ctype>49</Ctype>
@@ -21775,7 +21775,7 @@
 		<Id>933</Id>
 		<Sortno>933</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏Littorio</Name>
+		<Name>Summer Littorio</Name>
 		<Yomi>リットリオ・イタリア</Yomi>
 		<Stype>8</Stype>
 		<Ctype>58</Ctype>
@@ -21813,7 +21813,7 @@
 		<Id>934</Id>
 		<Sortno>934</Sortno>
 		<Bookno>0</Bookno>
-		<Name>夏Italia</Name>
+		<Name>Summer Italia</Name>
 		<Yomi>リットリオ・イタリア</Yomi>
 		<Stype>8</Stype>
 		<Ctype>58</Ctype>
@@ -21851,7 +21851,7 @@
 		<Id>935</Id>
 		<Sortno>935</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋朧</Name>
+		<Name>Autumn Oboro</Name>
 		<Yomi>おぼろ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>1</Ctype>
@@ -21889,7 +21889,7 @@
 		<Id>936</Id>
 		<Sortno>936</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋磯風</Name>
+		<Name>Autumn Isokaze</Name>
 		<Yomi>いそかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -21927,7 +21927,7 @@
 		<Id>937</Id>
 		<Sortno>937</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋磯風改</Name>
+		<Name>Autumn Isokaze Kai</Name>
 		<Yomi>いそかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -21965,7 +21965,7 @@
 		<Id>938</Id>
 		<Sortno>938</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋浦風</Name>
+		<Name>Autumn Urakaze</Name>
 		<Yomi>うらかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -22003,7 +22003,7 @@
 		<Id>939</Id>
 		<Sortno>939</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋浜風</Name>
+		<Name>Autumn Hamakaze</Name>
 		<Yomi>はまかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>30</Ctype>
@@ -22041,7 +22041,7 @@
 		<Id>940</Id>
 		<Sortno>940</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋江風</Name>
+		<Name>Autumn Kawakaze</Name>
 		<Yomi>かわかぜ</Yomi>
 		<Stype>2</Stype>
 		<Ctype>23</Ctype>
@@ -22079,7 +22079,7 @@
 		<Id>941</Id>
 		<Sortno>941</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋Z1</Name>
+		<Name>Autumn Z1</Name>
 		<Yomi>レーベレヒト・マース</Yomi>
 		<Stype>2</Stype>
 		<Ctype>48</Ctype>
@@ -22117,7 +22117,7 @@
 		<Id>942</Id>
 		<Sortno>942</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋雷</Name>
+		<Name>Autumn Ikazuchi</Name>
 		<Yomi>いかづち</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -22155,7 +22155,7 @@
 		<Id>943</Id>
 		<Sortno>943</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋電</Name>
+		<Name>Autumn Inazuma</Name>
 		<Yomi>いなづま</Yomi>
 		<Stype>2</Stype>
 		<Ctype>5</Ctype>
@@ -22193,7 +22193,7 @@
 		<Id>944</Id>
 		<Sortno>944</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋長良</Name>
+		<Name>Autumn Nagara</Name>
 		<Yomi>ながら</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -22231,7 +22231,7 @@
 		<Id>945</Id>
 		<Sortno>945</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋名取</Name>
+		<Name>Autumn Natori</Name>
 		<Yomi>なとり</Yomi>
 		<Stype>3</Stype>
 		<Ctype>20</Ctype>
@@ -22269,7 +22269,7 @@
 		<Id>946</Id>
 		<Sortno>946</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋球磨</Name>
+		<Name>Autumn Kuma</Name>
 		<Yomi>くま</Yomi>
 		<Stype>3</Stype>
 		<Ctype>4</Ctype>
@@ -22307,7 +22307,7 @@
 		<Id>947</Id>
 		<Sortno>947</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋多摩</Name>
+		<Name>Autumn Tama</Name>
 		<Yomi>たま</Yomi>
 		<Stype>3</Stype>
 		<Ctype>4</Ctype>
@@ -22345,7 +22345,7 @@
 		<Id>948</Id>
 		<Sortno>948</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋大淀改</Name>
+		<Name>Autumn Ooyodo Kai</Name>
 		<Yomi>おおよど</Yomi>
 		<Stype>3</Stype>
 		<Ctype>52</Ctype>
@@ -22383,7 +22383,7 @@
 		<Id>949</Id>
 		<Sortno>949</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋神通改二</Name>
+		<Name>Autumn Jintsuu Kai Ni</Name>
 		<Yomi>じんつう</Yomi>
 		<Stype>3</Stype>
 		<Ctype>16</Ctype>
@@ -22421,7 +22421,7 @@
 		<Id>950</Id>
 		<Sortno>950</Sortno>
 		<Bookno>0</Bookno>
-		<Name>秋瑞穂</Name>
+		<Name>Autumn Mizuho</Name>
 		<Yomi>みずほ</Yomi>
 		<Stype>16</Stype>
 		<Ctype>62</Ctype>
