@@ -1399,7 +1399,7 @@
 	<Type>7</Type>
 	<Torigger>144</Torigger>
 	<Name>"Surface Strike Fleet" to the S\nouth!</Name>
-	<Details>Deploy a fleet with 3 slow BBs, 1 CL and 2 \nadditional ships to World V5-1 in \nthe Southern Sea and defeat the Boss.</Details>
+	<Details>Deploy a fleet with only 3 of the following classes: \nYamato-class, Nagato-class, Ise-class and Fusou-class \nSlow Battleships, 1 CL and 2 additional ships \nto World V5-1 in the Southern Sea and defeat the Boss.</Details>
 	<Get_1>1,4,6</Get_1>
 	<Get_2>1,4,8</Get_2>
 	<Mat>400,400,800,0</Mat>
