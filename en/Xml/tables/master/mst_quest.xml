@@ -757,7 +757,7 @@
 	<Category>1</Category>
 	<Type>1</Type>
 	<Torigger>239,127</Torigger>
-	<Name>Organize a powerful \nSubmarine Fleet</Name>
+	<Name>Organize a powerful \nSubmarine Fleet!</Name>
 	<Details>Have a level 80 Submarine as flagship \nwith atleast 3 other lvl 40 \nSubmarines in any of your fleets</Details>
 	<Get_1>12,1,67</Get_1>
 	<Get_2>1,3,7</Get_2>
@@ -768,7 +768,7 @@
 	<Category>1</Category>
 	<Type>1</Type>
 	<Torigger>296,164</Torigger>
-	<Name>Organize a powerful \nSubmarine Fleet</Name>
+	<Name>Organize a powerful \n"Aviation Battleship" squadron!</Name>
 	<Details>Have Ise Kai, Hyuga Kai, Fuso Kai-Ni, \nand 2 DDs in a fleet. </Details>
 	<Get_1>12,1,80</Get_1>
 	<Get_2>1,3,7</Get_2>
@@ -1139,7 +1139,7 @@
 	<Type>1</Type>
 	<Torigger>206,109</Torigger>
 	<Name>Patrol the Northern Strait!</Name>
-	<Details>Deploy to World V7-3 in the South \nAnchorage Sea and score 3 S rank \nvictories against the Boss. </Details>
+	<Details>Deploy to World V8-2 in the North \nAnchorage Sea and score 3 S rank \nvictories against the Boss. </Details>
 	<Get_1>12,1,28</Get_1>
 	<Get_2>101,150,1</Get_2>
 	<Mat>300,0,300,0</Mat>
@@ -1149,7 +1149,7 @@
 	<Category>2</Category>
 	<Type>1</Type>
 	<Torigger>207,237</Torigger>
-	<Name>Control South connecting sea zone!</Name>
+	<Name>Control South Connecting Sea zone!</Name>
 	<Details>Deploy to World V9-1 in the South \nConnecting Sea and Achieve B+ Rank at \nthe Boss Node.</Details>
 	<Get_1>12,1,46</Get_1>
 	<Get_2>103,2,1</Get_2>
@@ -1161,7 +1161,7 @@
 	<Type>1</Type>
 	<Torigger>235,316</Torigger>
 	<Name>Anti Submarine Patrol Track \nAnchorage!</Name>
-	<Details>Deploy to World V9-1 in the South Connecting Sea and destroy \nenemy submarines.</Details>
+	<Details>Deploy to World V7-1 in the South Anchorage Sea and destroy \nenemy submarines.</Details>
 	<Get_1>11,1,89</Get_1>
 	<Get_2>101,150,1</Get_2>
 	<Mat>300,300,300,0</Mat>
@@ -1367,7 +1367,7 @@
 	<Type>6</Type>
 	<Torigger>254</Torigger>
 	<Name>Deploy the "Submarine Fleet"!</Name>
-	<Details>Deploy a fleet with 3 or more Submarines \nto world V6-1 in the Central Sea \nand score an S rank at the Boss node \n3 times.</Details>
+	<Details>Deploy a fleet with only three or more \nSubmarines to world V6-1 in the Central Sea \nand score a S? rank or better at the \nBoss node 3 times.</Details>
 	<Get_1>13,1,59</Get_1>
 	<Get_2>3,1,12</Get_2>
 	<Mat>0,600,0,0</Mat>
@@ -1399,7 +1399,7 @@
 	<Type>7</Type>
 	<Torigger>144</Torigger>
 	<Name>"Surface Strike Fleet" to the S\nouth!</Name>
-	<Details>Deploy a fleet with only 3 of the following classes: \nYamato-class, Nagato-class, Ise-class and Fusou-class \nSlow Battleships, 1 CL and 2 additional ships \nto World V5-1 in the Southern Sea and defeat the Boss.</Details>
+	<Details>Deploy a fleet with 3 slow BBs, 1 CL and 2 \nadditional ships to World V5-1 in \nthe Southern Sea and defeat the Boss.</Details>
 	<Get_1>1,4,6</Get_1>
 	<Get_2>1,4,8</Get_2>
 	<Mat>400,400,800,0</Mat>
@@ -1476,7 +1476,7 @@
 	<Type>7</Type>
 	<Torigger>263,147</Torigger>
 	<Name>"Surface Counterattack Fleet" Charge!</Name>
-	<Details>Deploy 3 BB(V) + 1 CL + 2 ships to World V11-4 in \nthe Central Western Sea and score an \nS-rank the Boss node.</Details>
+	<Details>Deploy 2 DD(Flag) + 1 CA + 1 CL + 2 ships to \n Central Western Sea V11-4 and score an \nS-rank the Boss node.</Details>
 	<Get_1>1,4,7</Get_1>
 	<Get_2>1,5,8</Get_2>
 	<Mat>300,600,0,300</Mat>
@@ -1553,7 +1553,7 @@
 	<Type>1</Type>
 	<Torigger>307</Torigger>
 	<Name>Newly-Formed "Mikawa Fleet" to \nthe Solomon Region!</Name>
-	<Details>ith Choukai Kai Ni (flagship) plus 5 ships \nfrom the following: Furutaka, Kako, Aoba, \nKinugasa, Yuubari and Tenryuu. Obtain S-rank \nvictory at the Boss node of World V5-1 in the \nSouthern Sea.</Details>
+	<Details>With Choukai Kai Ni (flagship) plus 5 ships \nfrom the following: Furutaka, Kako, Aoba, \nKinugasa, Yuubari and Tenryuu. Obtain S-rank \nvictory at the Boss node of World V5-1 in the \nSouthern Sea.</Details>
 	<Get_1>13,1,57</Get_1>
 	<Get_2>1,6,7</Get_2>
 	<Mat>700,700,0,0</Mat>
@@ -1564,7 +1564,7 @@
 	<Type>1</Type>
 	<Torigger>120,216</Torigger>
 	<Name>"6th Destroyer Division" \nAnti-Submarine Patrol!</Name>
-	<Details>Sortie Akatsuki, Hibiki/Вер, Ikazuchi, and \nInazuma to V9-3 in \nthe Southern Connecting Sea and obtain a \nC-Rank or better at the Boss, Akatsuki must \nbe flagship.</Details>
+	<Details>Sortie Akatsuki, Hibiki/Вер, Ikazuchi, and \nInazuma to V9-2 in \nthe Southern Connecting Sea and obtain a \nC-Rank or better at the Boss, Akatsuki must \nbe flagship.</Details>
 	<Get_1>12,1,46</Get_1>
 	<Get_2>1,4,7</Get_2>
 	<Mat>200,200,200,0</Mat>
@@ -2161,7 +2161,7 @@
 	<Category>4</Category>
 	<Type>6</Type>
 	<Torigger>410</Torigger>
-	<Name>Name - Continue the [Tokyo Express] \nto the southern sea!</Name>
+	<Name>Continue the [Tokyo Express] \nto the southern sea!</Name>
 	<Details>Carry out the [Tokyo Express] \nmissions of  the Southern Sea and \nclear them 6 times.</Details>
 	<Get_1>103,1,1</Get_1>
 	<Get_2>1,2,8</Get_2>
@@ -2195,7 +2195,7 @@
 	<Type>1</Type>
 	<Torigger>139</Torigger>
 	<Name>Central Western sea submarine patrol</Name>
-	<Details>Send a fleet of 3 submarines to \nthe 4th expedition [Submarine Patrol] of \nthe Central Western Sea</Details>
+	<Details>Send a fleet of 3 submarines to \nthe 4th expedition [Submarine Patrol] of \nthe Central Western Sea twice</Details>
 	<Get_1>12,1,95</Get_1>
 	<Mat>100,100,0,0</Mat>
 </mst_quest>
@@ -2205,7 +2205,7 @@
 	<Type>1</Type>
 	<Torigger>414</Torigger>
 	<Name>Carry Out Distant Ocean \nSubmarine Operation!</Name>
-	<Details>Carry out "Distant Ocean Submarine Operation" \nto increase the submarine fleet's \nexperience and reduce the enemy fleet!</Details>
+	<Details>Carry out "Distant Ocean Submarine Operation" \nto increase the submarine fleet's \nexperience and reduce the enemy fleet! twice</Details>
 	<Get_1>12,1,95</Get_1>
 	<Mat>150,150,0,0</Mat>
 </mst_quest>
@@ -2237,7 +2237,7 @@
 	<Type>1</Type>
 	<Torigger>137</Torigger>
 	<Name>Perform the Fleet Review \nRehearsal!</Name>
-	<Details>Prepare a fleet for the 5th expedition \n[Fleet Review Rehearsal] of the Naval District \nSea and and clear it 2 times!</Details>
+	<Details>Prepare a fleet for the 5th expedition \n[Fleet Review Rehearsal] of the Naval District \nSea and clear it 2 times!</Details>
 	<Get_1>1,3,7</Get_1>
 	<Mat>200,0,200,0</Mat>
 </mst_quest>
