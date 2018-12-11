@@ -21,12 +21,15 @@ sub plain_or_asset {
 sub run {
     my $cwd        = io(".")->absolute->pathname;
     my $patch_dir  = "../kc_original_unpack_modded";
-    my $src_dir    = "../kc_translation_mod";
+    my $src_dir    = "../kc_original";
     my $target_dir = "../kc_translation_mod_candidate";
     my $media_dir  = "$target_dir/Media";
     my $asset_dir  = "$media_dir/Unity_Assets_Files";
     my $unity_ex   = io("../unity_tools/UnityEX.exe")->absolute->pathname;
     my $verbose    = grep /^-v$/, @ARGV;
+
+    say "deleting candidate dir";
+    io($target_dir)->rmtree;
 
     say "prepped, copying patches";
     my @patch_files = grep $_ !~ /\.git/, io($patch_dir)->All_Files;

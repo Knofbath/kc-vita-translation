@@ -27,12 +27,14 @@ sub run {
     my $src_dir = "../kc_original_unpack/Media/Unity_Assets_Files/";
     my @list = $has_find ? split /\n/, `c:/cygwin/bin/find "$src_dir" -type f`    #
       : io($src_dir)->All_Files;
-    @list = map ref $_ ? $_ : io($_), grep !/\.(tex|dds|mat|gobj|shader|txt|xml)$/, @list;
+    @list = map ref $_ ? $_ : io($_), grep !/\.(tex|dds|mat|gobj|shader|txt|xml|ttf)$/, @list;
     say "prepped";
+    my @tr_keys = reverse sort { length $a <=> length $b } keys %tr;
+
     for my $file ( sort @list ) {
         my $content = $file->all;
-        my ( %found, $error );
-        for my $jp ( keys %tr ) {
+        my ( $found, $error );
+        for my $jp (@tr_keys) {
             next if $content !~ /\0([^\0]*$jp[^\0]*?)\0/;
             my $m = $1;
             if ( length $m > length $jp ) {
@@ -40,20 +42,19 @@ sub run {
                 $error++;
                 next;
             }
-            $found{$jp}++ for $content =~ /\0$jp\0/g;
+            $found = $jp;
+            last;
         }
-        my $found_total = sum( 0, values %found );
         my @file_parts = split /\/|\\/, $file;
         $file_parts[1] = "kc_original_unpack_modded";
         my $target = join "/", @file_parts;
-        if ( $found_total != 1 or $error ) {
-            say $file->filename . " " . ( $error ? "problem" : $found_total ? "too many" : "nothing" ) if $found_total;
+        if ( !$found or $error ) {
+            say $file->filename . " " . ( $error ? "problem" : "nothing" ) if $found;
             io($target)->unlink if -e $target;
             next;
         }
-        my ($to_translate) = keys %found;
-        my $translation = $tr{$to_translate};
-        $content =~ s/\0$to_translate\0/\0$translation\0/;
+        my $translation = $tr{$found};
+        $content =~ s/\0$found\0/\0$translation\0/g;
         io( io->file($target)->filepath )->mkpath;
         io($target)->print($content);
         say $file->filename . " done - '$translation'";

@@ -1,80 +1,81 @@
-1. get app and patch
-2. decrypt both <url>
-3. copy app, then patch into dir "original", overwriting as necessary
-4. copy dir "original" to dir "translation", overwrite with contents of translation patch
+=head1 TODO THINGS
 
-next up, unityex unpacking, sadly gameobjects tree view cannot be unpacked from command line, and ui unpack doesn't create nested trees
+- extend the dictionaries for utf8+16 translation and give them more options and
+  logic
+- speed up application of dictionaries to binary files by cleaning out the
+  unpack dir and using cygwin/find to prefilter more
+- add a flag to the dictionary so strings used multiple times are numbered in
+  patch creation so they can be matched against the output of the patch builder
+  to find which ingame string is in which data file
+- extract japanese strings for the dictionaries from the original files
+- create a dictionary for xml translations, so english XMLs can be built from JP
+- combine all dictionaries
+- maybe set up a way to generate xdelta patches so the distributed translation
+  patch can be smaller
 
-first task though should be creating a script to create translation from original using the repo
+wtf is a monobehavior, is the file format described? found mention that it's a
+base class of unity objects and the exact type is clarified by the ids. needs
+more research.
 
-the unity asset manipulations tools <url> are not great, so they'll mostly be used manually and then binary patches created, i think (xdelta)
+=head1 VISUAL TEXT RESTRICTIONS
 
-dds files extracted via conversion from asset files don'd loat in faststone, but irfanview can handle them. support contacted
-
-
-assembly-csharp was unpacked with jetbrains c# decompiler but not yet repackable. binary patch?
-
-wtf is a monobehavior, is the file format described? found mention that it's a base class of unity objects and the exact type is clarified by the ids. needs more research.
-
-quest descriptions have space for 4 lines, seem to need newlines as they break below ui elements otherwise,
+quest descriptions have space for 4 lines, seem to need newlines as they break
+below ui elements otherwise,
 fit about this much: "Have 2 ships in your main fleet. Mmmmmmm mmm"
 
 ship greeting texts have space for 4 lines and auto-break,
 fit about this much: "mmm mmmmmm mmmmmm mmmmm mmmmmm", 630 px
 
-font for both appears to be A-OTF-ShinGoPro-Regular.ttf, 18, line leading setting of -5
+I have a small script that can calculate the width of a string in a given font.
 
+The font for the bottom pop up menu was too wide, so i replace it during patch
+building with one that's more narrow and fits more characters.
 
-選択 6 "Select"
-提督コマンド 18 "Admiral Command   "
-戦略へ 9 "Strategy "
-決定 6 "Choose"
-戻る 6 "Return"
+=head1 TEXTURES
 
-wrote a script to inject english versions of jp strings via raw string-matching
+These are a bit annoying as a dictionary approach won't work well there. Maybe
+at least transcribe the texts into a glossary?
 
-wrote a script to inject modified binary files back into .asset files in bulk
+In order to avoid degradation by way of DDS compression we use UnityTexTool to
+convert the raw unityex *.tex files directly into PNG and back.
 
+=head1 ASSEMBLY-CSHARP.DLL
 
+Contains mostly strings in UCS-2 LE. But however a FEW strings (enums) are also
+UTF8. No idea if the latter show up ingame.
 
-=head1 Assembly-CSharp.dll
+There's a bunch of tools to inspect this, and even a bunch that can compile a
+dll again, but none of these that i tried were able to recompile the dll into
+something that doesn't crash the vita, so i went the way of binary modding the
+dll.
 
-Contains mostly strings in UCS-2 LE. But however a FEW strings (enums) are also UTF8.
-No idea if the latter show up ingame.
+As for simply unpacking it, Jetbrains C# Decompiler seems to be the best option
+and results in perfectly readable C# code.
 
-> "Most tutorials like this, that I've seen,
-> always use .NET Reflector with the Reflexil plugin.
-> However, I'm going to be using ILSpy,
-> which is a free alternative, with the Reflexil plugin."
-
-https://github.com/icsharpcode/ILSpy/releases
-https://github.com/sailro/Reflexil/releases
-https://github.com/0xd4d/dnSpy/releases
-jetbrains c# decompiler
-
-None of these that i tried were able to recompile the dll into something that doesn't
-crash the vita, so i went the way of binary modding the dll.
-
-Sadly due to the strings being in UTF16 and binary modding not allowing
-changes to the byte length, it's necessary to mod the fonts in order to
-show more characters per byte than usually possible.
+Sadly due to the strings being in UTF16 and binary modding not allowing changes
+to the byte length, it's necessary to mod the fonts in order to show more
+characters per byte than usually possible.
 
 A-OTF-ShinGoPro-Regular.ttf in assets 2, used for quest name texts, ship greetings, ...
 A-OTF-UDShinGoPro-Regular.ttf in assets 3, used for the popup button guide at the bottom, ...
+(there's more fonts)
 
 online font tester: http://torinak.com/font/lsfont.html
 
-For modding fonts i use FontForge. When using it there might be
-an error window in the taskbar but not actually visible,
-click on that and hit esc once.
+For modding fonts i use FontForge. When using it there might be an error window
+in the taskbar but not actually visible, click on that and hit esc once.
 
-Detailed steps from start to finish:
+=head1 BUILDING THE PATCH
 
 The following stuff doesn't need to be done everytime, it's just preparation.
 
 - put unityex in ../unity_tools
 - put the decrypted game in ../kc_original
-- # unpack_original_files.pl
+  - decrypt on console: https://github.com/TheRadziu/NoNpDRM-modding/wiki#obtaining-decrypted-game-assets-from-nonpdrm-rips-through-vitashell-decryption-on-console
+  - decrypt on pc: https://github.com/TheRadziu/NoNpDRM-modding/wiki#obtaining-decrypted-game-assets-from-nonpdrm-rips-through-psvpfstools-decryption-on-pc
+- # perl unpack_original_files.pl
+- after that, delete all *.gobj and *.dds files in kc_original_unpack.
+  they slow things down and aren't needed
 - open ../kc_original\Media\Managed\Assembly-CSharp.dll in JetBrains dotPeek
   - right-click Assembly-CSharp, export to project (might need two clicks (???))
   - ..\kc_original_unpack\Media\Managed\
@@ -83,17 +84,27 @@ The following stuff doesn't need to be done everytime, it's just preparation.
 <dll dictionary updater here (not even sure if we'll need this or just build the
 dictionary manually)>
 
-- edit the files `binary_translations.pm` and `csharp_translations.pm` to add
-new japanese strings to modify, and their translations.
+- edit any of the following files to add new japanese strings or translations
+  - binary_translations.pm for translations in utf8 strings in asset files
+  - csharp_translations.pm for translations in utf16 strings in CSharp.dll
+  - en/Xml/* for bulk texts in raw xml
+  - en/Unity_Assets_Files for images
+- to add translated images the *.tex files in kc_original_unpack will need to be
+  converted to PNG with UnityTexTool. when put in the right directory the patch
+  builder will pick them up on its own
+- to add translations of binary and csharp it will be necessary to locate the
+  exact strings in the binary and add them to the *.pm files
 
-The next script then will do all of this:
+- # perl _build_translation_patch.pl
+
+This script then will do all of this:
 
 It attempts to replace strings in unpacked binary files from the units asset
 files.
 
 It attempts to replace strings in Assembly-CSharp.dll with their translations.
 It might complain, depending on whether the translation dictionary has changed,
-that tuples are missing. Add them judiciously to the `font_mod_character_pairs`
+that tuples are missing. Add them judiciously to the font_mod_character_pairs
 file until it stops complaining. Tuples can probably be very long. The
 translation will be padded if more bytes are necessary. However shorter tuples
 might be useful for reusing things. (Then again we have 5000 glyphs available.)
@@ -101,19 +112,18 @@ might be useful for reusing things. (Then again we have 5000 glyphs available.)
 Then it sets up the fonts to prepare them for injecting character tuples:
 
 - Directories are created with copies of the fonts that contain 5000+
-prepared glyphs in the first "Private Use Area".
+  prepared glyphs in the first "Private Use Area".
 - Then copies of these directories are made and multi-character strings injected
-into the prepared glyphs according to `font_mod_character_pairs`.
+  into the prepared glyphs according to font_mod_character_pairs.
 - After that those mod directories are converted into fonts which are placed in
-the appropriate translation candidate sub-directories.
+  the appropriate translation candidate sub-directories.
 
 (The script caches font directories in ../fonts to speed things up. If you
 suspect something went wrong, deleting either of them will cause them to be
 rebuilt.)
 
 Then it injects the fonts and other asset files from the directory
-`kc_original_unpack_modded` into asset files in `kc_translation_mod_candidate`.
+kc_original_unpack_modded into asset files in kc_translation_mod_candidate.
 
-And lastly it copies everything onto the vita mounted at E:.
-
-- # perl modify_fonts_and_inject.pl
+And lastly it copies everything onto the vita mounted at E: and warns about
+extraneous files there.

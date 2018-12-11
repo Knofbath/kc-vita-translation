@@ -8,21 +8,31 @@ run();
 
 sub run {
     say "copying";
-    my $sums_file = "e:/rePatch/PCSG00684/Media/checksums";
+    my $vita_dir = "e:/rePatch/PCSG00684/Media";
+    my $cand_dir = "../kc_translation_mod_candidate";
 
+    my @vita_files = grep !/checksums/, io($vita_dir)->All_Files;
+    for my $file (@vita_files) {
+        my @file_parts = split /\/|\\/, $file;
+        shift @file_parts for 1 .. 3;
+        my $cand_file = join "/", $cand_dir, @file_parts;
+        next if -e $cand_file;
+        say "file '$file' on vita doesn't exist in candidate dir, recommend delete";
+    }
+
+    my $sums_file = "$vita_dir/checksums";
     my %known_sums = -e $sums_file ? split /\n|\t/, io($sums_file)->all : ();
-
     my %sums;
 
-    my @files = io("../kc_translation_mod_candidate")->All_Files;
+    my @files = reverse sort { $a->size <=> $b->size } io($cand_dir)->All_Files;
     for my $file (@files) {
         print "$file ";
         my @file_parts = split /\/|\\/, $file;
         shift @file_parts for 1 .. 3;
         my $path = join "/", @file_parts;
         $sums{$path} = sha1_base64 $file->all;
-        if ( $sums{$path} eq $known_sums{$path} ) {
-            say " already on vita, skipping";
+        if ( $known_sums{$path} and $sums{$path} eq $known_sums{$path} ) {
+            say " already on vita, skip";
             next;
         }
         say "copying";
