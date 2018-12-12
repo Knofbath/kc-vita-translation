@@ -10,9 +10,9 @@ sub data {
         "戦略へ"                                  => { tr => "Strategy", },
         "戦略へ	"                                 => { tr => "Strategy", },
         "決定"                                     => { tr => "Choose", },
-        "戻る"                                     => { tr => "Return", },
-        "戻る　　決定"                         => { tr => "Return  Choose", },
-        "選択　　戻る　　決定"             => { tr => "Select  Return  Choose", },
+        "戻る"                                     => { tr => "Back", },
+        "戻る　　決定"                         => { tr => "Back  Choose", },
+        "選択　　戻る　　決定"             => { tr => "Select  Back  Choose", },
         "作戦難易度を選択してください" => { tr => "Please select strategy difficulty level", },
         "提督名入力"                            => { tr => "Admiral Name", desc => "(this had to be shortened)", },
 

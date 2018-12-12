@@ -24,13 +24,18 @@ sub data {
         "戦略へ" => { tr => "Strategy", desc => "leads to fleet strategy management screen", ok => 4518868 },
         "決定"    => { tr => "Choose",   desc => "select the currently chosen option",        ok => 4518802 },
         "戻る"    => { tr => "Return",   desc => "back out of the current screen",            ok => 4518826, skip => [ 4566833, 4682617 ] },
-        "らしんばんをまわしてね！" => { desc => "some kind of compass fairy text, using this to find it" },
         "敵艦隊"             => { desc => "" },
         "見ゅ"                => { desc => "" },
         "見ゆ"                => { desc => "" },
         "被弾回避率補正" => { desc => "" },
         "タイトルに戻る" => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
         "提督名入力"       => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
+
+        "らしんばんをまわしてね！" => {
+            tr   => "Spin the compass please!",
+            ok   => 4564621,
+            desc => "a compass fairy text. these are in csharp, but the decompiler doesn't see them. maybe these could default to a cute way of speaking?"
+        },
 
         # https://www.thoughtco.com/can-you-tell-me-the-old-names-of-the-months-2027868
         #this.monthFormat.MonthNames = new string[13]
