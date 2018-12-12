@@ -21,6 +21,26 @@ def glyph_nach_datei(glyph):
 		return "space.glyph"
 	elif glyph == "-":
 		return "uni2010.glyph"
+	elif glyph == "0":
+		return "zero.glyph"
+	elif glyph == "1":
+		return "one.glyph"
+	elif glyph == "2":
+		return "two.glyph"
+	elif glyph == "3":
+		return "three.glyph"
+	elif glyph == "4":
+		return "four.glyph"
+	elif glyph == "5":
+		return "five.glyph"
+	elif glyph == "6":
+		return "six.glyph"
+	elif glyph == "7":
+		return "seven.glyph"
+	elif glyph == "8":
+		return "eight.glyph"
+	elif glyph == "9":
+		return "nine.glyph"
 	else:
 		chars = list(glyph)
 		i = 0
