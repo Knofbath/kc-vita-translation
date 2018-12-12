@@ -20,6 +20,8 @@
   patch can be smaller
 - figure out certain strings that are in csharp.dll, but aren't exposed by the
   decompiler, like compass fairy strings: "ばんをまわしてね"
+- on the "repair costs" screen the number of days it takes to repair overlaps
+  the "days" character
 
 wtf is a monobehavior, is the file format described? found mention that it's a
 base class of unity objects and the exact type is clarified by the ids. needs
