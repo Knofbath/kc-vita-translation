@@ -25,12 +25,12 @@ sub data {
         "決定"    => { tr => "Choose",   desc => "select the currently chosen option",        ok => 4518802 },
         "戻る"    => { tr => "Return",   desc => "back out of the current screen",            ok => 4518826, skip => [ 4566833, 4682617 ] },
         "らしんばんをまわしてね！" => { desc => "some kind of compass fairy text, using this to find it" },
-        "敵艦隊"                            => { desc => "" },
-        "見ゅ"                               => { desc => "" },
-        "見ゆ"                               => { desc => "" },
-        "被弾回避率補正"                => { desc => "" },
-        "タイトルに戻る"                => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
-        "提督名入力"                      => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
+        "敵艦隊"             => { desc => "" },
+        "見ゅ"                => { desc => "" },
+        "見ゆ"                => { desc => "" },
+        "被弾回避率補正" => { desc => "" },
+        "タイトルに戻る" => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
+        "提督名入力"       => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
 
         # https://www.thoughtco.com/can-you-tell-me-the-old-names-of-the-months-2027868
         #this.monthFormat.MonthNames = new string[13]
@@ -62,8 +62,10 @@ sub data {
         "玖" => { tr => "9",  ok => 4594587 },
         "拾" => { tr => "10", ok => 4594597 },
 
-        #"海上護衛艦隊" => { tr => "Return", desc => "" },
-        #"  貴官の提督名をお知らせ下さい。(" + (object) 12 + "文字まで入力可能です)",
+        #"海上護衛艦隊" => { tr => "Return", desc => "" }, # this one is part of some strings in here
+        "  貴官の提督名をお知らせ下さい。(" => { tr => "Please choose your Admiral's name. (Up to ", ok => 4566537 },
+        "文字まで入力可能です)"                  => { tr => " characters can be entered.)",               ok => 4566575 },
+
         # 未配備 # main screen message at the left, but probably handled in assets
     );
 }

@@ -18,6 +18,8 @@
 - combine all dictionaries
 - maybe set up a way to generate xdelta patches so the distributed translation
   patch can be smaller
+- figure out certain strings that are in csharp.dll, but aren't exposed by the
+  decompiler, like compass fairy strings: "ばんをまわしてね"
 
 wtf is a monobehavior, is the file format described? found mention that it's a
 base class of unity objects and the exact type is clarified by the ids. needs
