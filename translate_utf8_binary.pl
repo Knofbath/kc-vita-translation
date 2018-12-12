@@ -76,7 +76,7 @@ sub run {
                     my $search = decode "UTF-8", $jp;
                     while ( $offset < 3 ) {
                         $extract = decode "UTF-8", substr $content, $hit - 16 + $offset, 32 + 16;
-                        last if $extract =~ /$search/;
+                        last if $extract =~ /\Q$search\E/;
                         $offset++;
                     }
                     my $msg = sprintf "hit '$file_hit' %08x %08x for $search not marked skipped or ok, please verify $search in >$extract<", $mod, $hit;

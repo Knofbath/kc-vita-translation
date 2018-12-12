@@ -103,7 +103,7 @@ sub run {
                 my ( $offset, $extract ) = (0);
                 while ( $offset < 3 ) {
                     $extract = decode "UTF-16LE", substr $content, $hit - 16 + $offset, 32 + 16;
-                    last if $extract =~ /$jp/;
+                    last if $extract =~ /\Q$jp\E/;
                     $offset++;
                 }
                 my $msg = sprintf "hit $hit %08x %08x for $jp not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
