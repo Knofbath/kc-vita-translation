@@ -41,6 +41,14 @@ def glyph_nach_datei(glyph):
 		return "eight.glyph"
 	elif glyph == "9":
 		return "nine.glyph"
+	elif glyph == "'":
+		return "quotesingle.glyph"
+	elif glyph == ".":
+		return "period.glyph"
+	elif glyph == "(":
+		return "parenleft.glyph"
+	elif glyph == ")":
+		return "parenright.glyph"
 	else:
 		chars = list(glyph)
 		i = 0
