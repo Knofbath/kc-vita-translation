@@ -12,12 +12,40 @@ sub run {
         {
             name        => "A-OTF-UDShinGoPro-Regular",
             target_path => "Media/Unity_Assets_Files/sharedassets3",
-            src         => "fonts/ume-pgs4.ttf"
+            src         => "fonts/ume-pgs4.ttf"                        # to make this more narrow
         },
         {
             name        => "A-OTF-ShinGoPro-Regular",
             target_path => "Media/Unity_Assets_Files/sharedassets2",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets3/A-OTF-UDShinGoPro-Regular.ttf"
+            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets2/A-OTF-ShinGoPro-Regular.ttf"
+        },
+        {
+            name        => "CenturyGothicStd",
+            target_path => "Media/Unity_Assets_Files/resources",
+            src         => "../kc_original_unpack/Media/Unity_Assets_Files/resources/CenturyGothicStd.ttf"
+        },
+        {
+            name        => "A-OTF-ShinGoPro-Regular-For-ScrollList",
+            target_path => "Media/Unity_Assets_Files/sharedassets5",
+            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets5/A-OTF-ShinGoPro-Regular-For-ScrollList.ttf"
+        },
+
+        {
+            name        => "AxisStd-Regular_1",
+            target_path => "Media/Unity_Assets_Files/sharedassets5",
+            src         => "fonts/ume-pgs4.ttf"                        # munger breaks on these
+                                                                       #    src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets5/AxisStd-Regular_1.ttf"
+        },
+        {
+            name        => "A-OTF-RyuminPr5-ExBold",
+            target_path => "Media/Unity_Assets_Files/sharedassets11",
+            src         => "fonts/ume-pgs4.ttf"                         # munger breaks on these
+                                                                        #    src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets11/A-OTF-RyuminPr5-ExBold.ttf"
+        },
+        {
+            name        => "Century Gothic",
+            target_path => "Media/Unity_Assets_Files/sharedassets26",
+            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets26/Century Gothic.ttf"
         },
     );
     io("../fonts")->mkdir if !-d "../fonts";
@@ -46,8 +74,16 @@ sub mod_font {
         $err =~ s/^The following table.*ignored.*\n(^ .*\n)+//m;
         $err =~ s/^Warning:.*\n(^ .*\n)+//mg;
         $err =~ s/^This font contains both.*\n(^ .*\n)+//m;
+        $err =~ s/^.*SEAC-like endchar operator is deprecated for Type2\n//mg;
+        $err =~ s/^Subtable status not filled in .*\n*//mg;
+        $err =~ s/^The glyph named .* is mapped to .*\n  But its name indicates it should be mapped to .*\n*//mg;                  # research
+        $err =~ s/^Bad sfd file. Glyph .* has width .* even though it should be\n  bound to the width of .* which is .*\n*//mg;    # research
         $out =~ s/^log:.*\n//mg;
-        die "error:\nout:\n$out\nerr:\n$err\nres: $res\n" if $out or $err or $res;
+
+        if ( $out or $err or $res ) {
+            io("../fonts/$font{name}.sfdir")->rmtree;
+            die "error:\nout:\n$out\nerr:\n$err\nres: $res\n";
+        }
     }
 
     say "modding font with multi-glyphs";
