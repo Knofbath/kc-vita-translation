@@ -22,7 +22,7 @@ sub data {
         },
         "配備輸送船数" => { tr => "Cargo ships at sea", },
         "予想獲得資源" => { tr => "Expected Gain", },
-        "海上護衛艦隊" => { tr => "Sea Escort Fleet", },
+        "海上護衛艦隊" => { tr => "Escort Fleet", },
         "回航中"          => { tr => "At Sea", desc => "map screen, tankers at sea, apparently, but also used elsewhere" },
         "未配備"          => { tr => "Undeployd", desc => "one char too long, really need to add glyph aliasing here too" },
 
