@@ -31,5 +31,39 @@ sub data {
         "被弾回避率補正"                => { desc => "" },
         "タイトルに戻る"                => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
         "提督名入力"                      => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
+
+        # https://www.thoughtco.com/can-you-tell-me-the-old-names-of-the-months-2027868
+        #this.monthFormat.MonthNames = new string[13]
+        #{ "睦月", "如月", "弥生", "卯月", "皐月", "水無月", "文月", "葉月", "長月", "神無月", "霜月", "師走", string.Empty };
+        "睦月"    => { tr => "Jan", ok => 4594475 },
+        "如月"    => { tr => "Feb", ok => 4594481 },
+        "弥生"    => { tr => "Mar", ok => 4594487 },
+        "卯月"    => { tr => "Apr", ok => 4594493 },
+        "皐月"    => { tr => "May", ok => 4594499 },
+        "水無月" => { tr => "Jun", ok => 4594505 },
+        "文月"    => { tr => "Jul", ok => 4594513 },
+        "葉月"    => { tr => "Aug", ok => 4594519 },
+        "長月"    => { tr => "Sep", ok => 4594525 },
+        "神無月" => { tr => "Oct", ok => 4594531 },
+        "霜月"    => { tr => "Nov", ok => 4594539 },
+        "師走"    => { tr => "Dec", ok => 4594545 },
+
+        #this.yearFormat = new Dictionary<string, string>()
+        #{ {"0","零"},{"1","壱"},{"2","弐"},{"3","参"},{"4","肆"},{"5","伍"},{"6","陸"},{"7","質"},{"8","捌"},{"9","玖"},{"10","拾"} };
+        "零" => { tr => "0",  ok => 4594551 },
+        "壱" => { tr => "1",  ok => 4594555 },
+        "弐" => { tr => "2",  ok => 4594559 },
+        "参" => { tr => "3",  ok => 4594563 },
+        "肆" => { tr => "4",  ok => 4594567 },
+        "伍" => { tr => "5",  ok => 4594571 },
+        "陸" => { tr => "6",  ok => 4594575 },
+        "質" => { tr => "7",  ok => 4594579 },
+        "捌" => { tr => "8",  ok => 4594583 },
+        "玖" => { tr => "9",  ok => 4594587 },
+        "拾" => { tr => "10", ok => 4594597 },
+
+        #"海上護衛艦隊" => { tr => "Return", desc => "" },
+        #"  貴官の提督名をお知らせ下さい。(" + (object) 12 + "文字まで入力可能です)",
+        # 未配備 # main screen message at the left, but probably handled in assets
     );
 }

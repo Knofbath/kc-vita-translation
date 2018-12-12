@@ -1,5 +1,11 @@
 =head1 TODO THINGS
 
+- Operations button menu untranslated.
+- Options menu untranslated.
+- operations and strategy screens have a bunch of untranslated texts
+- some textures have weird red background (dock empty message) or
+  pink (formations in battle, Diamond, Double Line)
+- Strategy is too wide. Choose is too wide.
 - extend the dictionaries for utf8+16 translation and give them more options and
   logic
 - speed up application of dictionaries to binary files by cleaning out the
@@ -92,8 +98,6 @@ dictionary manually)>
 - to add translated images the *.tex files in kc_original_unpack will need to be
   converted to PNG with UnityTexTool. when put in the right directory the patch
   builder will pick them up on its own
-- to add translations of binary and csharp it will be necessary to locate the
-  exact strings in the binary and add them to the *.pm files
 
 - # perl _build_translation_patch.pl
 
