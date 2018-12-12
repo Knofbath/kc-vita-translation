@@ -73,7 +73,7 @@ sub run {
     my @pairs    = grep $_, map split( /\|/, $_ ), map trim_nl($_), io("font_mod_character_pairs")->getlines;
     my %prepared = map +( $pairs[$_] => chr( $unicode + $_ ) ), 0 .. $#pairs;
 
-    for my $jp ( grep !$tr{$_}{tr}, sort keys %tr ) {
+    for my $jp ( grep !defined $tr{$_}{tr}, sort keys %tr ) {
         say "no translation for $jp, skipping";
         delete $tr{$jp};
     }
