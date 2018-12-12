@@ -106,7 +106,12 @@ sub run {
                     last if $extract =~ /$jp/;
                     $offset++;
                 }
-                say sprintf "hit $hit %08x %08x for $jp not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
+                my $msg = sprintf "hit $hit %08x %08x for $jp not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
+                $msg =~ s/\0/\\0/g;
+                $msg =~ s/\x7/\\7/g;
+                $msg =~ s/\r/\\r/g;
+                $msg =~ s/\n/\\n/g;
+                say $msg;
                 next;
             }
             substr( $content, $hit, length $obj{tr_mapped} ) = $obj{tr_mapped};

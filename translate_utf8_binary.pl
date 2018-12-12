@@ -35,13 +35,14 @@ sub run {
     my %tr = binary_translations->data;
 
     for my $key ( keys %tr ) {
-        my $l  = length $key;
-        my $tr = $tr{$key}{tr};
-        die "translation too long for $key, $tr" if length $tr > $l;
+        my $err_key = decode "UTF-8", $key;
+        my $l       = length $key;
+        my $tr      = $tr{$key}{tr};
+        die "translation too long for '$err_key', '$tr': $l " . length $tr if length $tr > $l;
         while ( my $diff = $l - length $tr ) {    # null width spaces help with formatting, but require 3 bytes
             $tr .= $diff < 3 ? " " : encode "UTF-8", "\x{200B}";
         }
-        die "translation too long for $key, $tr" if length $tr > $l;
+        die "translation too long for '$err_key', '$tr': $l " . length $tr if length $tr > $l;
         $tr{$key}{tr_mapped} = $tr;
     }
     say "grabbing file list";
