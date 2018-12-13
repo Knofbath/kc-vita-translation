@@ -22,20 +22,19 @@ sub get_hits {
 
 sub map_str_to_multi_chars {
     my ( $tr, %prepared ) = @_;
-    my $orig = $tr;
     my @mapped;
     while ( my $l = length $tr ) {
         my $work = $tr;
-        my $hit;
         while ( my $wl = length $work ) {
             last if $prepared{$work} or $wl == 1;
-            say "combination missing: '$work' in '$orig'" if $wl <= 3;
             $work = substr $work, 0, $wl - 1;
         }
-        push @mapped, $prepared{$work} // $work;
+        push @mapped, $work;
         $tr = substr $tr, length $work;
     }
-    return encode "UTF-16LE", join "", @mapped;
+    my $raw = join "|", @mapped;
+    my $encoded = encode "UTF-16LE", join "", map $prepared{$_} // $_, @mapped;
+    return ( $encoded, $raw );
 }
 
 sub pad_multi_char_w_spaces {
@@ -47,11 +46,11 @@ sub pad_multi_char_w_spaces {
 
 sub map_tr_to_multi_chars {
     my ( $jp, $obj, %prepared ) = @_;
-    $obj->{tr_mapped} = map_str_to_multi_chars $obj->{tr}, %prepared;
+    ( $obj->{tr_mapped}, my $raw ) = map_str_to_multi_chars $obj->{tr}, %prepared;
     my $l_src = length encode "UTF-16LE", $jp;
     my $l_tra = length $obj->{tr_mapped};
     $l_tra = pad_multi_char_w_spaces $l_src, $l_tra, $obj if $l_tra < $l_src;
-    die "translation '$jp' => '$obj->{tr}' doesn't match lengths: $l_src => $l_tra, probable char count: " . ( $l_src / 2 ) . "\n"
+    die "translation '$jp' => '$obj->{tr}' doesn't match lengths: $l_src => $l_tra, probable char count: " . ( $l_src / 2 ) . "\ncomposition: $raw\n"
       if $l_src != $l_tra;
     return;
 }
