@@ -28,6 +28,15 @@ sub data {
 
         # 艦隊   状態   艦種   艦船名    Lv    耐久   火力   対空   速カ
         # 1st column is whether they are assigned to a fleet, 2nd is the current state(at sea/has acted), ship type, ship name, Lv, Armor, Firepower, Anti-Air, and Speed
+        # 艦隊 - Fleet Number. Defines which fleet the ship is assigned to.
+        # 状態 - Condition
+        # 艦種 - Ship Class - probably just best to say "Class"
+        # 艦船名 - Ship Name - go with Name
+        # Lv - Obviously no need to translate
+        # 耐久 - Hit Points or Health
+        # 火力 - Firepower or ATK
+        # 対空 - Anti-air or Air Defense
+        # 速カ - Speed
         #[1:06 AM] Knofbep: i think i was wrong about the 2nd column, it's probably just for at-sea
         #[1:06 AM] Knofbep: the damage shows up 2nd to last column
         #[1:06 AM] Knofbep: next to the heart lock
