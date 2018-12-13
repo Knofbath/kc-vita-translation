@@ -28,15 +28,15 @@ sub data {
 
         # 艦隊   状態   艦種   艦船名    Lv    耐久   火力   対空   速カ
         # 1st column is whether they are assigned to a fleet, 2nd is the current state(at sea/has acted), ship type, ship name, Lv, Armor, Firepower, Anti-Air, and Speed
-        # 艦隊 - Fleet Number. Defines which fleet the ship is assigned to.
-        # 状態 - Condition
-        # 艦種 - Ship Class - probably just best to say "Class"
-        # 艦船名 - Ship Name - go with Name
+        # 艦隊 - "Fleet" : Fleet Number. Defines which fleet the ship is assigned to.
+        # 状態 - "State" : Status/Condition of current fleet
+        # 艦種 - "Class" : Ship Class - maybe "Hull"
+        # 艦船名 - "Name" : Ship Name - go with Name
         # Lv - Obviously no need to translate
-        # 耐久 - Hit Points or Health
-        # 火力 - Firepower or ATK
-        # 対空 - Anti-air or Air Defense
-        # 速カ - Speed
+        # 耐久 - "Health" : Hit Points or Health I definitely prefer not to use generic HP for clarity
+        # 火力 - "FP" : Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power
+        # 対空 - "AA" : Anti-air or Air Defense
+        # 速カ - "SPD" : Speed
         #[1:06 AM] Knofbep: i think i was wrong about the 2nd column, it's probably just for at-sea
         #[1:06 AM] Knofbep: the damage shows up 2nd to last column
         #[1:06 AM] Knofbep: next to the heart lock
@@ -44,11 +44,11 @@ sub data {
         # https://cdn.discordapp.com/attachments/235919493686231051/522203328923435018/2017-05-02-221035.jpg
 
         # 新しい週になりました！ _shii_ninarimashita! maybe here or in csharp, weekly resource bonus
-        # 新しい月、霜月  となりました ! - Monthly Resource Bonus
-        # 新しい月、師走  となりました ! - Monthly Resource Bonus, example 2
+        # 新しい月、霜月  となりました ! - "A new month, September, is here!" or, "...has arrived." - Monthly Resource Bonus
+        # 新しい月、師走  となりました ! - "A new month, December, is here!" or, "...has arrived." - Monthly Resource Bonus, example 2
 
-        # ターンを終了しますか？   - Quick Turn End by hitting Square
-        # ターン終了             - Quick Turn End, hit Square to confirm
+        # ターンを終了しますか？   - "Do you want to end your turn?" - Quick Turn End by hitting Square - performed on Operations Screen.
+        # ターン終了             - "End of Turn"-  Quick Turn End, hit Square to confirm
 
         # Enemy Raiding
         # 護衛艦損傷！        - Escort ship damage!
