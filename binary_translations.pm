@@ -62,5 +62,21 @@ sub data {
         # （基本経験値）       -(Basic experience value) # only as part of a longer text in Assembly-CSharp\local\models\battle\BattleResultModel.cs
         "獲得アイテム" => { tr => "Earned items", desc => "followed by icons and numbers which don't need translation" },
         
+        # Map screen
+        # どこに進む？        - Where do you go?
+        
+        # Compass Fairy
+        # よーし、らしんばんまわすよー！   - Well, I'm going to spin everything!
+        # えいっ               - Ei ~tsu - Translate says Ei, some sort of exclamation?
+        # それっ               - Sore ~tsu - Translate says That
+        
+        # Battle formation screen
+        # 陣形を選択してください。- Please select the formation.
+        # 単縦陣               - Line Ahead
+        # 複縦陣               - Double Line
+        # 輪形陣               - Diamond
+        # 梯形陣               - Echelon
+        # 単横陣               - Line Abreast
+        
     );
 }
