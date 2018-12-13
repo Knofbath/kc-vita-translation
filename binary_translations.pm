@@ -63,12 +63,12 @@ sub data {
         "獲得アイテム" => { tr => "Earned items", desc => "followed by icons and numbers which don't need translation" },
         
         # Map screen
-        # どこに進む？        - Where do you go?
+        # どこに進む？        - "Where do you want to go?" or " Where to now?" - Where do you go?
         
         # Compass Fairy
-        # よーし、らしんばんまわすよー！   - Well, I'm going to spin everything!
-        # えいっ               - Ei ~tsu - Translate says Ei, some sort of exclamation?
-        # それっ               - Sore ~tsu - Translate says That
+        # よーし、らしんばんまわすよー！   - "Alright, I'll spin the compass!"
+        # えいっ               - "Eh!" - it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.
+        # それっ               - "Take That!" or "That!" - can also use "This". remember implied words. once more with the っ. 
         
         # Battle formation screen
         # 陣形を選択してください。- Please select the formation.
@@ -76,7 +76,7 @@ sub data {
         # 複縦陣               - Double Line
         # 輪形陣               - Diamond
         # 梯形陣               - Echelon
-        # 単横陣               - Line Abreast
+        # 単横陣               - Line Abreast - these are all the accepted translations already. so yes.
         
     );
 }
