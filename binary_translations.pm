@@ -30,11 +30,11 @@ sub data {
         # ship table headers
         "艦隊" => { tr => "Fleet", desc => "Fleet Number. Defines which fleet the ship is assigned to." },
         "状態" => { tr => "State", desc => "Status/Condition of current fleet (red is has acted, blue is on expedition, blue is (maybe) 'on deployment', and blue is at sea again)" },
-        "艦種" => { tr => "Class", desc => "Ship Class - maybe 'Hull'" },
+        "艦種" => { tr => "Type", desc => "Ship Class - maybe 'Hull'" },
         "艦船名" => { tr => "Name", desc => "Ship Name - go with Name" },
         # Lv - Obviously no need to translate
-        "耐久" => { tr => "Health", desc => "Hit Points or Health I definitely prefer not to use generic HP for clarity" },
-        "火力" => { tr => "FP", desc => "Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power" },
+        "耐久" => { tr => "HP", desc => "Hit Points or Health I definitely prefer not to use generic HP for clarity" },
+        "火力" => { tr => "ATK", desc => "Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power" },
         "対空" => { tr => "AA", desc => "Anti-air or Air Defense" },
         "速力" => { tr => "SPD", desc => "Speed" },
         #[1:06 AM] Knofbep: the damage shows up 2nd to last column
