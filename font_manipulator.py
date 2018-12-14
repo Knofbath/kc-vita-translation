@@ -49,6 +49,8 @@ def glyph_nach_datei(glyph):
 		return "parenleft.glyph"
 	elif glyph == ")":
 		return "parenright.glyph"
+	elif glyph == "!":
+		return "exclam.glyph"
 	else:
 		chars = list(glyph)
 		i = 0
