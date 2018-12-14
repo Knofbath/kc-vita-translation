@@ -59,14 +59,27 @@ def glyph_nach_datei(glyph):
 			i+=1
 		return "".join(chars) + ".glyph"
 
+def make_pairs(l):
+    for i in range(0, len(l), 2): # For item i in a range that is a length of l,
+        yield l[i:i+2]            # Create an index range for l of n items:
+
 def stems_zerlegen(stemstring):
 	ausgabe = []
 	for stem in stemstring.split(">"):
 		if stem.strip():
-			ebene = stem.split("<")[0].split()
-			positionen_roh = stem.split("<")[1].split()
-			positionen = map(list,zip(*[iter(positionen_roh)]*2))
-			ausgabe += [[ebene, positionen]]
+			stem_parts = stem.split("<")
+			ebene = stem_parts[0].split()
+			if len(ebene) != 2:
+				ebene_pairs = list(make_pairs(ebene))
+				while len(ebene_pairs) > 1:
+					ausgabe += [[ebene_pairs.pop(0)]]
+				ebene = ebene_pairs.pop(0)
+			if len(stem_parts) == 2:
+				positionen_roh = stem_parts[1].split()
+				positionen = map(list,zip(*[iter(positionen_roh)]*2))
+				ausgabe += [[ebene, positionen]]
+			else:
+				ausgabe += [[ebene]]
 	return ausgabe
 
 def stems_vereinen(stemslist):
@@ -75,7 +88,8 @@ def stems_vereinen(stemslist):
 		neu = True
 		for bestehender_stem in ausgabe:
 			if stem[0] == bestehender_stem[0]:
-				bestehender_stem[1] += stem[1]
+				if len(stem) == 2:
+					bestehender_stem[1] += stem[1]
 				neu = False
 				break
 		if neu:
@@ -86,9 +100,11 @@ def stems_nach_string(stems):
 	ausgabe = ""
 	for stem in stems:
 		ausgabe += " ".join(stem[0])
-		ausgabe += "<"
-		ausgabe += " ".join([komp for position in stem[1] for komp in position])
-		ausgabe += "> "
+		if len(stem) == 2:
+			ausgabe += "<"
+			ausgabe += " ".join([komp for position in stem[1] for komp in position])
+			ausgabe += ">"
+		ausgabe += " "
 	return ausgabe
 
 class Schrift:
@@ -201,9 +217,10 @@ class Schrift:
 
 			if j < len(hstems):
 				for hstem in hstems[j]:
-					for position in hstem[1]:
-						for i in (0,1):
-							position[i] = str(string_auswerten(position[i]) + verschiebung)
+					if len(hstem) == 2:
+						for position in hstem[1]:
+							for i in (0,1):
+								position[i] = str(string_auswerten(position[i]) + verschiebung)
 
 			if j < len(vstems):
 				for vstem in vstems[j]:
