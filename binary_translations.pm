@@ -47,6 +47,7 @@ sub data {
 
         "ターンを終了しますか？" => { tr => "Do you want to end your turn?", desc => "Quick Turn End by hitting Square - performed on Operations Screen." },
         "ターン終了" => { tr => "End of Turn", desc => "Quick Turn End, hit Square to confirm" },
+        "[12c112]ターン終了[-]" => { tr => "[12c112]End of Turn[-]", desc => "Quick Turn End, hit Square to confirm" },
 
         # Enemy Raiding
         # these are embedded in sharedassets5/Atlas_RaderHukidashi.tex
@@ -62,21 +63,6 @@ sub data {
         # （基本経験値）       -(Basic experience value) # only as part of a longer text in Assembly-CSharp\local\models\battle\BattleResultModel.cs
         "獲得アイテム" => { tr => "Earned items", desc => "followed by icons and numbers which don't need translation" },
         
-        # Map screen
-        # どこに進む？        - "Where do you want to go?" or " Where to now?" - Where do you go?
-        
-        # Compass Fairy
-        # よーし、らしんばんまわすよー！   - "Alright, I'll spin the compass!"
-        # えいっ               - "Eh!" - it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.
-        # それっ               - "Take That!" or "That!" - can also use "This". remember implied words. once more with the っ. 
-        
-        # Battle formation screen
-        # 陣形を選択してください。- Please select the formation.
-        # 単縦陣               - Line Ahead
-        # 複縦陣               - Double Line
-        # 輪形陣               - Diamond
-        # 梯形陣               - Echelon
-        # 単横陣               - Line Abreast - these are all the accepted translations already. so yes.
-        
+        "単縦陣" => { tr => "LineAhead", desc => "and another one that needs font replacement" },
     );
 }

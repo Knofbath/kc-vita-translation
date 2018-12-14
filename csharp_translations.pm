@@ -88,10 +88,35 @@ sub data {
             ]
         },
 
-        "獲得アイテム:{0}" => { tr => "Earned items:{0}" },
+        "獲得アイテム:{0}" => { tr => "Earned items:{0}", ok => 4601141, desc => "tbh not sure where exactly this is" },
 
         # this.Title.text = monthName.Length != 2 ? "新しい月、　　　　となりました！" : "新しい月、　　　となりました！";
-        "新しい月、　　　　となりました！" => { tr => "A new month,　　　　, is here!", desc => "the month is rendered as a separate string into the gap" },
-        "新しい月、　　　となりました！" => { tr => "A new month,　　　, is here!", desc => "the month is rendered as a separate string into the gap" },
+        "新しい月、　　　　となりました！" => { tr => "A new month,　　　　, is here!", ok => 4572711, desc => "the month is rendered as a separate string into the gap" },
+        "新しい月、　　　となりました！"    => { tr => "A new month,　　　, is here!",    ok => 4572679, desc => "the month is rendered as a separate string into the gap" },
+
+        # Map screen
+        "どこに進む？" => {
+            tr   => "Where to now?",
+            ok   => [ 4564133, 4698584 ],                               # i am VERY unsure about these hits, they'll require verification
+            desc => q["Where do you want to go?" or " Where to now?"]
+        },
+
+        # Compass Fairy
+        "よーし、らしんばんまわすよー！" => { tr => "Alright, I'll spin the compass!", ok => 4564557 },
+        "えいっ"                                     => {
+            tr => "Eh!",
+            ok => 4564647,
+            desc =>
+q[it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.]
+        },
+        "それっ" => { tr => "Take that!", ok => 4564655, desc => q["Take That!" or "That!" - can also use "This". remember implied words. once more with the っ. (i think it could also be "There!")] },
+
+        # Battle formation screen
+        "陣形を選択してください。" => { tr => "Please select the formation.", ok => [ 4564073, 4698793 ] },
+        "単縦陣" => { tr => "Line Ahead", ok => 4501426 },
+        "複縦陣" => { tr => "Double Line", ok => 4501434 },
+        "輪形陣" => { tr => "Diamond", ok => 4501442 },
+        "梯形陣" => { tr => "Echelon", ok => 4501450 },
+        "単横陣" => { tr => "Line Abreast", ok => 4501458, desc => "these are all the accepted translations already. so yes." },
     );
 }
