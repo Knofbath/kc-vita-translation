@@ -171,29 +171,29 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         "単横陣" => { tr => "Line Abreast", ok => 'a-csharp 4501458', desc => "these are all the accepted translations already. so yes. See if you can do a carriage return after Line ina all of these." },
         
         
-        # 獲得可能資材
-        # 残り輸送船数
-        # 必要輸送船数
+        # 獲得可能資材 - "Materials Available" [OC] that means out of context and i reserve the right to edit later.
+        # 残り輸送船数 - "Ships Remaining" [OC]
+        # 必要輸送船数 - "Required Number of Ships" [OC]
         
-        # ここっ
-        # はやくはやくー！
+        # ここっ - "Here!" but with exertion.
+        # はやくはやくー！ - "Hurry! Hury!" - i may localize it a little better.
         # Missing one in the middle here, just not fast enough to confirm and screenshot
-        # とまれ一つ
-        # えー？らしんばん、まわすのー？
+        # とまれ一つ - "" i will come back to this one. more context needed.
+        # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please"
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
         
-        # 艦隊の針路を選択できます。
-        # 提督、どちらの針路を選択しますか？
+        # 艦隊の針路を選択できます。 - "Plot the fleets course."
+        # 提督、どちらの針路を選択しますか？ - "Admiral, pick a course?" could be "Admiral, which course do you prefer?"
 
-        # この艦隊で出撃しますか？
-        # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。
+        # この艦隊で出撃しますか？ - "Sortie this fleet?"
+        # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。 - "If you have too many Shipgirls, there is a possibility of not getting a Shipgirl reward."
         # Example: https://i.imgur.com/Z6yQfbF.png
         
         # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
-        # 補給してよろしいですか？
-        # 必要燃料数
-        # 必要弾薬数
+        # 補給してよろしいですか？ - "Resupply with the following?" - this is more localized.
+        # 必要燃料数 - "Fuel needed" [OC] - maybe required?
+        # 必要弾薬数 - "Ammunition needed" [OC]  - maybe required.
         
         # 接近            - Approach
         # 離脱            - Escape or Retreat
