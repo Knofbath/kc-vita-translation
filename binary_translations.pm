@@ -20,9 +20,9 @@ sub data {
             tr => "Please choose your Admiral's name.\n(Up to 12 characters can be entered.)",
             ok => 'level5/level5_00004.-6 196'
         },
-        "配備輸送船数" => { tr => "Transport ships", desc => "Number of deployed shipping vessels, Cargo ships in area" },
+        "配備輸送船数" => { tr => "Transports", desc => "Number of deployed shipping vessels, Cargo ships in area" },
         "予想獲得資源" => { tr => "Expected Gain", desc => "Expected acquisition resources (Daily Resource Generation) Fuel, Ammo, Steel, Bauxite per map hex" },
-        "海上護衛艦隊" => { tr => "Escort Fleet", desc => "Maritime Escort Fleet" },
+        "海上護衛艦隊" => { tr => "Escort fleet", desc => "Maritime Escort Fleet" },
         "回航中"          => { tr => "At Sea", desc => "map screen, tankers at sea, apparently, but also used elsewhere" },
         "未配備"          => { tr => "No Escort", desc => "Undeployed - one char too long, really need to add glyph aliasing here too" },
 
