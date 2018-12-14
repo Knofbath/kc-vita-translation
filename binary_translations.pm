@@ -189,15 +189,16 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # https://cdn.discordapp.com/attachments/235919493686231051/523259716009328658/2018-12-14-010022.png
         # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
-        # 。。。ん。         -  "Huh?" - Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]
+        # 。。。ん。         -  "...un!" - grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
-        # 。。。。。。あい    -  "Yes" - Literally "...ai" - Or, maybe she is just making a sound. Hard to tell OC, really need to get it in game to know.
+        # 。。。。。。あい    -  "...aww" - Literally "...ai" - Or, maybe she is just making a sound. I am going to play with this some.
         
         # 艦隊の針路を選択できます。 - "Plot the fleets course."
         # 提督、どちらの針路を選択しますか？ - "Admiral, pick a course?" could be "Admiral, which course do you prefer?"
 
         # この艦隊で出撃しますか？ - "Sortie this fleet?"
-        # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。 - "If you have too many Shipgirls, there is a possibility of not getting a Shipgirl reward."
+        # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。 - "※If you have too many Ship Girls, there is a possibility of not getting a Ship Girl reward." - Edited for consistency. 
+        # I want to point out, the symbol ※ is used as a Bullet Point Mark.
         # Example: https://i.imgur.com/Z6yQfbF.png
         
         # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
