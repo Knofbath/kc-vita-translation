@@ -176,17 +176,18 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # 必要輸送船数 - "Required Number of Ships" [OC]
         
         # Compass fairy with bob haircut
-        # ここっ           - "Here!" but with exertion.
+        # ここっ - "Here!" but with exertion.
         # Compass fairy with chick on head
-        # はやくはやくー！    - "Hurry! Hurry!" - i may localize it a little better.
-        # えいえいえーいっ    - "I love you
-        # とまれ一つ         - "" i will come back to this one. more context needed.
+        # はやくはやくー！ - "Hurry! Hurry!" - i may localize it a little better. "C'mon! Hurry up!" alternate, more localized. Kind of like it myself.
+        # えいえいえーいっ - "" I need to see it in use for flavour. Knofbath translation does not feel right at this time.
+        # とまれ一つ - "And Another One" i will come back to this one. more context needed.
         # Compass fairy who is sleepy
-        # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already." 
-        # 。。。ん。         - https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
-        # 。。。。。。あい    - https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
+        # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."
+        # 。。。ん。         -  "....n."
+        # 。。。。。。あい    -  "...ai"
+        # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
+        # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
         
-
         # 艦隊の針路を選択できます。 - "Plot the fleets course."
         # 提督、どちらの針路を選択しますか？ - "Admiral, pick a course?" could be "Admiral, which course do you prefer?"
 
@@ -196,22 +197,22 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         
         # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
         # 補給してよろしいですか？ - "Resupply with the following?" - this is more localized.
-        # 必要燃料数 - "Fuel Required" - maybe needed? Yes, "Fuel Required"
-        # 必要弾薬数 - "Ammunition Required" - maybe needed. Do first test with "Ammunition". If that does not fit, use "Ammo Required".
-
-        # 接近            - Approach
-        # 離脱            - Escape or Retreat
-        # 航空攻撃         - Aerial Attack 
-        # 砲撃            - Shelling
-        # 対潜攻撃         - Anti-submarine attack or Anti-submarine warfare(ASW)
-        # 突撃（接近+砲撃） - Charge, increase accuracy while decreasing evasion
-        # 雷撃            - Torpedo, can be opener and closer if ships have right equipment or are high-level subs
-        # 回避            - Evasion, no attack
-        # 統射            - Coordinated Shelling or Radar-coordinated Shelling
+        # 必要燃料数 - "Fuel Required" - maybe "Needed"?
+        # 必要弾薬数 - "Ammunition Required" - maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.
         
-        # 制空権確保         - Air Supremacy or Air Superiority Ensured
-        # 航空優勢          - Air Superiority
-        # 制空権喪失         - Air Incapability or Air Superiority Lost
+        # 接近            - "Approach"
+        # 離脱            - "Withdraw" - Escape or Retreat
+        # 航空攻撃         - "Air Strike" - Aerial Attack 
+        # 砲撃            - "Shelling" - Bombard could work as well. 
+        # 対潜攻撃         - "Anti-Submarine" - Anti-submarine attack or Anti-submarine warfare(ASW)
+        # 突撃（接近+砲撃） - "Assault (Approach + Shelling)" - Charge, increase accuracy while decreasing evasion
+        # 雷撃            - "Torpedo" - can be opener and closer if ships have right equipment or are high-level subs
+        # 回避            - "Evasion" - no attack
+        # 統射            - "Coordinated Shelling" Tough one. It literally breaks down into Unified Archery. For now, I am going to go with Coordinated Shelling to see how it fits - Radar-coordinated Shelling
+        
+        # 制空権確保         - "Air Secured" - Air Supremacy or Air Superiority Ensured
+        # 航空優勢          - "Air Advantage" - Air Superiority
+        # 制空権喪失         - "Air Disadvantage" - Air Incapability or Air Superiority Lost
         
     );
 }
