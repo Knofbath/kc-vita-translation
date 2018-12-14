@@ -36,7 +36,7 @@ sub data {
         "耐久" => { tr => "Health", desc => "Hit Points or Health I definitely prefer not to use generic HP for clarity" },
         "火力" => { tr => "FP", desc => "Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power" },
         "対空" => { tr => "AA", desc => "Anti-air or Air Defense" },
-        "速カ" => { tr => "SPD", desc => "Speed" },
+        "速力" => { tr => "SPD", desc => "Speed" },
         #[1:06 AM] Knofbep: the damage shows up 2nd to last column
         #[1:06 AM] Knofbep: next to the heart lock
         # https://cdn.discordapp.com/attachments/235919493686231051/522193240510693396/2018-12-11-182050.png
