@@ -104,7 +104,7 @@ sub data {
         # Compass Fairy
         "よーし、らしんばんまわすよー！" => { tr => "Alright, I'll spin the compass!", ok => 4564557 },
         "えいっ"                                     => {
-            tr => "Eh!",
+            tr => "Ey!",
             ok => 4564647,
             desc =>
 q[it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.]
