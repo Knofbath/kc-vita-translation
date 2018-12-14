@@ -50,7 +50,7 @@ sub map_tr_to_multi_chars {
     my $l_src = length encode "UTF-16LE", $jp;
     my $l_tra = length $obj->{tr_mapped};
     $l_tra = pad_multi_char_w_spaces $l_src, $l_tra, $obj if $l_tra < $l_src;
-    die "translation '$jp' => '$obj->{tr}' doesn't match lengths: $l_src => $l_tra, probable char count: " . ( $l_src / 2 ) . "\ncomposition: $raw\n"
+    return "translation '$jp' => '$obj->{tr}' doesn't match lengths: $l_src => $l_tra, probable char count: " . ( $l_src / 2 ) . "\ncomposition: $raw\n"
       if $l_src != $l_tra;
     return;
 }
@@ -76,7 +76,8 @@ sub run {
         say "no translation for $jp, skipping";
         delete $tr{$jp};
     }
-    map_tr_to_multi_chars( $_, $tr{$_}, %prepared ) for sort keys %tr;
+    my @too_long = map map_tr_to_multi_chars( $_, $tr{$_}, %prepared ), sort keys %tr;
+    die join "\n", @too_long, "\n" if @too_long;
 
     my $rel_path = "Media/Managed/Assembly-CSharp.dll";
     my $src      = "../kc_original/$rel_path";
@@ -85,6 +86,8 @@ sub run {
     io($tgt)->unlink if -f $tgt;
 
     my $content = io($src)->all;
+
+    say "note that this will attempt to output useful dumps, but sometimes they go corrupt, fiddling or asking mithaldu is your best bet";
 
     my ( %found, $error );
     for my $jp ( reverse sort { length $a <=> length $b } sort keys %tr ) {
@@ -101,13 +104,12 @@ sub run {
                 my $mod = $hit - ( $hit % 16 );
                 my ( $offset, $extract ) = (0);
                 while ( $offset < 3 ) {
-                    $extract = decode "UTF-16LE", substr $content, $hit - 16 + $offset, 32 + 16;
+                    $extract = decode "UTF-16LE", substr $content, $hit - 8 + $offset, 16 + 2 * length encode "UTF-16LE", $jp;
                     last if $extract =~ /\Q$jp\E/;
                     $offset++;
                 }
                 my $msg = sprintf "hit $hit %08x %08x for $jp not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
-                $msg =~ s/\0/\\0/g;
-                $msg =~ s/\x7/\\7/g;
+                $msg =~ s/\x$_/\\$_/g for 0 .. 9;
                 $msg =~ s/\r/\\r/g;
                 $msg =~ s/\n/\\n/g;
                 say $msg;
