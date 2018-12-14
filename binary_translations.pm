@@ -179,7 +179,7 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # はやくはやくー！ - "Hurry! Hury!" - i may localize it a little better.
         # Missing one in the middle here, just not fast enough to confirm and screenshot
         # とまれ一つ - "" i will come back to this one. more context needed.
-        # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please"
+        # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already." 
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
         
