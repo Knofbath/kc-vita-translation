@@ -1,5 +1,6 @@
 package binary_translations;
 use strictures 2;
+use utf8;
 
 1;
 
