@@ -169,5 +169,20 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         "輪形陣" => { tr => "Diamond", ok => 'a-csharp 4501442' },
         "梯形陣" => { tr => "Echelon", ok => 'a-csharp 4501450' },
         "単横陣" => { tr => "Line Abreast", ok => 'a-csharp 4501458', desc => "these are all the accepted translations already. so yes. See if you can do a carriage return after Line ina all of these." },
+        
+        
+        # 獲得可能資材
+        # 残り輸送船数
+        # 必要輸送船数
+        
+        # ここっ
+        # はやくはやくー！
+        # 艦隊の針路を選択できます。
+        # 提督、どちらの針路を選択しますか？
+
+        # この艦隊で出撃しますか？
+        # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。
+        # Example: https://i.imgur.com/Z6yQfbF.png
+        
     );
 }
