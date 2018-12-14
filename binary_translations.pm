@@ -175,14 +175,18 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # 残り輸送船数 - "Ships Remaining" [OC]
         # 必要輸送船数 - "Required Number of Ships" [OC]
         
-        # ここっ - "Here!" but with exertion.
-        # はやくはやくー！ - "Hurry! Hurry!" - i may localize it a little better.
-        # Missing one in the middle here, just not fast enough to confirm and screenshot
-        # とまれ一つ - "" i will come back to this one. more context needed.
+        # Compass fairy with bob haircut
+        # ここっ           - "Here!" but with exertion.
+        # Compass fairy with chick on head
+        # はやくはやくー！    - "Hurry! Hurry!" - i may localize it a little better.
+        # えいえいえーいっ    - "I love you
+        # とまれ一つ         - "" i will come back to this one. more context needed.
+        # Compass fairy who is sleepy
         # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already." 
-        # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
-        # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
+        # 。。。ん。         - https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
+        # 。。。。。。あい    - https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
         
+
         # 艦隊の針路を選択できます。 - "Plot the fleets course."
         # 提督、どちらの針路を選択しますか？ - "Admiral, pick a course?" could be "Admiral, which course do you prefer?"
 
@@ -192,9 +196,9 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         
         # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
         # 補給してよろしいですか？ - "Resupply with the following?" - this is more localized.
-        # 必要燃料数 - "Fuel Required" - maybe needed?
+        # 必要燃料数 - "Fuel Required" - maybe needed? Yes, "Fuel Required"
         # 必要弾薬数 - "Ammunition Required" - maybe needed. Do first test with "Ammunition". If that does not fit, use "Ammo Required".
-        
+
         # 接近            - Approach
         # 離脱            - Escape or Retreat
         # 航空攻撃         - Aerial Attack 
