@@ -71,8 +71,6 @@ sub data {
         "  貴官の提督名をお知らせ下さい。(" => { tr => "Please choose your Admiral's name. (Up to ", ok => 4566537 },
         "文字まで入力可能です)"                  => { tr => " characters can be entered.)",               ok => 4566575 },
 
-        # 未配備 # main screen message at the left, but probably handled in assets
-
         "ゲーム開始" => { tr => "Game Starters", ok => [ 4566659, 4699455 ], desc => "title of game starter set selection screen" },
         "初期艦選択" => {
             tr => "Starter Ship Selection",
@@ -89,5 +87,11 @@ sub data {
                 4699477,    # unsure about this one
             ]
         },
+
+        "獲得アイテム:{0}" => { tr => "Earned items:{0}" },
+
+        # this.Title.text = monthName.Length != 2 ? "新しい月、　　　　となりました！" : "新しい月、　　　となりました！";
+        "新しい月、　　　　となりました！" => { tr => "A new month,　　　　, is here!", desc => "the month is rendered as a separate string into the gap" },
+        "新しい月、　　　となりました！" => { tr => "A new month,　　　, is here!", desc => "the month is rendered as a separate string into the gap" },
     );
 }
