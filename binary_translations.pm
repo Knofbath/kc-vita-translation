@@ -177,12 +177,37 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         
         # ここっ
         # はやくはやくー！
+        # Missing one in the middle here, just not fast enough to confirm and screenshot
+        # とまれ一つ
+        # えー？らしんばん、まわすのー？
+        # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
+        # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
+        
         # 艦隊の針路を選択できます。
         # 提督、どちらの針路を選択しますか？
 
         # この艦隊で出撃しますか？
         # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。
         # Example: https://i.imgur.com/Z6yQfbF.png
+        
+        # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
+        # 補給してよろしいですか？
+        # 必要燃料数
+        # 必要弾薬数
+        
+        # 接近            - Approach
+        # 離脱            - Escape or Retreat
+        # 航空攻撃         - Aerial Attack 
+        # 砲撃            - Shelling
+        # 対潜攻撃         - Anti-submarine attack or Anti-submarine warfare(ASW)
+        # 突撃（接近+砲撃） - Charge, increase accuracy while decreasing evasion
+        # 雷撃            - Torpedo, can be opener and closer if ships have right equipment or are high-level subs
+        # 回避            - Evasion, no attack
+        # 統射            - Coordinated Shelling or Radar-coordinated Shelling
+        
+        # 制空権確保         - Air Supremacy or Air Superiority Ensured
+        # 航空優勢          - Air Superiority
+        # 制空権喪失         - Air Incapability or Air Superiority Lost
         
     );
 }
