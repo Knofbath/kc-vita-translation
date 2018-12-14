@@ -81,7 +81,7 @@ sub run {
                         last if $extract =~ /\Q$search\E/;
                         $offset++;
                     }
-                    my $msg = sprintf "hit '$file_hit' %08x %08x for $search not marked skipped or ok, please verify $search in >$extract<", $mod, $hit;
+                    my $msg = sprintf "hit '$file_hit' %08x %08x not marked skipped or ok, please verify $search in >$extract<", $mod, $hit;
                     $msg =~ s/\0/\\0/g;
                     $msg =~ s/\x7/\\7/g;
                     $msg =~ s/\r/\\r/g;

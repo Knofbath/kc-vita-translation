@@ -108,7 +108,7 @@ sub run {
                     last if $extract =~ /\Q$jp\E/;
                     $offset++;
                 }
-                my $msg = sprintf "hit $hit %08x %08x for $jp not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
+                my $msg = sprintf "hit $hit %08x %08x not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
                 $msg =~ s/\x$_/\\$_/g for 0 .. 9;
                 $msg =~ s/\r/\\r/g;
                 $msg =~ s/\n/\\n/g;
