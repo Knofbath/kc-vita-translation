@@ -192,8 +192,8 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         
         # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
         # 補給してよろしいですか？ - "Resupply with the following?" - this is more localized.
-        # 必要燃料数 - "Fuel needed" [OC] - maybe required? Yes, "Fuel Required"
-        # 必要弾薬数 - "Ammunition needed" [OC]  - maybe required. Try "Ammo Required" to fit better.
+        # 必要燃料数 - "Fuel Required" - maybe needed?
+        # 必要弾薬数 - "Ammunition Required" - maybe needed. Do first test with "Ammunition". If that does not fit, use "Ammo Required".
         
         # 接近            - Approach
         # 離脱            - Escape or Retreat
