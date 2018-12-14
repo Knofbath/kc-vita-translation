@@ -28,15 +28,15 @@ sub data {
 
         # 艦隊   状態   艦種   艦船名    Lv    耐久   火力   対空   速カ
         # ship table headers
-        "艦隊" => { tr => "Fleet", desc => "Fleet Number. Defines which fleet the ship is assigned to." },
+        "艦隊" => { tr => "Fleet", desc => "Fleet Number. Defines which fleet the ship is assigned to. try with adding space at begin for formatting. further adjustements pending results." },
         "状態" => { tr => "State", desc => "Status/Condition of current fleet (red is has acted, blue is on expedition, blue is (maybe) 'on deployment', and blue is at sea again)" },
-        "艦種" => { tr => "Type", desc => "Ship Class - maybe 'Hull'" },
-        "艦船名" => { tr => "Name", desc => "Ship Name - go with Name" },
+        "艦種" => { tr => "Class", desc => "Ship Class - maybe 'Hull'" },
+        "艦船名" => { tr => "Ship Name", desc => 'prefer "Ship Name" over "name" - requires font substitution.' },
         # Lv - Obviously no need to translate
-        "耐久" => { tr => "HP", desc => "Hit Points or Health I definitely prefer not to use generic HP for clarity" },
+        "耐久" => { tr => "Health", desc => 'Use Health for clarity as it is already used in other locations. is easier to use "Health" if we can resize it slightly than it would be for changing all the previous uses.' },
         "火力" => { tr => "ATK", desc => "Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power" },
         "対空" => { tr => "AA", desc => "Anti-air or Air Defense" },
-        "速力" => { tr => "SPD", desc => "Speed" },
+        "速力" => { tr => "Speed", desc => "Try Speed instead of SPD as I would like to check table formatting." },
         #[1:06 AM] Knofbep: the damage shows up 2nd to last column
         #[1:06 AM] Knofbep: next to the heart lock
         # https://cdn.discordapp.com/attachments/235919493686231051/522193240510693396/2018-12-11-182050.png
