@@ -117,6 +117,6 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         "複縦陣" => { tr => "Double Line", ok => 4501434 },
         "輪形陣" => { tr => "Diamond", ok => 4501442 },
         "梯形陣" => { tr => "Echelon", ok => 4501450 },
-        "単横陣" => { tr => "Line Abreast", ok => 4501458, desc => "these are all the accepted translations already. so yes." },
+        "単横陣" => { tr => "Line Abreast", ok => 4501458, desc => "these are all the accepted translations already. so yes. See if you can do a carriage return after Line ina all of these." },
     );
 }
