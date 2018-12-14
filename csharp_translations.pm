@@ -31,12 +31,6 @@ sub data {
         "タイトルに戻る" => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
         "提督名入力"       => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
 
-        "らしんばんをまわしてね！" => {
-            tr   => "Spin the compass please!",
-            ok   => 4564621,
-            desc => "a compass fairy text. these are in csharp, but the decompiler doesn't see them. maybe these could default to a cute way of speaking?"
-        },
-
         # https://www.thoughtco.com/can-you-tell-me-the-old-names-of-the-months-2027868
         #this.monthFormat.MonthNames = new string[13]
         #{ "睦月", "如月", "弥生", "卯月", "皐月", "水無月", "文月", "葉月", "長月", "神無月", "霜月", "師走", string.Empty };
@@ -101,7 +95,13 @@ sub data {
             desc => q["Where do you want to go?" or " Where to now?"]
         },
 
-        # Compass Fairy
+        # Compass Fairy with magic hat
+        "らしんばんをまわしてね！" => {
+            tr   => "Spin the compass please!",
+            ok   => 4564621,
+            desc => "a compass fairy text. these are in csharp, but the decompiler doesn't see them. maybe these could default to a cute way of speaking?"
+        },
+        # Compass Fairy with bob haircut
         "よーし、らしんばんまわすよー！" => { tr => "Alright, I'll spin the compass!", ok => 4564557 },
         "えいっ"                                     => {
             tr => "Ey!",
