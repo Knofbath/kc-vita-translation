@@ -1,7 +1,7 @@
 use 5.020;
 use strictures 2;
 use IO::All -binary;
-use List::Util 'sum';
+use List::Util qw'sum uniq';
 use Encode qw' decode encode ';
 use lib '.';
 use binary_translations;
@@ -34,17 +34,19 @@ sub run {
     say "prepping dictionary";
     my %tr = binary_translations->data;
 
+    my @too_long;
     for my $key ( keys %tr ) {
         my $err_key = decode "UTF-8", $key;
         my $l       = length $key;
         my $tr      = $tr{$key}{tr};
-        die "translation too long for '$err_key', '$tr': $l " . length $tr if length $tr > $l;
-        while ( my $diff = $l - length $tr ) {    # null width spaces help with formatting, but require 3 bytes
+        push @too_long, "translation too long for '$err_key', '$tr': $l " . length $tr if length $tr > $l;
+        while ( ( my $diff = $l - length $tr ) > 0 ) {    # null width spaces help with formatting, but require 3 bytes
             $tr .= $diff < 3 ? " " : encode "UTF-8", "\x{200B}";
         }
-        die "translation too long for '$err_key', '$tr': $l " . length $tr if length $tr > $l;
+        push @too_long, "translation too long for '$err_key', '$tr': $l " . length $tr if length $tr > $l;
         $tr{$key}{tr_mapped} = $tr;
     }
+    die join "\n", uniq @too_long, "\n" if @too_long;
     say "grabbing file list";
     my $has_find = -e "c:/cygwin/bin/find.exe";
     say "has find: $has_find";
@@ -76,10 +78,10 @@ sub run {
                     my $search = decode "UTF-8", $jp;
                     while ( $offset < 3 ) {
                         $extract = decode "UTF-8", substr $content, $hit - 16 + $offset, 32 + 16;
-                        last if $extract =~ /$search/;
+                        last if $extract =~ /\Q$search\E/;
                         $offset++;
                     }
-                    my $msg = sprintf "hit '$file_hit' %08x %08x for $search not marked skipped or ok, please verify $search in >$extract<", $mod, $hit;
+                    my $msg = sprintf "hit '$file_hit' %08x %08x not marked skipped or ok, please verify $search in >$extract<", $mod, $hit;
                     $msg =~ s/\0/\\0/g;
                     $msg =~ s/\x7/\\7/g;
                     $msg =~ s/\r/\\r/g;

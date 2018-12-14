@@ -24,13 +24,18 @@ sub data {
         "戦略へ" => { tr => "Strategy", desc => "leads to fleet strategy management screen", ok => 4518868 },
         "決定"    => { tr => "Choose",   desc => "select the currently chosen option",        ok => 4518802 },
         "戻る"    => { tr => "Return",   desc => "back out of the current screen",            ok => 4518826, skip => [ 4566833, 4682617 ] },
-        "らしんばんをまわしてね！" => { desc => "some kind of compass fairy text, using this to find it" },
-        "敵艦隊"                            => { desc => "" },
-        "見ゅ"                               => { desc => "" },
-        "見ゆ"                               => { desc => "" },
-        "被弾回避率補正"                => { desc => "" },
-        "タイトルに戻る"                => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
-        "提督名入力"                      => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
+        "敵艦隊"             => { desc => "" },
+        "見ゅ"                => { desc => "" },
+        "見ゆ"                => { desc => "" },
+        "被弾回避率補正" => { desc => "" },
+        "タイトルに戻る" => { tr   => "Back to Title", desc => "name choosing menu", ok => 4566823 },
+        "提督名入力"       => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 4566487, 4699444 ] },
+
+        "らしんばんをまわしてね！" => {
+            tr   => "Spin the compass please!",
+            ok   => 4564621,
+            desc => "a compass fairy text. these are in csharp, but the decompiler doesn't see them. maybe these could default to a cute way of speaking?"
+        },
 
         # https://www.thoughtco.com/can-you-tell-me-the-old-names-of-the-months-2027868
         #this.monthFormat.MonthNames = new string[13]
@@ -62,8 +67,56 @@ sub data {
         "玖" => { tr => "9",  ok => 4594587 },
         "拾" => { tr => "10", ok => 4594597 },
 
-        #"海上護衛艦隊" => { tr => "Return", desc => "" },
-        #"  貴官の提督名をお知らせ下さい。(" + (object) 12 + "文字まで入力可能です)",
-        # 未配備 # main screen message at the left, but probably handled in assets
+        #"海上護衛艦隊" => { tr => "Return", desc => "" }, # this one is part of some strings in here
+        "  貴官の提督名をお知らせ下さい。(" => { tr => "Please choose your Admiral's name. (Up to ", ok => 4566537 },
+        "文字まで入力可能です)"                  => { tr => " characters can be entered.)",               ok => 4566575 },
+
+        "ゲーム開始" => { tr => "Game Starters", ok => [ 4566659, 4699455 ], desc => "title of game starter set selection screen" },
+        "初期艦選択" => {
+            tr => "Starter Ship Selection",
+            ok => [
+                4566671,
+                4699466,    # unsure about this one
+            ],
+            desc => "not sure, think title of the screen after the set"
+        },
+        "チュートリアル" => {
+            tr => "Tutorial",
+            ok => [
+                4566683,
+                4699477,    # unsure about this one
+            ]
+        },
+
+        "獲得アイテム:{0}" => { tr => "Earned items:{0}", ok => 4601141, desc => "tbh not sure where exactly this is" },
+
+        # this.Title.text = monthName.Length != 2 ? "新しい月、　　　　となりました！" : "新しい月、　　　となりました！";
+        "新しい月、　　　　となりました！" => { tr => "A new month,　　　　, is here!", ok => 4572711, desc => "the month is rendered as a separate string into the gap" },
+        "新しい月、　　　となりました！"    => { tr => "A new month,　　　, is here!",    ok => 4572679, desc => "the month is rendered as a separate string into the gap" },
+
+        # Map screen
+        "どこに進む？" => {
+            tr   => "Where to now?",
+            ok   => [ 4564133, 4698584 ],                               # i am VERY unsure about these hits, they'll require verification
+            desc => q["Where do you want to go?" or " Where to now?"]
+        },
+
+        # Compass Fairy
+        "よーし、らしんばんまわすよー！" => { tr => "Alright, I'll spin the compass!", ok => 4564557 },
+        "えいっ"                                     => {
+            tr => "Eh!",
+            ok => 4564647,
+            desc =>
+q[it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.]
+        },
+        "それっ" => { tr => "Take that!", ok => 4564655, desc => q["Take That!" or "That!" - can also use "This". remember implied words. once more with the っ. (i think it could also be "There!")] },
+
+        # Battle formation screen
+        "陣形を選択してください。" => { tr => "Please select the formation.", ok => [ 4564073, 4698793 ] },
+        "単縦陣" => { tr => "Line Ahead", ok => 4501426 },
+        "複縦陣" => { tr => "Double Line", ok => 4501434 },
+        "輪形陣" => { tr => "Diamond", ok => 4501442 },
+        "梯形陣" => { tr => "Echelon", ok => 4501450 },
+        "単横陣" => { tr => "Line Abreast", ok => 4501458, desc => "these are all the accepted translations already. so yes." },
     );
 }

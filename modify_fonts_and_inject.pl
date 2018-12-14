@@ -33,14 +33,12 @@ sub run {
         {
             name        => "AxisStd-Regular_1",
             target_path => "Media/Unity_Assets_Files/sharedassets5",
-            src         => "fonts/ume-pgs4.ttf"                        # munger breaks on these
-                                                                       #    src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets5/AxisStd-Regular_1.ttf"
+            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets5/AxisStd-Regular_1.ttf"
         },
         {
             name        => "A-OTF-RyuminPr5-ExBold",
             target_path => "Media/Unity_Assets_Files/sharedassets11",
-            src         => "fonts/ume-pgs4.ttf"                         # munger breaks on these
-                                                                        #    src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets11/A-OTF-RyuminPr5-ExBold.ttf"
+            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets11/A-OTF-RyuminPr5-ExBold.ttf"
         },
         {
             name        => "Century Gothic",

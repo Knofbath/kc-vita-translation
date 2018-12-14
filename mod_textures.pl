@@ -9,7 +9,7 @@ run();
 sub run {
     my $skipped;
     say "copying and converting images";
-    my @images = io("en/Unity_Assets_Files")->All_Files;
+    my @images = grep /\.png$/, io("en/Unity_Assets_Files")->All_Files;
     for my $image (@images) {
         my @file_parts = split /\/|\\/, $image;
         my $source_tex = "../kc_original_unpack/Media/Unity_Assets_Files/$file_parts[2]/$file_parts[4]";
