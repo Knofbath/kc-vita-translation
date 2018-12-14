@@ -175,18 +175,23 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # 残り輸送船数 - "Ships Remaining" [OC]
         # 必要輸送船数 - "Required Number of Ships" [OC]
         
+        # Compass fairy with magic hat
+        # https://cdn.discordapp.com/attachments/235919493686231051/523259704890097675/2018-12-05-071704.png
         # Compass fairy with bob haircut
+        # https://cdn.discordapp.com/attachments/235919493686231051/523259707331313713/2018-12-05-102944.png
         # ここっ - "Here!" but with exertion.
         # Compass fairy with chick on head
+        # https://cdn.discordapp.com/attachments/235919493686231051/523259713480163328/2018-12-13-232523.png
         # はやくはやくー！ - "Hurry! Hurry!" - i may localize it a little better. "C'mon! Hurry up!" alternate, more localized. Kind of like it myself.
         # えいえいえーいっ - "" I need to see it in use for flavour. Knofbath translation does not feel right at this time.
         # とまれ一つ - "And Another One" i will come back to this one. more context needed.
         # Compass fairy who is sleepy
+        # https://cdn.discordapp.com/attachments/235919493686231051/523259716009328658/2018-12-14-010022.png
         # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."
-        # 。。。ん。         -  "Huh?" - Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
-        # 。。。。。。あい    -  "Yes" - Literally "...ai" - Or, maybe she is just making a sound. Hard to tell OC, really need to get it in game to know.
+        # 。。。ん。         -  "Huh?" - Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
+        # 。。。。。。あい    -  "Yes" - Literally "...ai" - Or, maybe she is just making a sound. Hard to tell OC, really need to get it in game to know.
         
         # 艦隊の針路を選択できます。 - "Plot the fleets course."
         # 提督、どちらの針路を選択しますか？ - "Admiral, pick a course?" could be "Admiral, which course do you prefer?"
