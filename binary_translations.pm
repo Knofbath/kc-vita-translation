@@ -183,8 +183,8 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # とまれ一つ - "And Another One" i will come back to this one. more context needed.
         # Compass fairy who is sleepy
         # えー？らしんばん、まわすのー？ - "Please Spin The Compass!" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."
-        # 。。。ん。         -  "....n."
-        # 。。。。。。あい    -  "...ai"
+        # 。。。ん。         -  "Huh?" - Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]
+        # 。。。。。。あい    -  "Yes" - Literally "...ai" - Or, maybe she is just making a sound. Hard to tell OC, really need to get it in game to know.
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
         
