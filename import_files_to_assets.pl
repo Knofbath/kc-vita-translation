@@ -59,6 +59,11 @@ sub run {
     say "\ndeleting patches";
     io($asset_dir)->rmtree;
 
+    my $sub_path = "repatch/PCSG00684/";
+    say "moving to $sub_path";
+    io("$target_dir/$sub_path/")->mkpath;
+    io($media_dir)->rename("$target_dir/$sub_path/Media");
+
     say "done";
     return;
 }
