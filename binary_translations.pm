@@ -198,6 +198,8 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
 
         # この艦隊で出撃しますか？ - "Sortie this fleet?"
         # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。 - "※If you have too many Ship Girls, there is a possibility of not getting a Ship Girl reward." - Edited for consistency. 
+        # ※艦娘保有数が上限に達しているため、新しい艦娘との邂逅はできません。    - red, ships full
+        # https://cdn.discordapp.com/attachments/235919493686231051/523300790283272234/2018-12-14-194114.png
         # I want to point out, the symbol ※ is used as a Bullet Point Mark.
         # Example: https://i.imgur.com/Z6yQfbF.png
         
@@ -220,6 +222,9 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # 制空権確保         - "Air Secured" - Air Supremacy or Air Superiority Ensured
         # 航空優勢          - "Air Advantage" - Air Superiority
         # 制空権喪失         - "Air Disadvantage" - Air Incapability or Air Superiority Lost
+        
+        # 装備数が保有上限に達し開発できません - warning message when constructing ships
+        # 装備の保有上限に達しています        - warning message when claiming ships
         
     );
 }
