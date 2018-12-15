@@ -207,14 +207,15 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # 必要弾薬数 - "Ammunition Required" - maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.
         
         # 接近            - "Approach"
-        # 離脱            - "Withdraw" - Escape or Retreat
-        # 航空攻撃         - "Air Strike" - Aerial Attack 
+        # 離脱            - "Escape" - Withdraw, Escape or Retreat
+        # 航空攻撃         - "Aerial Attack" - Air Strike 
         # 砲撃            - "Shelling" - Bombard could work as well. 
-        # 対潜攻撃         - "Anti-Submarine" - Anti-submarine attack or Anti-submarine warfare(ASW)
+        # 対潜攻撃         - "ASW" - Anti-submarine attack or Anti-submarine warfare(ASW)
         # 突撃（接近+砲撃） - "Assault (Approach + Shelling)" - Charge, increase accuracy while decreasing evasion
         # 雷撃            - "Torpedo" - can be opener and closer if ships have right equipment or are high-level subs
-        # 回避            - "Evasion" - no attack
+        # 回避            - "Evade" - no attack, Evasion
         # 統射            - "Coordinated Shelling" Tough one. It literally breaks down into Unified Archery. For now, I am going to go with Coordinated Shelling to see how it fits - Radar-coordinated Shelling
+        #           ** I have updated these to reflect \resources\Textures\info6_set.tex.png ** these are final translations between 接近 and 統射
         
         # 制空権確保         - "Air Secured" - Air Supremacy or Air Superiority Ensured
         # 航空優勢          - "Air Advantage" - Air Superiority
