@@ -223,8 +223,9 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         # 航空優勢          - "Air Advantage" - Air Superiority
         # 制空権喪失         - "Air Disadvantage" - Air Incapability or Air Superiority Lost
         
-        # 装備数が保有上限に達し開発できません - "Ship Girl storage full, can not develop any more." warning message when constructing ships
-        # 装備の保有上限に達しています        - "Ship Girl storage full, can not accept any more." warning message when claiming ships
+        # 装備数が保有上限に達し開発できません - "Equipment storage full, can not develop any more." warning message when constructing ships
+        # 装備の保有上限に達しています        - "Equipment storage full." warning message when claiming ships
+        # 艦が保有上限に達し建造できません     -  "Ship Girl storage full, can not construct any more." warning message when constructing ships
         
     );
 }
