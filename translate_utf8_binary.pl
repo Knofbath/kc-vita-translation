@@ -4,44 +4,68 @@ use IO::All -binary;
 use List::Util qw'sum uniq';
 use Encode qw' decode encode ';
 use utf8;
-use Devel::Confess;
 use lib '.';
 use binary_translations;
 
 run();
 
 sub map_str_to_multi_chars {
-    my ( $tr, %prepared ) = @_;
-    my @mapped;
-    while ( my $l = length $tr ) {
-        my $work = $tr;
-        while ( my $wl = length $work ) {
-            last if $prepared{$work} or $wl == 1;
-            $work = substr $work, 0, $wl - 1;
-        }
-        push @mapped, $work;
-        $tr = substr $tr, length $work;
-    }
-    my $raw = join "|", @mapped;
-    my $encoded = encode "UTF-16LE", join "", map $prepared{$_} // $_, @mapped;
-    return ( $encoded, $raw );
-}
+    my ( $tr, $enc, $length_target, $used, %prepared ) = @_;
+    my %rev_prep = reverse %prepared;
+    my @glyphs   = sort { length $a <=> length $b } sort keys %prepared;
+    my @parts    = split /(?<=\])|(?=\[)/, $tr;
 
-sub pad_multi_char_w_spaces {
-    my ( $l_src, $l_tra, $obj ) = @_;
-    my $diff = ( $l_src - $l_tra ) / 2;
-    $obj->{tr_mapped}{"UTF-16LE"} .= encode( "UTF-16LE", " " ) x $diff;
-    return length $obj->{tr_mapped}{"UTF-16LE"};
+    my $e = sub { encode $enc, join "", @_ };
+    my $l = sub { length $e->(@_) };
+    return $e->(@parts) if $l->(@parts) == $length_target;
+
+    my ( %seen, @failed, $proc, $closest, $closest_diff );
+    $proc = sub {    # the lists made before each loop aren't faster, but easier to debug
+        my @parts          = @_;
+        my $length_current = $l->(@parts);
+        my $need_to_shrink = $length_current - $length_target;
+        my @to_process     = grep +( $parts[$_] !~ /^\[/ and not $rev_prep{ $parts[$_] } ), 0 .. $#parts;
+        for my $i (@to_process) {
+            my $part = $parts[$i];
+            my @matches = grep index( $part, $_ ) != -1, @glyphs;
+            @matches = grep length > ( $need_to_shrink > 25 ? 3 : 1 ), @matches if $need_to_shrink > 0;
+            for my $glyph (@matches) {
+                my ( $p1, $p2 ) = split /\Q$glyph\E/, $part, 2;
+                my @parts2 = @parts;
+                splice @parts2, $i, 1, grep length, $p1, $prepared{$glyph}, $p2;
+                my $l2   = $l->(@parts2);
+                my $diff = $l2 - $length_target;
+                return @parts2 if not $diff;
+
+                my $fail = "length in encoding $enc: $length_current -> $l2 : " . join "|", map +( $rev_prep{$_} ? "\$$rev_prep{$_}" : $_ ), @parts2;
+                ( $closest, $closest_diff ) = ( $fail, abs $diff ) if not $closest_diff or ( $closest_diff > abs $diff );
+                push @failed, $fail;
+                next if $seen{ $e->(@parts2) };
+
+                my @deeper = $proc->(@parts2);
+                $seen{ $e->(@parts2) }++;
+                die "tried for too long, add more things to the font mod pairs" if 10_000 == keys %seen;
+                return @deeper if @deeper;
+            }
+        }
+        return;
+    };
+
+    my @mapped = eval { $proc->(@parts) };
+    push @failed, "closest: $closest" if $closest and @failed > 1;
+    @mapped = @parts if not @mapped;
+    $used->{ $rev_prep{$_} }++ for grep defined $rev_prep{$_}, @mapped;
+    return ( $e->(@mapped), uniq @failed );
 }
 
 sub map_tr_to_multi_chars {
-    my ( $jp, $obj, %prepared ) = @_;
-    ( $obj->{tr_mapped}{"UTF-16LE"}, my $raw ) = map_str_to_multi_chars $obj->{tr}, %prepared;
-    my $l_src = length encode "UTF-16LE", $jp;
-    my $l_tra = length $obj->{tr_mapped}{"UTF-16LE"};
-    $l_tra = pad_multi_char_w_spaces $l_src, $l_tra, $obj if $l_tra < $l_src;
-    return "translation '$jp' => '$obj->{tr}' doesn't match lengths: $l_src => $l_tra, probable char count: " . ( $l_src / 2 ) . "\ncomposition: $raw\n"
-      if $l_src != $l_tra;
+    my ( $jp, $enc, $obj, $used, %prepared ) = @_;
+    my $target_length = length encode $enc, $jp;
+    my ( $tr, @failed ) = map_str_to_multi_chars( $obj->{tr}, $enc, $target_length, $used, %prepared );
+    my $l_tr = length $tr;
+    return "length wanted: $target_length", @failed, "translation '$jp' ($target_length) => '$obj->{tr}' ($l_tr) doesn't match in length"
+      if $target_length != $l_tr;
+    $obj->{tr_mapped}{$enc} = $tr;
     return;
 }
 
@@ -51,33 +75,9 @@ sub trim_nl {
     return $s;
 }
 
-sub add_utf16_mapped {
-    my ($dictionary) = @_;
-    my $unicode = 0xE000;
-    my @pairs = grep $_, map split( /\|/, $_ ), map trim_nl($_), io("font_mod_character_pairs")->getlines;
-    my %prepared = map +( $pairs[$_] => chr( $unicode + $_ ) ), 0 .. $#pairs;
-    my @too_long = map map_tr_to_multi_chars( $_, $dictionary->{$_}, %prepared ), sort keys $dictionary->%*;
-    die join "\n", @too_long, "\n" if @too_long;
-    return;
-}
-
-sub add_utf8_mapped {
-    my ($dictionary) = @_;
-    my @too_long;
-    for my $key ( keys $dictionary->%* ) {
-        my $target_length = length encode "UTF-8", $key;
-        my $tr            = $dictionary->{$key}{tr};
-        my $tr_length     = length encode "UTF-8", $tr;
-        push @too_long, "translation too long for '$key', '$tr': $target_length $tr_length" if $tr_length > $target_length;
-        while ( ( my $diff = $target_length - $tr_length ) > 0 ) {    # null width spaces help with formatting, but require 3 bytes
-            $tr .= $diff < 3 ? " " : "\x{200B}";
-            $tr_length = length encode "UTF-8", $tr;
-        }
-        push @too_long, "translation too long for '$key', '$tr': $target_length $tr_length" if $tr_length > $target_length;
-        $dictionary->{$key}{tr_mapped}{"UTF-8"} = encode "UTF-8", $tr;
-    }
-    die join "\n", uniq @too_long, "\n" if @too_long;
-    return;
+sub add_mapped {
+    my ( $dictionary, $enc, $used, %mapping ) = @_;
+    return map map_tr_to_multi_chars( $_, $enc, $dictionary->{$_}, $used, %mapping ), sort keys $dictionary->%*;
 }
 
 sub get_hits {
@@ -129,19 +129,36 @@ sub report_near_miss {
     say $msg;
 }
 
+sub duplicate_check {
+    my %seen = map +( $_ => 1 ), binary_translations->data;
+    my @duplicates = grep $seen{$_} > 1, keys %seen;
+    die "following keys are duplicate in dictionary: @duplicates" if @duplicates;
+    return;
+}
+
 sub run {
     $|++;
     binmode STDOUT, ":encoding(UTF-8)";
     binmode STDERR, ":encoding(UTF-8)";
 
     say "prepping dictionary";
+    my %mapping = do {
+        my $unicode = 0xE000;
+        my @pairs = grep length $_, map split( /\|/, $_ ), map trim_nl($_), io("font_mod_character_pairs")->getlines;
+        map +( $pairs[$_] => chr( $unicode + $_ ) ), 0 .. $#pairs;
+    };
+    duplicate_check;
     my %tr = binary_translations->data;
     for my $jp ( grep !defined $tr{$_}{tr}, sort keys %tr ) {
         say "no translation for $jp, skipping";
         delete $tr{$jp};
     }
-    add_utf8_mapped \%tr;
-    add_utf16_mapped \%tr;
+    my %used;
+    my @too_long = map add_mapped( \%tr, $_, \%used, %mapping ), "UTF-16LE", "UTF-8";
+    s/\n/\\n/g for @too_long;
+    die join "\n", @too_long, "\n" if @too_long;
+    my @unused = grep !$used{$_}, keys %mapping;
+    die "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
 
     # this converts any single string ok/skip entries into arrays, or fills in empty arrays if there's none
     for my $entry ( values %tr ) {
@@ -154,7 +171,7 @@ sub run {
         file      => io("../kc_original/Media/Managed/Assembly-CSharp.dll"),
         filename  => "Assembly-CSharp.dll",
         fileparts => [ split /\/|\\/, "../kc_original/Media/Managed/Assembly-CSharp.dll" ],
-        enc       => "UTF-16LE",
+        enc       => ["UTF-16LE","UTF-8"],
         fileid    => "a-csharp",
     };
     @list = sort { lc $a->{fileid} cmp lc $b->{fileid} } @list;
@@ -179,8 +196,9 @@ sub run {
                     }
                     my $tr = $obj{tr_mapped}{$enc};
                     substr( $content, $hit, length $tr ) = $tr;
+                    $tr =~ s/\x$_/\\$_/g for 0 .. 9;
                     $tr =~ s/\n/\\n/g;
-                    say "hit '$file_hit' done - '$jp' as '$obj{tr}'";
+                    say "hit '$file_hit' done - '$jp' as '$obj{tr}' mapped to '$tr'";
                     $found++;
                 }
             }
