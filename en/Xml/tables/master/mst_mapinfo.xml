@@ -7,7 +7,7 @@
 	<Name>Naval Base: Front Area</Name>
 	<Level>1</Level>
 	<Opetext>Naval Base Defense</Opetext>
-	<Infotext>艦隊を編成し、鎮守府正面近海の警備を実施せよ！</Infotext>
+	<Infotext>Organize the fleet and patrol in the vicinity of the Naval Base!</Infotext>
 	<Item1>0</Item1>
 	<Item2>0</Item2>
 	<Item3>0</Item3>
@@ -94,9 +94,9 @@
 	<Id>14</Id>
 	<Maparea_id>1</Maparea_id>
 	<No>4</No>
-	<Name>Maritime Trade Route Escort</Name>
+	<Name>Nearby Islands Defense Line</Name>
 	<Level>1</Level>
-	<Opetext>Reinforcing the Defense Line of the Adjacent Sea</Opetext>
+	<Opetext>Reinforcing the Nearby Islands Defense Line</Opetext>
 	<Infotext>近海諸島防衛線に我が艦隊を投入、\n同防衛線を支援、敵侵攻艦隊を迎撃せよ！</Infotext>
 	<Item1>33</Item1>
 	<Item2>32</Item2>
@@ -214,9 +214,9 @@
 	<Id>21</Id>
 	<Maparea_id>2</Maparea_id>
 	<No>1</No>
-	<Name>Southwest Islands: Coast Area</Name>
+	<Name>Nansei Islands: Approach</Name>
 	<Level>1</Level>
-	<Opetext>Advance on the Southwest Islands</Opetext>
+	<Opetext>Advance on the Nansei Islands</Opetext>
 	<Infotext>有力な艦隊戦力を以て、南西諸島海域への進出を図る。水上\n打撃部隊、または空母機動部隊を南西諸島方面へ展開、敵の\n動向を探りつつ、同海域進出の橋頭堡を確立せよ！</Infotext>
 	<Item1>0</Item1>
 	<Item2>0</Item2>
@@ -244,9 +244,9 @@
 	<Id>22</Id>
 	<Maparea_id>2</Maparea_id>
 	<No>2</No>
-	<Name>南西諸島サメワニ沖</Name>
+	<Name>Nansei Islands: Samewani Coast</Name>
 	<Level>1</Level>
-	<Opetext>サメワニ沖海戦</Opetext>
+	<Opetext>Battle of the Samewani Coast</Opetext>
 	<Infotext>南西諸島サメワニ沖に多方面から集結した深海棲艦寄せ集め\n艦隊の存在を確認した。同敵艦隊を捕捉、これを撃滅せよ！</Infotext>
 	<Item1>31</Item1>
 	<Item2>0</Item2>
@@ -274,7 +274,7 @@
 	<Id>23</Id>
 	<Maparea_id>2</Maparea_id>
 	<No>3</No>
-	<Name>Southwest of Zunda Strait</Name>
+	<Name>Nansei Islands: Zunda Strait</Name>
 	<Level>1</Level>
 	<Opetext>Across the Zunda Strait</Opetext>
 	<Infotext>サメワニ沖海戦の残敵を掃射しつつ、接近中の敵増援艦隊を\n捕捉撃滅し、南西諸島ズンダ海峡方面の制海権を確保せよ！</Infotext>
@@ -424,9 +424,9 @@
 	<Id>31</Id>
 	<Maparea_id>3</Maparea_id>
 	<No>1</No>
-	<Name>Northern Moray Sea</Name>
+	<Name>North Sea: Moray</Name>
 	<Level>1</Level>
-	<Opetext>Northern Sea Patrol</Opetext>
+	<Opetext>North Sea Patrol</Opetext>
 	<Infotext>北方海域に艦隊を進出させ、北方モーレイ海の哨戒を実施せよ！</Infotext>
 	<Item1>33</Item1>
 	<Item2>0</Item2>
@@ -454,7 +454,7 @@
 	<Id>32</Id>
 	<Maparea_id>3</Maparea_id>
 	<No>2</No>
-	<Name>Northern Kis Island: Coast Area</Name>
+	<Name>North Sea: Kis Island Coast</Name>
 	<Level>1</Level>
 	<Opetext>Kis Island Withdrawal Tactics</Opetext>
 	<Infotext>軽巡または駆逐艦を旗艦とした水雷戦隊で、敵包囲下の北方\n海域キス島に突入！同島の守備隊を無事収容、撤収せよ！</Infotext>
@@ -484,7 +484,7 @@
 	<Id>33</Id>
 	<Maparea_id>3</Maparea_id>
 	<No>3</No>
-	<Name>Northern Kis Island: Rear Area</Name>
+	<Name>North Sea: Kis Island Rear Area</Name>
 	<Level>1</Level>
 	<Opetext>Battle of Kis Island's Coast</Opetext>
 	<Infotext>有力な艦隊を以て、北方海域へ再展開、敵情の強行偵察を\n敢行し、可能であれば敵戦力の漸減に努めよ！</Infotext>
@@ -514,9 +514,9 @@
 	<Id>34</Id>
 	<Maparea_id>3</Maparea_id>
 	<No>4</No>
-	<Name>Northern Alfonsino: Coast Area</Name>
+	<Name>North Sea: Alfonsino Coast</Name>
 	<Level>1</Level>
-	<Opetext>Decisive Fleet Battle off the Northern Islands</Opetext>
+	<Opetext>Decisive Battle of the Northern Archipelago</Opetext>
 	<Infotext>北方海域深部に敵艦隊が集結中の大規模泊地を発見した。\n我が艦隊の総力を挙げて、同方面の敵艦隊を撃滅せよ！</Infotext>
 	<Item1>0</Item1>
 	<Item2>0</Item2>
