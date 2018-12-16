@@ -178,6 +178,9 @@ sub run {
     @list = sort { lc $a->{fileid} cmp lc $b->{fileid} } @list;
     say "prepped";
     my @tr_keys = reverse sort { length $a <=> length $b } sort keys %tr;
+    my %found;
+    my %unmatched;
+    my %hit;
 
     for my $file (@list) {
         my $content = $file->{file}->all;
@@ -191,7 +194,9 @@ sub run {
                 for my $hit (@hits) {
                     my $file_hit = "$file->{fileid} $hit";
                     next if grep $file_hit eq $_, $obj{skip}->@*;
+                    $hit{$jp}++;
                     if ( !grep $file_hit eq $_, $obj{ok}->@* and !check_for_null_bracketing $content, $jp, $enc, $hit ) {
+                        $unmatched{$jp}++;
                         report_near_miss $file_hit, $hit, $enc, $jp, $content;
                         next;
                     }
@@ -202,6 +207,7 @@ sub run {
                     $msg =~ s/\n/\\n/g;
                     say $msg;
                     $found++;
+                    $found{$jp}++;
                 }
             }
         }
@@ -215,6 +221,13 @@ sub run {
         io( io->file($target)->filepath )->mkpath;
         io($target)->print($content);
     }
-    say "done";
+
+    say join "\n", "", "strings not always identified confidently:",
+      map sprintf( "  %-" . ( 30 - length $_ ) . "s %-30s hit x %3s, nomatch x %3s, match x %3s", $_, $tr{$_}{tr}, $hit{$_}, $unmatched{$_}, $hit{$_} - $unmatched{$_} ),
+      reverse sort { length $a <=> length $b } sort keys %unmatched;
+
+    say join "\n", "", "strings found nowhere:", map sprintf( "  %-" . ( 30 - length $_ ) . "s $tr{$_}{tr}", $_ ), grep +( !$found{$_} and !$unmatched{$_} ), @tr_keys;
+
+    say "\ndone";
     return;
 }
