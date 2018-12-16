@@ -1,7 +1,7 @@
 use 5.020;
 use strictures 2;
 use IO::All -binary;
-use List::Util qw'sum uniq';
+use List::Util qw'sum uniq min';
 use Encode qw' decode encode ';
 use utf8;
 use lib '.';
@@ -19,7 +19,7 @@ sub map_str_to_multi_chars {
     my $l = sub { length $e->(@_) };
     return $e->(@parts) if $l->(@parts) == $length_target;
 
-    my ( %seen, @failed, $proc, $closest, $closest_diff );
+    my ( %seen, @failed, $proc, %closest );
     $proc = sub {    # the lists made before each loop aren't faster, but easier to debug
         my @parts          = @_;
         my $length_current = $l->(@parts);
@@ -38,7 +38,7 @@ sub map_str_to_multi_chars {
                 return @parts2 if not $diff;
 
                 my $fail = "length in encoding $enc: $length_current -> $l2 : " . join "|", map +( $rev_prep{$_} ? "\$$rev_prep{$_}" : $_ ), @parts2;
-                ( $closest, $closest_diff ) = ( $fail, abs $diff ) if not $closest_diff or ( $closest_diff > abs $diff );
+                push @{ $closest{ abs $diff } }, $fail;
                 push @failed, $fail;
                 next if $seen{ $e->(@parts2) };
 
@@ -52,7 +52,8 @@ sub map_str_to_multi_chars {
     };
 
     my @mapped = eval { $proc->(@parts) };
-    push @failed, "closest: $closest" if $closest and @failed > 1;
+    my $closest_diff = min keys %closest;
+    push @failed, map "closest: $_", $closest{$closest_diff}->@* if $closest_diff;
     @mapped = @parts if not @mapped;
     $used->{ $rev_prep{$_} }++ for grep defined $rev_prep{$_}, @mapped;
     return ( $e->(@mapped), uniq @failed );
@@ -118,12 +119,12 @@ sub report_near_miss {
     my $mod = $hit - ( $hit % 16 );
     my ( $offset, $extract ) = (0);
     while ( $offset < 3 ) {
-        $extract = decode $enc, substr $content, $hit - 16 + $offset, 24 + length encode $enc, $jp;
+        $extract = decode $enc, substr $content, $hit - 16 + $offset, 28 + length encode $enc, $jp;
         last if $extract =~ /\Q$jp\E/;
         $offset++;
     }
-    my $msg = sprintf "hit '$file_hit' %08x %08x not marked skipped or ok, please verify $jp in >$extract<", $mod, $hit;
-    $msg =~ s/\x$_/\\$_/g for 0 .. 9;
+    my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s<", $file_hit, $mod, $hit, $jp, $extract;
+    $msg =~ s/\x$_/■/g for 0 .. 9, "1E", "14";
     $msg =~ s/\r/\\r/g;
     $msg =~ s/\n/\\n/g;
     say $msg;
@@ -171,7 +172,7 @@ sub run {
         file      => io("../kc_original/Media/Managed/Assembly-CSharp.dll"),
         filename  => "Assembly-CSharp.dll",
         fileparts => [ split /\/|\\/, "../kc_original/Media/Managed/Assembly-CSharp.dll" ],
-        enc       => ["UTF-16LE","UTF-8"],
+        enc       => [ "UTF-16LE", "UTF-8" ],
         fileid    => "a-csharp",
     };
     @list = sort { lc $a->{fileid} cmp lc $b->{fileid} } @list;
@@ -196,9 +197,10 @@ sub run {
                     }
                     my $tr = $obj{tr_mapped}{$enc};
                     substr( $content, $hit, length $tr ) = $tr;
-                    $tr =~ s/\x$_/\\$_/g for 0 .. 9;
-                    $tr =~ s/\n/\\n/g;
-                    say "hit '$file_hit' done - '$jp' as '$obj{tr}' mapped to '$tr'";
+                    $tr =~ s/\x$_/■/g for 0 .. 9;
+                    my $msg = "hit '$file_hit' done - '$jp' as '$obj{tr}' mapped to '$tr'";
+                    $msg =~ s/\n/\\n/g;
+                    say $msg;
                     $found++;
                 }
             }
