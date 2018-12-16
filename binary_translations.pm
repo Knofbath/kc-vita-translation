@@ -33,8 +33,8 @@ sub data {
         "作戦難易度を選択してください" => { tr => "Please select strategy difficulty level", },
         "タイトルに戻る" => { tr   => "Back to Title", desc => "name choosing menu", ok => 'a-csharp 4566823' },
         "提督名入力"       => { tr   => "Admiral Name Entry", desc => "name choosing menu title, not sure if this one is used", ok => [ 'a-csharp 4566487', 'a-csharp 4699444' ] },
-        #"海上護衛艦隊" => { tr => "Return", desc => "" }, # this one is part of some strings in here
-        "  貴官の提督名をお知らせ下さい。(" => { tr => "Please choose your Admiral's name. (Up to ", ok => 'a-csharp 4566537' },
+
+        "  貴官の提督名をお知らせ下さい。(" => { tr => "Please choose your Admiral's name. (Up to ", ok => 'a-csharp 4566537', desc => "TODO: verify the space at the start" },
         "文字まで入力可能です)"                  => { tr => " characters can be entered.)",               ok => 'a-csharp 4566575' },
         "貴官の提督名をお知らせ下さい。\n（１２文字まで入力可能です）" => {
             tr => "Please choose your Admiral's name.\n(Up to 12 characters can be entered.)",
@@ -59,7 +59,7 @@ sub data {
 
         "配備輸送船数" => { tr => "Transports", desc => "Number of deployed shipping vessels, Cargo ships in area" },
         "予想獲得資源" => { tr => "Expected Gain", desc => "Expected acquisition resources (Daily Resource Generation) Fuel, Ammo, Steel, Bauxite per map hex" },
-        "海上護衛艦隊" => { tr => "Escort fleet", desc => "Maritime Escort Fleet" },
+        "海上護衛艦隊" => { tr => "Escort fleet", desc => "Maritime Escort Fleet", skip => [ 'a-csharp 4604319', 'a-csharp 4604361' ] }, #  part of larger strings
         "回航中"          => { tr => "At Sea", desc => "map screen, tankers at sea, apparently, but also used elsewhere" },
         "未配備"          => { tr => "Undeployed", desc => "Undeployed - one char too long, really need to add glyph aliasing here too" },
 
@@ -85,7 +85,7 @@ sub data {
         "新しい週になりました！" => { tr => "A new week is here!", desc => "weekly resource bonus" },
 
         "ターンを終了しますか？" => { tr => "Do you want to end your turn?", desc => "Quick Turn End by hitting Square - performed on Operations Screen." },
-        "ターン終了" => { tr => "End of Turn", desc => "Quick Turn End, hit Square to confirm" },
+        "ターン終了" => { tr => "End of Turn", desc => "Quick Turn End, hit Square to confirm", skip => [ 'a-csharp 4573257', 'a-csharp 4604171' ] }, # skips part of larger strings
         "[12c112]ターン終了[-]" => { tr => "[12c112]End of Turn[-]", desc => "Quick Turn End, hit Square to confirm" },
 
         # Enemy Raiding
@@ -157,8 +157,8 @@ sub data {
         "えいっ"                                     => {
             tr => "Ey!",
             ok => 'a-csharp 4564647',
-            desc =>
-q[it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.]
+            desc =>''
+              . q[it is a sound uttered/made when someone is exerting force, or throwing something. you would be best ignoring the "っ" for now. It is not a tsu. "つ" is. I am nt reallt set to explain sokuon and glottal stops.]
         },
         "それっ" => { tr => "Take that!", ok => 'a-csharp 4564655', desc => q["Take That!" or "That!" - can also use "This". remember implied words. once more with the っ. (i think it could also be "There!")] },
 
@@ -171,61 +171,61 @@ q[it is a sound uttered/made when someone is exerting force, or throwing somethi
         "単横陣" => { tr => "Line Abreast", ok => 'a-csharp 4501458', desc => "these are all the accepted translations already. so yes. See if you can do a carriage return after Line ina all of these." },
         
         
-        # 獲得可能資材 - "Materials Available" [OC] that means out of context and i reserve the right to edit later.
-        # 残り輸送船数 - "Ships Remaining" [OC]
-        # 必要輸送船数 - "Required Number of Ships" [OC]
+        "獲得可能資材" => { tr => "Materials Available", desc => '[OC] that means out of context and i reserve the right to edit later.' },
+        "残り輸送船数" => { tr => "Ships Remaining", desc => '[OC]' },
+        "必要輸送船数" => { tr => "Required Number of Ships", desc => '[OC]', skip => 'a-csharp 4603172', }, # part of a larger string
         
         # Compass fairy with magic hat
         # https://cdn.discordapp.com/attachments/235919493686231051/523259704890097675/2018-12-05-071704.png
         # Compass fairy with bob haircut
         # https://cdn.discordapp.com/attachments/235919493686231051/523259707331313713/2018-12-05-102944.png
-        # ここっ - "Here!" but with exertion.
+        "ここっ" => { tr => "Here!", desc => 'but with exertion' },
         # Compass fairy with chick on head
         # https://cdn.discordapp.com/attachments/235919493686231051/523259713480163328/2018-12-13-232523.png
-        # はやくはやくー！ - "Hurry! Hurry!" - i may localize it a little better. "C'mon! Hurry up!" alternate, more localized. Kind of like it myself.
-        # えいえいえーいっ - "" I need to see it in use for flavour. Knofbath translation does not feel right at this time.
-        # とまれ一つ - "And Another One" i will come back to this one. more context needed.
+        "はやくはやくー！" => { tr => "Hurry! Hurry!", desc => q[i may localize it a little better. "C'mon! Hurry up!" alternate, more localized. Kind of like it myself.], ok => 'a-csharp 4564539' },
+        "えいえいえーいっ" => { tr => "Here!\x{200B}\x{200B}\x{200B}", desc => 'I need to see it in use for flavour. Knofbath translation does not feel right at this time. since the tr was VERY short i added zero width spaces', ok => 'a-csharp 4564885' },
+        "とまれ一つ" => { tr => "And Another One", desc => 'i will come back to this one. more context needed.' },
         # Compass fairy who is sleepy
         # https://cdn.discordapp.com/attachments/235919493686231051/523259716009328658/2018-12-14-010022.png
-        # えー？らしんばん、まわすのー？ - "Uh? You want me to spin the compass?" or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."
+        "えー？らしんばん、まわすのー？" => { tr => "Uh? You want me to spin the compass?", desc => 'or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."', ok   => 'a-csharp 4564589' },
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
-        # 。。。ん。         -  "...un!" - grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]
+        "。。。ん。" => { tr => "...un!", desc => 'grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]' },
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
-        # 。。。。。。あい    -  "...huhn." - Literally "...ai" - Or, maybe she is just making a sound. I am going to play with this some.
+        "。。。。。。あい" => { tr => "...huhn.", desc => 'Literally "...ai" - Or, maybe she is just making a sound. I am going to play with this some.' },
         
-        # 艦隊の針路を選択できます。 - "Plot the fleets course."
-        # 提督、どちらの針路を選択しますか？ - "Admiral, pick a course?" could be "Admiral, which course do you prefer?"
+        "艦隊の針路を選択できます。" => { tr => "Plot the fleet's course.", desc => "todo: verify if this and the next string are one unit", ok => [ 'a-csharp 4563083', 'a-csharp 4698848' ] },
+        "提督、どちらの針路を選択しますか？" => { tr => "Admiral, pick a course?", desc => 'could be "Admiral, which course do you prefer?"', ok => [ 'a-csharp 4563111', 'a-csharp 4698876' ] },
 
-        # この艦隊で出撃しますか？ - "Sortie this fleet?"
-        # ※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。 - "※If you have too many Ship Girls, there is a possibility of not getting a Ship Girl reward." - Edited for consistency. 
-        # ※艦娘保有数が上限に達しているため、新しい艦娘との邂逅はできません。    - "※You have reached your limit of Ship Girls and can not accept your reward." - red, ships full
+        "この艦隊で出撃しますか？" => { tr => "Sortie this fleet?", ok => [ 'a-csharp 4567317', 'sharedassets5/sharedassets5_00551.-4 196', 'level4/level4_00309.-15 196' ] },
+        "※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。" => { tr => "※If you have too many Ship Girls, there is a possibility of not getting a Ship Girl reward.", desc => 'Edited for consistency.', ok => "a-csharp 4567477" },
+        "※艦娘保有数が上限に達しているため、新しい艦娘との邂逅はできません。" => { tr => "※You have reached your limit of Ship Girls and can not accept your reward.", desc => 'red, ships full', ok => 'a-csharp 4567407' },
         # https://cdn.discordapp.com/attachments/235919493686231051/523300790283272234/2018-12-14-194114.png
         # I want to point out, the symbol ※ is used as a Bullet Point Mark.
         # Example: https://i.imgur.com/Z6yQfbF.png
         
         # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
-        # 補給してよろしいですか？ - "Resupply with the following?" - this is more localized.
-        # 必要燃料数 - "Fuel Required" - maybe "Needed"?
-        # 必要弾薬数 - "Ammunition Required" - maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.
+        "補給してよろしいですか？" => { tr => "Resupply with the following?", desc => 'this is more localized.', ok => 'sharedassets5/sharedassets5_01265.-4 196' },
+        "必要燃料数" => { tr => "Fuel Required", desc => 'maybe "Needed"?' },
+        "必要弾薬数" => { tr => "Ammunition Required", desc => 'maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.' },
         
-        # 接近            - "Approach"
-        # 離脱            - "Escape" - Withdraw, Escape or Retreat
-        # 航空攻撃         - "Aerial Attack" - Air Strike 
-        # 砲撃            - "Shelling" - Bombard could work as well. 
-        # 対潜攻撃         - "ASW" - Anti-submarine attack or Anti-submarine warfare(ASW)
-        # 突撃（接近+砲撃） - "Assault (Approach + Shelling)" - Charge, increase accuracy while decreasing evasion
-        # 雷撃            - "Torpedo" - can be opener and closer if ships have right equipment or are high-level subs
-        # 回避            - "Evade" - no attack, Evasion
-        # 統射            - "Coordinated Shelling" Tough one. It literally breaks down into Unified Archery. For now, I am going to go with Coordinated Shelling to see how it fits - Radar-coordinated Shelling
+        "接近"                    => { tr => "Approach" },
+        "離脱"                    => { tr => "Escape", desc => 'Withdraw, Escape or Retreat' },
+        "航空攻撃"                 => { tr => "Aerial Attack", desc => 'Air Strike' },
+        "砲撃"                    => { tr => "Shelling", desc => 'Bombard could work as well. ' },
+        "対潜攻撃"                 => { tr => "ASW\x{200B}", desc => 'Anti-submarine attack or Anti-submarine warfare(ASW)' },
+        "突撃（接近+砲撃）" => { tr => "Assault (Approach + Shelling)", desc => 'Charge, increase accuracy while decreasing evasion' },
+        "雷撃"            => { tr => "Torpedo", desc => 'can be opener and closer if ships have right equipment or are high-level subs' },
+        "回避"                    => { tr => "Evade", desc => 'no attack, Evasion' },
+        "統射" => { tr   => "Coordinated Shelling", desc => 'Tough one. It literally breaks down into Unified Archery. For now, I am going to go with Coordinated Shelling to see how it fits - Radar-coordinated Shelling' },
         #           ** I have updated these to reflect \resources\Textures\info6_set.tex.png ** these are final translations between 接近 and 統射
         
-        # 制空権確保         - "Air Secured" - Air Supremacy or Air Superiority Ensured
-        # 航空優勢          - "Air Advantage" - Air Superiority
-        # 制空権喪失         - "Air Disadvantage" - Air Incapability or Air Superiority Lost
+        "制空権確保" => { tr => "Air Secured", desc => 'Air Supremacy or Air Superiority Ensured' },
+        "航空優勢" => { tr => "Air Advantage", desc => 'Air Superiority' },
+        "制空権喪失" => { tr => "Air Disadvantage", desc => 'Air Incapability or Air Superiority Lost' },
         
-        # 装備数が保有上限に達し開発できません - "Equipment storage full, can not develop any more." warning message when constructing ships
-        # 装備の保有上限に達しています        - "Equipment storage full." warning message when claiming ships
-        # 艦が保有上限に達し建造できません     -  "Ship Girl storage full, can not construct any more." warning message when constructing ships
-        
+        "装備数が保有上限に達し開発できません" => { tr => "Equipment storage full, can not develop any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501118' },
+        "装備の保有上限に達しています" => { tr => "Equipment storage full.", desc => 'warning message when claiming ships', ok => 'a-csharp 4501184' },
+        "艦が保有上限に達し建造できません" => { tr => "Ship Girl storage full, can not construct any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501084' },
+
     );
 }
