@@ -135,3 +135,30 @@ kc_original_unpack_modded into asset files in kc_translation_mod_candidate.
 
 And lastly it copies everything onto the vita mounted at E: and warns about
 extraneous files there.
+
+=head1 BUILDING A PATCH UPDATER
+
+Since the patch itself will be pretty big, it's nice for working with others to
+have a small patcher to apply incremental changes without downloading the whole
+thing.
+
+To do this i chose Download Inno Setup XDELTA Patch Maker 2.5.6.7, which is only
+available from Softpedia because the russian author has no own site, but seems
+to work fairly ok.
+
+https://www.softpedia.com/get/Programming/Patchers/Inno-Setup-XDELTA-Patch-Maker.shtml
+
+Preparation: Have a previously known version of the translation patch unpacked
+in a directory; and have a release candidate built with a version number
+assigned.
+
+- run ISXPM
+- click "load project" in the bottom right, and load
+  ISXPM.Patcher.KancolleKai/ISXPM.Patcher.KancolleKai.ini
+- (note that if you save now, it'll go into the projects dir of ISXPM. to get
+  config changes into the repo the ini needs to be copied manually)
+- paste the path to the previous version in the "old version" field
+- paste the path to the release candidate in the "final version" field
+- update the "patch name" field to indicate from which ver to which ver it goes
+- adjust the "patch output" field to set where the exe is saved
+- click "build patch"
