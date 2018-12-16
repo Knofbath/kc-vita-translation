@@ -45,6 +45,7 @@ sub run {
     for my $file (@to_copy) {
         ( $file, my $path ) = $file->@*;
         say $file;
+        io( io->file($path)->filepath )->mkpath;
         $file->copy($path);
     }
 
