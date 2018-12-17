@@ -173,7 +173,7 @@ sub data {
         },
         # Compass fairy with bob haircut
         # https://cdn.discordapp.com/attachments/235919493686231051/523259707331313713/2018-12-05-102944.png
-        "ここっ"                                     => { tr => "Here!",                           desc => 'but with exertion' },
+        "ここっ"                                     => { tr => "Here!",                           desc => 'but with exertion', ok => 'a-csharp 4564761' },
         "よーし、らしんばんまわすよー！" => { tr => "Alright, I'll spin the compass!", ok   => 'a-csharp 4564557' },
         "えいっ"                                     => {
             tr   => "Ey!",
@@ -195,7 +195,7 @@ sub data {
             desc => 'I need to see it in use for flavour. Knofbath translation does not feel right at this time. since the tr was VERY short i added zero width spaces',
             ok   => 'a-csharp 4564885'
         },
-        "とまれ一つ" => { tr => "And Another One", desc => 'i will come back to this one. more context needed.' },
+        "とまれーっ" => { tr => "And Another One", desc => 'i will come back to this one. more context needed.', ok => 'a-csharp 4565001' },
         # Compass fairy who is sleepy
         # https://cdn.discordapp.com/attachments/235919493686231051/523259716009328658/2018-12-14-010022.png
         "えー？らしんばん、まわすのー？" => {
@@ -204,10 +204,10 @@ sub data {
             ok   => 'a-csharp 4564589'
         },
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
-        "。。。ん。" =>
-          { tr => "...un!", desc => 'grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]' },
+        "……ん" =>
+          { tr => "...un!", desc => 'grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]', ok => 'a-csharp 4564867' },
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
-        "。。。。。。あい" => { tr => "...huhn.", desc => 'Literally "...ai" - Or, maybe she is just making a sound. I am going to play with this some.' },
+        "……あい" => { tr => "...huhn", desc => 'Literally "...ai" - Or, maybe she is just making a sound. I am going to play with this some.', ok => 'a-csharp 4564875' },
 
         "艦隊の針路を選択できます。" =>
           { tr => "Plot the fleet's course.", desc => "todo: verify if this and the next string are one unit", ok => [ 'a-csharp 4563083', 'a-csharp 4698848' ] },
