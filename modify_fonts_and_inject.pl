@@ -8,43 +8,18 @@ run();
 sub run {
     my $ff            = "C:/Program Files (x86)/FontForgeBuilds/bin/fontforge.exe";
     my $candidate_dir = "../kc_original_unpack_modded";
-    my @fonts         = (
-        {
-            name        => "A-OTF-UDShinGoPro-Regular",
-            target_path => "Media/Unity_Assets_Files/sharedassets3",
-            src         => "fonts/ume-pgs4.ttf"                        # to make this more narrow
-        },
-        {
-            name        => "A-OTF-ShinGoPro-Regular",
-            target_path => "Media/Unity_Assets_Files/sharedassets2",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets2/A-OTF-ShinGoPro-Regular.ttf"
-        },
-        {
-            name        => "CenturyGothicStd",
-            target_path => "Media/Unity_Assets_Files/resources",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/resources/CenturyGothicStd.ttf"
-        },
-        {
-            name        => "A-OTF-ShinGoPro-Regular-For-ScrollList",
-            target_path => "Media/Unity_Assets_Files/sharedassets5",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets5/A-OTF-ShinGoPro-Regular-For-ScrollList.ttf"
-        },
+    my $t_root        = "Media/Unity_Assets_Files";
+    my $font_root     = "../kc_original_unpack/$t_root";
 
-        {
-            name        => "AxisStd-Regular_1",
-            target_path => "Media/Unity_Assets_Files/sharedassets5",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets5/AxisStd-Regular_1.ttf"
-        },
-        {
-            name        => "A-OTF-RyuminPr5-ExBold",
-            target_path => "Media/Unity_Assets_Files/sharedassets11",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets11/A-OTF-RyuminPr5-ExBold.ttf"
-        },
-        {
-            name        => "Century Gothic",
-            target_path => "Media/Unity_Assets_Files/sharedassets26",
-            src         => "../kc_original_unpack/Media/Unity_Assets_Files/sharedassets26/Century Gothic.ttf"
-        },
+    # ume is used to make texts ingame more narrow
+    my @fonts = (
+        { name => "A-OTF-UDShinGoPro-Regular",              target_path => "$t_root/sharedassets3",  src => "fonts/ume-pgs4.ttf" },
+        { name => "A-OTF-ShinGoPro-Regular",                target_path => "$t_root/sharedassets2",  src => "$font_root/sharedassets2/A-OTF-ShinGoPro-Regular.ttf" },
+        { name => "CenturyGothicStd",                       target_path => "$t_root/resources",      src => "$font_root/resources/CenturyGothicStd.ttf" },
+        { name => "A-OTF-ShinGoPro-Regular-For-ScrollList", target_path => "$t_root/sharedassets5",  src => "$font_root/sharedassets5/A-OTF-ShinGoPro-Regular-For-ScrollList.ttf" },
+        { name => "AxisStd-Regular_1",                      target_path => "$t_root/sharedassets5",  src => "$font_root/sharedassets5/AxisStd-Regular_1.ttf" },
+        { name => "A-OTF-RyuminPr5-ExBold",                 target_path => "$t_root/sharedassets11", src => "$font_root/sharedassets11/A-OTF-RyuminPr5-ExBold.ttf" },
+        { name => "Century Gothic",                         target_path => "$t_root/sharedassets26", src => "$font_root/sharedassets26/Century Gothic.ttf" },
     );
     io("../fonts")->mkdir if !-d "../fonts";
     mod_font( $ff, $candidate_dir, $_->%* ) for @fonts;
@@ -52,15 +27,15 @@ sub run {
     return;
 }
 
+sub _age($) { ( stat $_[0] )[9] || 0 }
+
 sub mod_font {
     my ( $ff, $candidate_dir, %font ) = @_;
     say "processing font '$font{name}'";
 
     my $target_path = "$candidate_dir/$font{target_path}";
     my $target_body = "$target_path/$font{name}";
-    my $target_age  = ( stat "$target_body.ttf" )[9];
-    my $source_age  = ( stat "font_mod_character_pairs" )[9];
-    if ( $target_age and $target_age > $source_age ) {
+    if ( _age "$target_body.ttf" > _age "font_mod_character_pairs" ) {
         say "font was generated after last change to char tuples, skipping";
         return;
     }
