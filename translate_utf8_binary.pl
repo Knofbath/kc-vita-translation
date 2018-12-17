@@ -124,7 +124,7 @@ sub report_near_miss {
         $offset++;
     }
     my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s<", $file_hit, $mod, $hit, $jp, $extract;
-    $msg =~ s/\x$_/■/g for 0 .. 9, "1E", "14";
+    $msg =~ s/\x{$_}/■/g for 0 .. 9, "1E", "14", "900";
     $msg =~ s/\r/\\r/g;
     $msg =~ s/\n/\\n/g;
     say $msg;
