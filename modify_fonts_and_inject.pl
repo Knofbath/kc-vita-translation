@@ -91,12 +91,12 @@ sub run {
     # ume is used to make texts ingame more narrow
     my @fonts = (
         { name => "A-OTF-UDShinGoPro-Regular",              target_path => "$t_root/sharedassets3",  src => "fonts/ume-pgs4.ttf" },
-        { name => "A-OTF-ShinGoPro-Regular",                target_path => "$t_root/sharedassets2",  src => "$font_root/sharedassets2/A-OTF-ShinGoPro-Regular.ttf" },
-        { name => "CenturyGothicStd",                       target_path => "$t_root/resources",      src => "$font_root/resources/CenturyGothicStd.ttf" },
-        { name => "A-OTF-ShinGoPro-Regular-For-ScrollList", target_path => "$t_root/sharedassets5",  src => "$font_root/sharedassets5/A-OTF-ShinGoPro-Regular-For-ScrollList.ttf" },
-        { name => "AxisStd-Regular_1",                      target_path => "$t_root/sharedassets5",  src => "$font_root/sharedassets5/AxisStd-Regular_1.ttf" },
-        { name => "A-OTF-RyuminPr5-ExBold",                 target_path => "$t_root/sharedassets11", src => "$font_root/sharedassets11/A-OTF-RyuminPr5-ExBold.ttf" },
-        { name => "Century Gothic",                         target_path => "$t_root/sharedassets26", src => "$font_root/sharedassets26/Century Gothic.ttf" },
+        { name => "A-OTF-ShinGoPro-Regular",                target_path => "$t_root/sharedassets2",  src => "fonts/ume-pgs4.ttf" },
+        { name => "CenturyGothicStd",                       target_path => "$t_root/resources",      src => "fonts/ume-pgs4.ttf" },
+        { name => "A-OTF-ShinGoPro-Regular-For-ScrollList", target_path => "$t_root/sharedassets5",  src => "fonts/ume-pgs4.ttf" },
+        { name => "AxisStd-Regular_1",                      target_path => "$t_root/sharedassets5",  src => "fonts/ume-pgs4.ttf" },
+        { name => "A-OTF-RyuminPr5-ExBold",                 target_path => "$t_root/sharedassets11", src => "fonts/ume-pgs4.ttf" },
+        { name => "Century Gothic",                         target_path => "$t_root/sharedassets26", src => "fonts/ume-pgs4.ttf" },
     );
     io("../fonts")->mkdir if !-d "../fonts";
     my %prepped;
