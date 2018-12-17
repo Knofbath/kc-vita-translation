@@ -11,7 +11,9 @@ pairs = [line.rstrip('\n').split("|") for line in open('font_mod_character_pairs
 pairs = filter(None, list(itertools.chain.from_iterable(pairs)))
 
 fontname = sys.argv[1]
-M20 = Schrift(fontname, "../fonts/"+fontname+".sfdir", "../fonts/"+fontname+"_mod.sfdir")
+font_source = sys.argv[2]
+font_target = sys.argv[3]
+M20 = Schrift(fontname, font_source, font_target)
 
 for pair in pairs:
     name = "uni%X" % unicode_point_int

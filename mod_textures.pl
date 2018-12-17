@@ -6,7 +6,9 @@ use Capture::Tiny 'capture';
 $|++;
 run();
 
-sub _age($) { ( stat $_[0] )[9] || 0 }
+sub _age($) {
+    eval { ( stat $_[0] )[9] } || 0;
+}
 
 sub run {
     say "copying and converting images";
