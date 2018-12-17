@@ -255,5 +255,11 @@ sub data {
         "装備の保有上限に達しています" => { tr => "Equipment storage full.", desc => 'warning message when claiming ships', ok => 'a-csharp 4501184' },
         "艦が保有上限に達し建造できません" =>
           { tr => "Ship Girl storage full, can not construct any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501084' },
+
+        #"廃棄は □ボタンで行います",
+        #"解体は □ボタンで行います",
+        #"ボタンで戦略コマンドを\n開き、ターンを終了せよ！",
+        #"ボタンで戦略コマンド\nを開き、艦隊出撃せよ！",
+        #"ボタンで\n旗艦提督室へ移動せよ！",
     );
 }
