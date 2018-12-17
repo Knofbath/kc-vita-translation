@@ -200,12 +200,7 @@ sub run {
                         report_near_miss $file_hit, $hit, $enc, $jp, $content;
                         next;
                     }
-                    my $tr = $obj{tr_mapped}{$enc};
-                    substr( $content, $hit, length $tr ) = $tr;
-                    $tr =~ s/\x$_/■/g for 0 .. 9;
-                    my $msg = "hit '$file_hit' done - '$jp' as '$obj{tr}' mapped to '$tr'";
-                    $msg =~ s/\n/\\n/g;
-                    say $msg;
+                    substr( $content, $hit, length $_ ) = $_ for $obj{tr_mapped}{$enc};
                     $found++;
                     $found{$jp}++;
                 }
