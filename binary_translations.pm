@@ -57,6 +57,7 @@ sub data {
                 'a-csharp 4699477',    # unsure about this one
             ]
         },
+        "チュートリアルを行いますか？" => {},
 
         "配備輸送船数" => { tr => "Transports",    desc => "Number of deployed shipping vessels, Cargo ships in area" },
         "予想獲得資源" => { tr => "Expected Gain", desc => "Expected acquisition resources (Daily Resource Generation) Fuel, Ammo, Steel, Bauxite per map hex" },
@@ -78,6 +79,9 @@ sub data {
         "火力" => { tr => "ATK",   desc => "Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power" },
         "対空" => { tr => "AA",    desc => "Anti-air or Air Defense" },
         "速力" => { tr => "Speed", desc => "Try Speed instead of SPD as I would like to check table formatting." },
+
+        "火力 -10" => {},
+
         #[1:06 AM] Knofbep: the damage shows up 2nd to last column
         #[1:06 AM] Knofbep: next to the heart lock
         # https://cdn.discordapp.com/attachments/235919493686231051/522193240510693396/2018-12-11-182050.png
@@ -260,6 +264,56 @@ sub data {
         #"解体は □ボタンで行います",
         #"ボタンで戦略コマンドを\n開き、ターンを終了せよ！",
         #"ボタンで戦略コマンド\nを開き、艦隊出撃せよ！",
-        #"ボタンで\n旗艦提督室へ移動せよ！",
+
+        "旗艦提督室"                                   => { desc => 'flagship admirals  | map screen tutorial' },
+        "への移動"                                      => { desc => 'map screen tutorial' },
+        "[E2E2E2][12c112]旗艦提督室[-]への移動[-]" => { desc => 'flagship admirals |map screen tutorial' },
+        "ボタンで"                                      => { desc => 'map screen tutorial' },
+        "      ボタンで\n旗艦提督室へ移動せよ！" =>
+          { desc => 'map screen tutorial', ok => 'resources/resources_00997.-10 196' },
+        "戦略コマンド"         => { desc => 'Command|map screen circle' },
+        "艦隊情報"               => { desc => 'Information|map screen triangle' },
+        "艦隊選択"               => { desc => 'Selection|map screen left right d-pad', ok => 'level19/level19_00052.-4 196' },
+        "海域選択"               => { desc => 'Selection|map screen right stick' },
+        "艦隊旗艦"               => { desc => 'Fleet|map screen fleet name' },
+        "○○○○艦隊旗艦\n" => { desc => 'Fleet |map screen fleet name, no idea if the circles can be touched' },
+
+        # "第1艦隊旗艦" => { desc => 'map screen fleet name, the first char is gonna be a bit tricky to identify, leaving as is for now' },
+        "[E2E2E2]はじめての[12c112]任務[-]！[-]" => { desc => 'admiral room tutorial for factory' },
+        "[e2e2e2]はじめての[12c112]配備[-][-]" =>
+          { desc => 'tutorial text found via text matching, the achievements indicate this should have an exclamation mark' },
+        "[E2E2E2]はじめての[12c112]建造[-]！[-]" => { desc => 'tutorial text found via text matching' },
+        "任務を受託せよ！"                    => { desc => 'admiral room tutorial for factory', ok => 'resources/resources_00790.-10 196' },
+        "新規に       任務を受託可能です" => { desc => 'quests' },
+        "任務内容確認"                          => { desc => 'quests' },
+        "設定"                                      => { desc => 'settings', ok => 'a-csharp 4851256' },
+        "操作ガイド"                             => { desc => 'settings' },
+        "残り"                                      => { desc => 'factory time cost' },
+        "日数"                                      => { desc => 'factory time cost' },
+        "残り日数"                                => { desc => 'factory time cost' },
+        "ロック"                                   => { desc => 'ship list', ok => 'a-csharp 4532088' },
+        "ソート"                                   => { desc => 'ship list', ok => 'a-csharp 4519060' },
+
+        "高速建造"                          => { desc => 'High speed construction | factory tutorial' },
+        "[E2E2E2][12c112]高速建造[-]！[-]" => { desc => 'High speed construction | factory tutorial' },
+
+        # [000000][006400]高速建造[-]について[-]
+
+        "高速建造材を使い、\n建造を完了せよ！" => {
+            desc => 'High speed construction | factory tutorial',
+            ok   => [ 'resources/resources_00988.-10 196', 'resources/resources_01361.-10 196' ]
+        },
+
+        "達成" => { desc => "this little segment follows all achievements, having the script search for it will highlight those in the output" },
+
+        "「はじめての建造！」 達成"    => { ok => 'a-csharp 4518268' },
+        "「はじめての任務！」 達成"    => { ok => 'a-csharp 4524440' },
+        "「はじめての配備！」 達成"    => { ok => 'a-csharp 4567769' },
+        "「高速建造！」 達成"             => { desc => "High speed construction | ", ok => 'a-csharp 4518296' },
+        "「任務完了！」 達成"             => { ok => 'a-csharp 4524330' },
+        "「艦隊を編成！」 達成"          => { ok => 'a-csharp 4529846' },
+        "「旗艦提督室への移動」 達成" => { ok => 'a-csharp 4533878' },
+        "「作戦海域への出撃！」 達成" => { ok => 'a-csharp 4573639' },
+        "「ターン終了」 達成"             => { ok => 'a-csharp 4573255' },
     );
 }
