@@ -220,7 +220,7 @@ sub data {
         # I want to point out, the symbol ※ is used as a Bullet Point Mark.
         # Example: https://i.imgur.com/Z6yQfbF.png
 
-        "接近"                    => { tr => "Approach" },
+        "接近"                    => { tr => "Approach",                      ok   => 'a-csharp 4556751' },
         "離脱"                    => { tr => "Escape", desc => 'Withdraw, Escape or Retreat' },
         "航空攻撃"              => { tr => "Aerial Attack", desc => 'Air Strike' },
         "砲撃"                    => { tr => "Shelling", desc => 'Bombard could work as well. ' },
@@ -230,7 +230,8 @@ sub data {
         "回避"                    => { tr => "Evade", desc => 'no attack, Evasion' },
         "統射" => {
             tr   => "Coordinated Shelling",
-            desc => 'Tough one. It literally breaks down into Unified Archery. For now, I am going to go with Coordinated Shelling to see how it fits - Radar-coordinated Shelling'
+            desc => 'Tough one. It literally breaks down into Unified Archery. For now, I am going to go with Coordinated Shelling to see how it fits - Radar-coordinated Shelling',
+            ok   => 'a-csharp 4556793',
         },
         #           ** I have updated these to reflect \resources\Textures\info6_set.tex.png ** these are final translations between 接近 and 統射
 
