@@ -28,7 +28,7 @@ sub map_str_to_multi_chars {
         for my $i (@to_process) {
             my $part = $parts[$i];
             my @matches = grep index( $part, $_ ) != -1, @glyphs;
-            @matches = grep length > ( $need_to_shrink > 25 ? 3 : 1 ), @matches if $need_to_shrink > 0;
+            @matches = grep length > ( ( $need_to_shrink > 25 ) ? 3 : ( $need_to_shrink > 15 ) ? 2 : 1 ), @matches if $need_to_shrink > 0;
             for my $glyph (@matches) {
                 my ( $p1, $p2 ) = split /\Q$glyph\E/, $part, 2;
                 my @parts2 = @parts;
@@ -44,7 +44,7 @@ sub map_str_to_multi_chars {
 
                 my @deeper = $proc->(@parts2);
                 $seen{ $e->(@parts2) }++;
-                die "tried for too long, add more things to the font mod pairs" if 10_000 == keys %seen;
+                die "tried for too long, add more things to the font mod pairs" if 80_000 == keys %seen;
                 return @deeper if @deeper;
             }
         }
