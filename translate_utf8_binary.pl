@@ -3,6 +3,8 @@ use strictures 2;
 use IO::All -binary;
 use List::Util qw'sum uniq min';
 use Encode qw' decode encode ';
+use Tk;
+use Tk::Font;
 use utf8;
 use lib '.';
 use binary_translations;
@@ -158,7 +160,24 @@ sub run {
     $tr{$_}{tr} //= "" for grep !defined $tr{$_}{tr}, sort keys %tr;
     my @tr_keys = reverse sort { length $a <=> length $b } sort keys %tr;
 
+    my ( $mw, $font_name ) = ( MainWindow->new, "Ume P Gothic S4" );
+    my $font = $mw->fontCreate( "test", -family => $font_name, -size => 18 );
+    my %what = $font->actual;
+    die "didn't create right font, but: $what{-family}" if $what{-family} ne $font_name;
+    for my $jp (@tr_keys) {
+        $tr{$jp}{width}       = $font->measure($jp);
+        $tr{$jp}{width_tr}    = $font->measure( $tr{$jp}{tr} );
+        $tr{$jp}{width_ratio} = sprintf "%.2f", $tr{$jp}{width_tr} / $tr{$jp}{width};
     }
+    for my $jp ( reverse sort { $tr{$a}{width_ratio} <=> $tr{$b}{width_ratio} } sort keys %tr ) {
+        next if $tr{$jp}{width_ratio} <= 1;
+        my $msg = " $tr{$jp}{width_ratio} = $tr{$jp}{width} : $tr{$jp}{width_tr} -- $jp #-# $tr{$jp}{width_ratio} = $tr{$jp}{width} : $tr{$jp}{width_tr} -- $tr{$jp}{tr}";
+        $msg =~ s/\n/\\n/g;
+        $msg =~ s/#-#/\n/g;
+        say $msg;
+    }
+    print "\n";
+
     my %used;
     my @too_long = map add_mapped( \%tr, $_, \%used, %mapping ), "UTF-16LE", "UTF-8";
     s/\n/\\n/g for @too_long;
