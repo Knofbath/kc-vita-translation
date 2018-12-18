@@ -37,7 +37,7 @@ sub map_str_to_multi_chars {
                 my $diff = $l2 - $length_target;
                 return @parts2 if not $diff;
 
-                my $fail = "length in encoding $enc: $length_current -> $l2 : " . join "|", map +( $rev_prep{$_} ? "\$$rev_prep{$_}" : $_ ), @parts2;
+                my $fail = "length in encoding $enc: $l2 : " . join "|", map +( $rev_prep{$_} ? "\$$rev_prep{$_}" : $_ ), @parts2;
                 push @{ $closest{ abs $diff } }, $fail;
                 push @failed, $fail;
                 next if $seen{ $e->(@parts2) };
@@ -119,12 +119,15 @@ sub report_near_miss {
     my $mod = $hit - ( $hit % 16 );
     my ( $offset, $extract ) = (0);
     while ( $offset < 3 ) {
-        $extract = decode $enc, substr $content, $hit - 16 + $offset, 28 + length encode $enc, $jp;
+        $extract = decode $enc, substr $content, $hit - 16 + $offset, 28 + 2 * length encode $enc, $jp;
         last if $extract =~ /\Q$jp\E/;
         $offset++;
     }
-    my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s<", $file_hit, $mod, $hit, $jp, $extract;
-    $msg =~ s/\x{$_}/■/g for 0 .. 9, "1E", "14", "900";
+    my ($ords) = map "[$_]", join "|", map uc sprintf( "%x", ord ), split //, $extract;
+    my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s< %s", $file_hit, $mod, $hit, $jp, $extract, $ords;
+    $msg =~ s/\x{$_}/■/g
+      for 0 .. 9,
+      qw( B C E F 10 11 12 13 15 17 18 19 1A 1B 1C 1D 1E 14 600 900 300 500 B00 1D00 2100 2300 2500 2D00 D00 1700 2700 800 2A00 2B00 1500 1900 F00 700 1B00 1D00 1F00 1300 1100 3000 2B00 7B00 3200 7D00 2900 2000  FFFD   );
     $msg =~ s/\r/\\r/g;
     $msg =~ s/\n/\\n/g;
     say $msg;
@@ -217,9 +220,11 @@ sub run {
         io($target)->print($content);
     }
 
-    say join "\n", "", "strings not always identified confidently:",
-      map sprintf( "  %-" . ( 30 - length $_ ) . "s %-30s hit x %3s, nomatch x %3s, match x %3s", $_, $tr{$_}{tr}, $hit{$_}, $unmatched{$_}, $hit{$_} - $unmatched{$_} ),
+    my @maybe = map sprintf( "  %-" . ( 30 - length $_ ) . "s %-30s hit x %3s, nomatch x %3s, match x %3s", $_, $tr{$_}{tr}, $hit{$_}, $unmatched{$_}, $hit{$_} - $unmatched{$_} ),
       reverse sort { length $a <=> length $b } sort keys %unmatched;
+    s/\n/\\n/g for @maybe;
+    s/\r/\\r/g for @maybe;
+    say join "\n", "", "strings not always identified confidently:", @maybe;
 
     say join "\n", "", "strings found nowhere:", map sprintf( "  %-" . ( 30 - length $_ ) . "s $tr{$_}{tr}", $_ ), grep +( !$found{$_} and !$unmatched{$_} ), @tr_keys;
 
