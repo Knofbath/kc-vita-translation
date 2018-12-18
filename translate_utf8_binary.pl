@@ -78,7 +78,7 @@ sub trim_nl {
 
 sub add_mapped {
     my ( $dictionary, $enc, $used, %mapping ) = @_;
-    return map map_tr_to_multi_chars( $_, $enc, $dictionary->{$_}, $used, %mapping ), sort keys $dictionary->%*;
+    return map map_tr_to_multi_chars( $_, $enc, $dictionary->{$_}, $used, %mapping ), grep length $dictionary->{$_}{tr}, sort keys $dictionary->%*;
 }
 
 sub get_hits {
@@ -145,6 +145,7 @@ sub run {
     $|++;
     binmode STDOUT, ":encoding(UTF-8)";
     binmode STDERR, ":encoding(UTF-8)";
+    my $do_blank = grep /--blank/, @ARGV;
 
     say "prepping dictionary";
     my %mapping = do {
@@ -154,9 +155,9 @@ sub run {
     };
     duplicate_check;
     my %tr = binary_translations->data;
-    for my $jp ( grep !defined $tr{$_}{tr}, sort keys %tr ) {
-        say "no translation for $jp, skipping";
-        delete $tr{$jp};
+    $tr{$_}{tr} //= "" for grep !defined $tr{$_}{tr}, sort keys %tr;
+    my @tr_keys = reverse sort { length $a <=> length $b } sort keys %tr;
+
     }
     my %used;
     my @too_long = map add_mapped( \%tr, $_, \%used, %mapping ), "UTF-16LE", "UTF-8";
@@ -164,6 +165,12 @@ sub run {
     die join "\n", @too_long, "\n" if @too_long;
     my @unused = grep !$used{$_}, keys %mapping;
     say "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
+
+    if ($do_blank) {
+        for my $enc ( "UTF-16LE", "UTF-8" ) {
+            $tr{$_}{tr_mapped}{$enc} = "\0" x length encode $enc, $_ for grep !length $tr{$_}{tr}, keys %tr;
+        }
+    }
 
     # this converts any single string ok/skip entries into arrays, or fills in empty arrays if there's none
     for my $entry ( values %tr ) {
@@ -181,7 +188,6 @@ sub run {
     };
     @list = sort { lc $a->{fileid} cmp lc $b->{fileid} } @list;
     say "prepped";
-    my @tr_keys = reverse sort { length $a <=> length $b } sort keys %tr;
     my %found;
     my %unmatched;
     my %hit;
@@ -204,6 +210,7 @@ sub run {
                         report_near_miss $file_hit, $hit, $enc, $jp, $content;
                         next;
                     }
+                    next if !$do_blank and !length $obj{tr};
                     substr( $content, $hit, length $_ ) = $_ for $obj{tr_mapped}{$enc};
                     $found++;
                     $found{$jp}++;
