@@ -159,7 +159,7 @@ sub run {
     s/\n/\\n/g for @too_long;
     die join "\n", @too_long, "\n" if @too_long;
     my @unused = grep !$used{$_}, keys %mapping;
-    die "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
+    say "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
 
     # this converts any single string ok/skip entries into arrays, or fills in empty arrays if there's none
     for my $entry ( values %tr ) {
