@@ -134,7 +134,8 @@ sub report_near_miss {
 }
 
 sub duplicate_check {
-    my %seen = map +( $_ => 1 ), binary_translations->data;
+    my %seen;
+    $seen{$_}++ for binary_translations->data;
     my @duplicates = grep $seen{$_} > 1, keys %seen;
     die "following keys are duplicate in dictionary: @duplicates" if @duplicates;
     return;
