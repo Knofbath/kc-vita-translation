@@ -18,16 +18,16 @@ sub data {
         },
         "提督コマンド" => {
             tr   => "Admiral Command",                                                       # quick menu?
-            desc => "usually opens quick menu or changes the buttons to an alternate set",
+            desc => "usually opens quick menu or changes the buttons to an alternate set, Arsenal.UIHowToArsenal",
             ok   => [ 'a-csharp 4518854', 'a-csharp 4682604' ]
         },
         "戦略へ" => {
             tr   => "Strategy",
-            desc => "leads to fleet strategy management screen",
+            desc => "leads to fleet strategy management screen, Arsenal.UIHowToArsenal",
             ok   => [ 'level22/level22_00034.-4 196', 'sharedassets5/sharedassets5_00617.-4 196', 'a-csharp 4518868' ],
         },
-        "決定" => { tr => "Choose", desc => "select the currently chosen option", ok => 'a-csharp 4518802' },
-        "戻る" => { tr => "Back",   desc => "back out of the current screen",     ok => 'a-csharp 4518826', skip => [ 'a-csharp 4566833', 'a-csharp 4682617' ] },
+        "決定" => { tr => "Choose", desc => "select the currently chosen option, Arsenal.UIHowToArsenal", ok => 'a-csharp 4518802' },
+        "戻る" => { tr => "Back",   desc => "back out of the current screen, Arsenal.UIHowToArsenal",     ok => 'a-csharp 4518826', skip => [ 'a-csharp 4566833', 'a-csharp 4682617' ] },
         "戻る　　決定"             => { tr => "Back  Choose", },
         "選択　　戻る　　決定" => { tr => "Select  Back  Choose", },
 
@@ -149,11 +149,11 @@ sub data {
         "どこに進む？" => {
             tr   => "Where to now?",
             ok   => [ 'a-csharp 4564133', 'a-csharp 4698584' ],         # i am VERY unsure about these hits, they'll require verification
-            desc => q["Where do you want to go?" or " Where to now?"]
+            desc => q["Where do you want to go?" or " Where to now?", SortieMap.Defines]
         },
 
         # Battle formation screen
-        "陣形を選択してください。" => { tr => "Please select the formation.", ok => [ 'a-csharp 4564073', 'a-csharp 4698793' ] },
+        "陣形を選択してください。" => { tr => "Please select the formation.", desc => "SortieMap.Defines", ok => [ 'a-csharp 4564073', 'a-csharp 4698793' ] },
         "単縦陣"                            => { tr => "Line Ahead",                   ok => 'a-csharp 4501426' },
         "複縦陣"                            => { tr => "Double Line",                  ok => 'a-csharp 4501434' },
         "輪形陣"                            => { tr => "Diamond",                      ok => 'a-csharp 4501442' },
@@ -333,8 +333,8 @@ sub data {
         "海上護衛艦隊名海上護衛艦隊名" => { },
         "[000000][0055aa]海上護衛艦隊[-]の配備について" => { },
 
-        "廃棄は □ボタンで行います" => {ok => 'a-csharp 4517038'},
-        "解体は □ボタンで行います" => {ok => 'a-csharp 4517066'},
+        "廃棄は □ボタンで行います" => {ok => 'a-csharp 4517038', desc => "Arsenal.TaskArsenalListManager"},
+        "解体は □ボタンで行います" => {ok => 'a-csharp 4517066', desc => "Arsenal.TaskArsenalListManager"},
         "ボタンで戦略コマンドを" => {},
         "輸送船団や海上護衛艦隊への" => {},
         "建造日数が掛かります" => {},
