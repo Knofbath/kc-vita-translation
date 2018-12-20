@@ -257,8 +257,6 @@ sub data {
         "艦が保有上限に達し建造できません" =>
           { tr => "Ship Girl storage full, can not construct any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501084' },
 
-        #"廃棄は □ボタンで行います",
-        #"解体は □ボタンで行います",
         #"ボタンで戦略コマンドを\n開き、ターンを終了せよ！",
         #"ボタンで戦略コマンド\nを開き、艦隊出撃せよ！",
 
@@ -316,9 +314,6 @@ sub data {
         "旗艦提督室で\n任務達成を\r確認せよ！\n"                                                => { tr => q[eaeaeaeaeaeaeaeaeaea], },
         #"略ポイント[-]は、任務達成及び\n海域攻略などで手に入ります。\n\n[0055aa]工" => { tr => q[eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaea], },
         #"0000][0055aa]戦略ポイント[-]は、任務達成及び\n海域攻略などで 手に入ります。\n\n[0055aa]工廠[-]での輸送船建造や、\r\n[0055aa]アイテム屋さん[-]でのアイテム購入で\n使用します" => { tr => q[eaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaeaeaeaeaeaeaeaea], },
-
-        # "廃棄は □ボタンで行います" =>  the square is a special char. not sure if it belongs in the string or was a separator
-        # "解体は □ボタンで行います" =>  the square is a special char. not sure if it belongs in the string or was a separator
 
         # "{0}(この海域への移動中:{1}) -" some kinda long string
 
