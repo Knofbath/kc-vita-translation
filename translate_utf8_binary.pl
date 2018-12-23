@@ -100,7 +100,7 @@ sub check_for_null_bracketing {
     $jp = encode $enc, $jp;
     my $pre = ord substr $content, $hit - 1, 1;
     my $post = ord substr $content, $hit + length $jp, 1;
-    return ( $pre == 0 and $post == 0 );
+    return ( $pre == 0 and ($post == 0 or $post == 0x14) );
 }
 
 sub utf8_asset_files {
