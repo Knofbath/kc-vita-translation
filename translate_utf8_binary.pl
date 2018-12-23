@@ -127,9 +127,10 @@ sub report_near_miss {
     }
     my ($ords) = map "[$_]", join "|", map uc sprintf( "%x", ord ), split //, $extract;
     my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s< %s", $file_hit, $mod, $hit, $jp, $extract, $ords;
+    # need to remain: newlines: A D, jp space: 3000
     $msg =~ s/\x{$_}/■/g
       for 0 .. 9,
-      qw( B C E F 10 11 12 13 15 17 18 19 1A 1B 1C 1D 1E 14 600 900 300 500 B00 1D00 2100 2300 2500 2D00 D00 1700 2700 800 2A00 2B00 1500 1900 F00 700 1B00 1D00 1F00 1300 1100 3000 2B00 7B00 3200 7D00 2900 2000  FFFD   );
+      qw( B C E F 10 11 12 13 15 17 18 19 1A 1B 1C 1D 1E 14 600 900 300 500 B00 1D00 D00 1700 800 1500 1900 F00 700 1B00 1D00 1F00 1300 1100 2000 2100 2300 2500 2700 2900 2A00 2B00 2D00 3200 321E 3428 3C3D 3D00 3E30 3F00 4300 4900 4C30 4D00 661A 7B00 7D00 FFFD   );
     $msg =~ s/\r/\\r/g;
     $msg =~ s/\n/\\n/g;
     say $msg;
@@ -249,11 +250,10 @@ sub run {
 
     my @maybe = map sprintf( "  %-" . ( 30 - length $_ ) . "s %-30s hit x %3s, nomatch x %3s, match x %3s", $_, $tr{$_}{tr}, $hit{$_}, $unmatched{$_}, $hit{$_} - $unmatched{$_} ),
       reverse sort { length $a <=> length $b } sort keys %unmatched;
-    s/\n/\\n/g for @maybe;
-    s/\r/\\r/g for @maybe;
-    say join "\n", "", "strings not always identified confidently:", @maybe;
-
-    say join "\n", "", "strings found nowhere:", map sprintf( "  %-" . ( 30 - length $_ ) . "s $tr{$_}{tr}", $_ ), grep +( !$found{$_} and !$unmatched{$_} ), @tr_keys;
+    my @nowhere = map sprintf( "  %-" . ( 30 - length $_ ) . "s $tr{$_}{tr}", $_ ), grep +( !$found{$_} and !$unmatched{$_} ), @tr_keys;
+    s/\n/\\n/g for @maybe, @nowhere;
+    s/\r/\\r/g for @maybe, @nowhere;
+    say join "\n", "", "strings not always identified confidently:", @maybe, "", "strings found nowhere:", @nowhere;
 
     say "\ndone";
     return;
