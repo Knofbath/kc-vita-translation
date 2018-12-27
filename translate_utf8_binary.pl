@@ -94,13 +94,14 @@ sub get_hits {
     return @hits;
 }
 
-sub check_for_null_bracketing {
+sub check_for_null_bracketing {    # looks at the following char as utf8 one to make scanning easier
     my ( $content, $jp, $enc, $hit ) = @_;
     return if $enc eq "UTF-16LE";
-    $jp = encode $enc, $jp;
+    my $decode_content = decode $enc, substr $content, $hit;
     my $pre = ord substr $content, $hit - 1, 1;
-    my $post = ord substr $content, $hit + length $jp, 1;
-    return ( $pre == 0 and ($post == 0 or $post == 0x14) );
+    my $post = ord substr $decode_content, length $jp, 1;
+    my %acceptable = map +( $_, 1 ), ( 0, 0x1, 0x4, 0x6, 0x7, 0x8, 0xB, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0xFFFD );
+    return ( $pre == 0 and $acceptable{$post} );
 }
 
 sub utf8_asset_files {
@@ -127,9 +128,10 @@ sub report_near_miss {
     }
     my ($ords) = map "[$_]", join "|", map uc sprintf( "%x", ord ), split //, $extract;
     my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s< %s", $file_hit, $mod, $hit, $jp, $extract, $ords;
+
     # need to remain: newlines: A D, jp space: 3000
     $msg =~ s/\x{$_}/■/g
-      for 0 .. 9,
+      for 0 .. 8,
       qw( B C E F 10 11 12 13 15 17 18 19 1A 1B 1C 1D 1E 14 600 900 300 500 B00 1D00 D00 1700 800 1500 1900 F00 700 1B00 1D00 1F00 1300 1100 2000 2100 2300 2500 2700 2900 2A00 2B00 2D00 3200 321E 3428 3C3D 3D00 3E30 3F00 4300 4900 4C30 4D00 661A 7B00 7D00 FFFD   );
     $msg =~ s/\r/\\r/g;
     $msg =~ s/\n/\\n/g;
@@ -174,6 +176,7 @@ sub run {
         next if $tr{$jp}{width_ratio} <= 1;
         my $msg = " $tr{$jp}{width_ratio} = $tr{$jp}{width} : $tr{$jp}{width_tr} -- $jp #-# $tr{$jp}{width_ratio} = $tr{$jp}{width} : $tr{$jp}{width_tr} -- $tr{$jp}{tr}";
         $msg =~ s/\n/\\n/g;
+        $msg =~ s/\r/\\r/g;
         $msg =~ s/#-#/\n/g;
         say $msg;
     }
@@ -182,13 +185,14 @@ sub run {
     my %used;
     my @too_long = map add_mapped( \%tr, $_, \%used, %mapping ), "UTF-16LE", "UTF-8";
     s/\n/\\n/g for @too_long;
+    s/\r/\\r/g for @too_long;
     die join "\n", @too_long, "\n" if @too_long;
     my @unused = grep !$used{$_}, keys %mapping;
     say "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
 
     if ($do_blank) {
         for my $enc ( "UTF-16LE", "UTF-8" ) {
-            $tr{$_}{tr_mapped}{$enc} = "\0" x length encode $enc, $_ for grep !length $tr{$_}{tr}, keys %tr;
+            $tr{$_}{tr_mapped}{$enc} = "\0" x length encode $enc, $_ for keys %tr;
         }
     }
 
