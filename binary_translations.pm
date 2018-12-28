@@ -220,14 +220,6 @@ sub data {
         # I want to point out, the symbol ※ is used as a Bullet Point Mark.
         # Example: https://i.imgur.com/Z6yQfbF.png
 
-        # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
-        "補給してよろしいですか？" => { tr => "Resupply with the following?", desc => 'this is more localized.', ok => 'sharedassets5/sharedassets5_01265.-4 196' },
-        "必要燃料数"                      => { tr => "Fuel Required",                desc => 'maybe "Needed"?' },
-        "必要弾薬数"                      => {
-            tr   => "Ammunition Required",
-            desc => 'maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.'
-        },
-
         "接近"                    => { tr => "Approach" },
         "離脱"                    => { tr => "Escape", desc => 'Withdraw, Escape or Retreat' },
         "航空攻撃"              => { tr => "Aerial Attack", desc => 'Air Strike' },
@@ -252,19 +244,13 @@ sub data {
         "艦が保有上限に達し建造できません" =>
           { tr => "Ship Girl storage full, can not construct any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501084' },
 
-        #"ボタンで戦略コマンド\nを開き、艦隊出撃せよ！",
-
-        "旗艦提督室"                                   => { desc => 'flagship admirals  | map screen tutorial' },
-        "への移動"                                      => { desc => 'map screen tutorial' },
         "[E2E2E2][12c112]旗艦提督室[-]への移動[-]" => { desc => 'flagship admirals |map screen tutorial' },
-        "ボタンで"                                      => { desc => 'map screen tutorial' },
         "      ボタンで\n旗艦提督室へ移動せよ！" =>
           { desc => 'map screen tutorial', ok => 'resources/resources_00997.-10 196' },
         "戦略コマンド"         => { desc => 'Command|map screen circle' },
         "艦隊情報"               => { desc => 'Information|map screen triangle' },
         "艦隊選択"               => { desc => 'Selection|map screen left right d-pad', ok => 'level19/level19_00052.-4 196' },
         "海域選択"               => { desc => 'Selection|map screen right stick' },
-        "艦隊旗艦"               => { desc => 'Fleet|map screen fleet name' },
         "○○○○艦隊旗艦\n" => { desc => 'Fleet |map screen fleet name, no idea if the circles can be touched' },
 
         # "第1艦隊旗艦" => { desc => 'map screen fleet name, the first char is gonna be a bit tricky to identify, leaving as is for now' },
@@ -279,21 +265,16 @@ sub data {
         "操作ガイド"                             => { desc => 'settings' },
         "残り"                                      => { desc => 'factory time cost' },
         "日数"                                      => { desc => 'factory time cost' },
-        "残り日数"                                => { desc => 'factory time cost' },
         "ロック"                                   => { desc => 'ship list', ok => 'a-csharp 4532088' },
         "ソート"                                   => { desc => 'ship list', ok => 'a-csharp 4519060' },
 
         "高速建造"                          => { desc => 'High speed construction | factory tutorial' },
         "[E2E2E2][12c112]高速建造[-]！[-]" => { desc => 'High speed construction | factory tutorial' },
 
-        # [000000][006400]高速建造[-]について[-]
-
         "高速建造材を使い、\n建造を完了せよ！" => {
             desc => 'High speed construction | factory tutorial',
             ok   => [ 'resources/resources_00988.-10 196', 'resources/resources_01361.-10 196' ]
         },
-
-        "達成" => { desc => "this little segment follows all achievements, having the script search for it will highlight those in the output" },
 
         "「はじめての建造！」 達成"    => { ok => 'a-csharp 4518268' },
         "「はじめての任務！」 達成"    => { ok => 'a-csharp 4524440' },
@@ -420,19 +401,27 @@ sub data {
         "[000000][006400]戦闘ショートカット[-]について[-]"=>{},
         "輸送船を1隻入手しました"=>{},
         "戦略コマンドから配備を\n選択し、輸送船や海上護衛\n艦隊を配備せよ！"=>{},
-        "\nより多くの[0055AA]鋼材[-]などの資源が必要です。\r\nまた、[0055AA]ボーキサイト[-]を多く投入すると\n航空母艦や\r同護衛艦艇が建造可能です。\n\n[0055AA]輸送船[-]の建造もここで可能です。\r\n\n" => {},
         "高速建造材を使用しますか？" => {},
         "\n旗艦提督室ＢＧＭ" => {},
 
+
+        # https://cdn.discordapp.com/attachments/235919493686231051/523030725616992267/2018-12-14-005011.png
+        "補給してよろしいですか？" => { tr => "Resupply with the following?", desc => 'this is more localized.', ok => 'sharedassets5/sharedassets5_01265.-4 196' },
+        "必要燃料数\r"                      => { tr => "Fuel Required",                desc => 'maybe "Needed"?' },
+        "必要弾薬数\r"                      => {
+            tr   => "Ammunition Required",
+            desc => 'maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.'
+        },
         "必要鋼材数\r\n\r必要燃料数\r\n修 復 日 数                    日\r\n\r\r高速修復材\r"
-          => {tr => "必要鋼材数\r\n\r必要燃料数\r\nDays To Repair                  d\r\n\r\r高速修復材\r"},
+          => {tr => "必要鋼材数\r\n\rFuel Required\r\nDays To Repair                  d\r\n\r\r高速修復材\r"},
         "修 復 日 数\r　　　日　　　　日\n\r \n高速修復材\r" => {},
         "修 復 日 数                     日\r\n\r\n必要鋼材数\r\n\r\n必要燃料数\r\n\r\n高速修復材\r"
-          => {tr => "Days To Repair                   d\r\n\r\n必要鋼材数\r\n\r\n必要燃料数\r\n\r\n高速修復材\r",},
+          => {tr => "Days To Repair                   d\r\n\r\n必要鋼材数\r\n\r\nFuel Required\r\n\r\n高速修復材\r",},
         "修 復 日 数                    日\r\n\r必要鋼材数\r\n\r必要燃料数\r\n\r高速修復材\r"
-          => {tr => "Days To Repair                  d\r\n\r必要鋼材数\r\n\r必要燃料数\r\n\r高速修復材\r",},
+          => {tr => "Days To Repair                  d\r\n\r必要鋼材数\r\n\rFuel Required\r\n\r高速修復材\r",},
         "修 復 日 数\r          日  ▶ 　   日\n\r\n高速修復材\r              ▶" => {desc => "triangle and square here might be bunk"},
         "修 復 日 数\r　　　 日  ▶　　 日\n\r \n高速修復材\r              ▶" => {},
+        "必要鋼材数\r\n\r\n必要燃料数\r\n\r\n\r修 復 日 数　　　　　　　 日\r\n\r\n高速修復材\r" => {},
 
         "\n\n\r\n[000000]我が輸送船団が、敵の[aa0000]通商破壊部隊[-]に\n襲撃を受け始めました。\r\n\n輸送船団に海上護衛部隊を配備して、\r\n敵の[aa0000]通商破壊部隊[-]に備えましょう。\n\n" => {},
         "   戦略画面に移動し、\nターンを終了せよ" => {},
@@ -754,9 +743,6 @@ sub data {
         "必要な弾薬数" => {},
         "必要な鋼材数" => {},
         "必要な開発資材数" => {},
-        "必要弾薬数\r" => {},
-        "必要燃料数\r" => {},
-        "必要鋼材数\r\n\r\n必要燃料数\r\n\r\n\r修 復 日 数　　　　　　　 日\r\n\r\n高速修復材\r" => {},
         "応急修理女神" => {},
         "応急修理女神\nを使用して進撃" => {},
         "応急修理要員\nを使用して進撃" => {},
