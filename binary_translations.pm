@@ -278,7 +278,7 @@ sub data {
         },
 
         "「はじめての建造！」 達成"    => { tr => q["My first construction!" achieved],           ok => 'a-csharp 4518268' },
-        "「はじめての任務！」 達成"    => { tr => q["My first duty!" achieved],                   ok => 'a-csharp 4524440' },
+        "「はじめての任務！」 達成"    => { tr => q["My first quest!" achieved],                   ok => 'a-csharp 4524440' },
         "「はじめての配備！」 達成"    => { tr => q["My first deployment!" achieved],             ok => 'a-csharp 4567769' },
         "「高速建造！」 達成"             => { tr => q["Fast Build!" achieved], desc => "High speed construction | ", ok => 'a-csharp 4518296' },
         "「任務完了！」 達成"             => { tr => q["A mission completed!" achieved],             ok => 'a-csharp 4524330' },
