@@ -3,6 +3,8 @@ use strictures 2;
 use IO::All -binary;
 use List::Util qw'sum uniq min';
 use Encode qw' decode encode ';
+use Tk;
+use Tk::Font;
 use utf8;
 use lib '.';
 use binary_translations;
@@ -28,7 +30,7 @@ sub map_str_to_multi_chars {
         for my $i (@to_process) {
             my $part = $parts[$i];
             my @matches = grep index( $part, $_ ) != -1, @glyphs;
-            @matches = grep length > ( $need_to_shrink > 25 ? 3 : 1 ), @matches if $need_to_shrink > 0;
+            @matches = grep length > ( ( $need_to_shrink > 25 ) ? 3 : ( $need_to_shrink > 15 ) ? 2 : 1 ), @matches if $need_to_shrink > 0;
             for my $glyph (@matches) {
                 my ( $p1, $p2 ) = split /\Q$glyph\E/, $part, 2;
                 my @parts2 = @parts;
@@ -37,14 +39,14 @@ sub map_str_to_multi_chars {
                 my $diff = $l2 - $length_target;
                 return @parts2 if not $diff;
 
-                my $fail = "length in encoding $enc: $length_current -> $l2 : " . join "|", map +( $rev_prep{$_} ? "\$$rev_prep{$_}" : $_ ), @parts2;
+                my $fail = "length in encoding $enc: $l2 : " . join "|", map +( $rev_prep{$_} ? "\$$rev_prep{$_}" : $_ ), @parts2;
                 push @{ $closest{ abs $diff } }, $fail;
                 push @failed, $fail;
                 next if $seen{ $e->(@parts2) };
 
                 my @deeper = $proc->(@parts2);
                 $seen{ $e->(@parts2) }++;
-                die "tried for too long, add more things to the font mod pairs" if 10_000 == keys %seen;
+                die "tried for too long, add more things to the font mod pairs" if 80_000 == keys %seen;
                 return @deeper if @deeper;
             }
         }
@@ -78,7 +80,7 @@ sub trim_nl {
 
 sub add_mapped {
     my ( $dictionary, $enc, $used, %mapping ) = @_;
-    return map map_tr_to_multi_chars( $_, $enc, $dictionary->{$_}, $used, %mapping ), sort keys $dictionary->%*;
+    return map map_tr_to_multi_chars( $_, $enc, $dictionary->{$_}, $used, %mapping ), grep length $dictionary->{$_}{tr}, sort keys $dictionary->%*;
 }
 
 sub get_hits {
@@ -92,13 +94,14 @@ sub get_hits {
     return @hits;
 }
 
-sub check_for_null_bracketing {
+sub check_for_null_bracketing {    # looks at the following char as utf8 one to make scanning easier
     my ( $content, $jp, $enc, $hit ) = @_;
     return if $enc eq "UTF-16LE";
-    $jp = encode $enc, $jp;
+    my $decode_content = decode $enc, substr $content, $hit;
     my $pre = ord substr $content, $hit - 1, 1;
-    my $post = ord substr $content, $hit + length $jp, 1;
-    return ( $pre == 0 and $post == 0 );
+    my $post = ord substr $decode_content, length $jp, 1;
+    my %acceptable = map +( $_, 1 ), ( 0, 0x1, 0x4, 0x6, 0x7, 0x8, 0xB, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1C, 0x1D, 0x1E, 0xFFFD );
+    return ( $pre == 0 and $acceptable{$post} );
 }
 
 sub utf8_asset_files {
@@ -119,19 +122,25 @@ sub report_near_miss {
     my $mod = $hit - ( $hit % 16 );
     my ( $offset, $extract ) = (0);
     while ( $offset < 3 ) {
-        $extract = decode $enc, substr $content, $hit - 16 + $offset, 28 + length encode $enc, $jp;
+        $extract = decode $enc, substr $content, $hit - 16 + $offset, 28 + 2 * length encode $enc, $jp;
         last if $extract =~ /\Q$jp\E/;
         $offset++;
     }
-    my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s<", $file_hit, $mod, $hit, $jp, $extract;
-    $msg =~ s/\x$_/■/g for 0 .. 9, "1E", "14";
+    my ($ords) = map "[$_]", join "|", map uc sprintf( "%x", ord ), split //, $extract;
+    my $msg = sprintf "hit '%s' %08x %08x not marked skipped or ok, please verify %s in >%s< %s", $file_hit, $mod, $hit, $jp, $extract, $ords;
+
+    # need to remain: newlines: A D, jp space: 3000
+    $msg =~ s/\x{$_}/■/g
+      for 0 .. 8,
+      qw( B C E F 10 11 12 13 15 17 18 19 1A 1B 1C 1D 1E 14 600 900 300 500 B00 1D00 D00 1700 800 1500 1900 F00 700 1B00 1D00 1F00 1300 1100 2000 2100 2300 2500 2700 2900 2A00 2B00 2D00 3200 321E 3428 3C3D 3D00 3E30 3F00 4300 4900 4C30 4D00 661A 7B00 7D00 FFFD   );
     $msg =~ s/\r/\\r/g;
     $msg =~ s/\n/\\n/g;
     say $msg;
 }
 
 sub duplicate_check {
-    my %seen = map +( $_ => 1 ), binary_translations->data;
+    my %seen;
+    $seen{$_}++ for binary_translations->data;
     my @duplicates = grep $seen{$_} > 1, keys %seen;
     die "following keys are duplicate in dictionary: @duplicates" if @duplicates;
     return;
@@ -141,6 +150,7 @@ sub run {
     $|++;
     binmode STDOUT, ":encoding(UTF-8)";
     binmode STDERR, ":encoding(UTF-8)";
+    my $do_blank = grep /--blank/, @ARGV;
 
     say "prepping dictionary";
     my %mapping = do {
@@ -150,16 +160,41 @@ sub run {
     };
     duplicate_check;
     my %tr = binary_translations->data;
-    for my $jp ( grep !defined $tr{$_}{tr}, sort keys %tr ) {
-        say "no translation for $jp, skipping";
-        delete $tr{$jp};
+    $tr{$_}{tr} //= "" for grep !defined $tr{$_}{tr}, sort keys %tr;
+    my @tr_keys = reverse sort { length $a <=> length $b } sort keys %tr;
+
+    my ( $mw, $font_name ) = ( MainWindow->new, "Ume P Gothic S4" );
+    my $font = $mw->fontCreate( "test", -family => $font_name, -size => 18 );
+    my %what = $font->actual;
+    die "didn't create right font, but: $what{-family}" if $what{-family} ne $font_name;
+    for my $jp (@tr_keys) {
+        $tr{$jp}{width}       = $font->measure($jp);
+        $tr{$jp}{width_tr}    = $font->measure( $tr{$jp}{tr} );
+        $tr{$jp}{width_ratio} = sprintf "%.2f", $tr{$jp}{width_tr} / $tr{$jp}{width};
     }
+    for my $jp ( reverse sort { $tr{$a}{width_ratio} <=> $tr{$b}{width_ratio} } sort keys %tr ) {
+        next if $tr{$jp}{width_ratio} <= 1;
+        my $msg = " $tr{$jp}{width_ratio} = $tr{$jp}{width} : $tr{$jp}{width_tr} -- $jp #-# $tr{$jp}{width_ratio} = $tr{$jp}{width} : $tr{$jp}{width_tr} -- $tr{$jp}{tr}";
+        $msg =~ s/\n/\\n/g;
+        $msg =~ s/\r/\\r/g;
+        $msg =~ s/#-#/\n/g;
+        say $msg;
+    }
+    print "\n";
+
     my %used;
     my @too_long = map add_mapped( \%tr, $_, \%used, %mapping ), "UTF-16LE", "UTF-8";
     s/\n/\\n/g for @too_long;
+    s/\r/\\r/g for @too_long;
     die join "\n", @too_long, "\n" if @too_long;
     my @unused = grep !$used{$_}, keys %mapping;
-    die "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
+    say "following tuples unused: @unused\nfollowing tuples used: '" . ( join "|", sort keys %used ) . "'\n" if @unused;
+
+    if ($do_blank) {
+        for my $enc ( "UTF-16LE", "UTF-8" ) {
+            $tr{$_}{tr_mapped}{$enc} = "\0" x length encode $enc, $_ for keys %tr;
+        }
+    }
 
     # this converts any single string ok/skip entries into arrays, or fills in empty arrays if there's none
     for my $entry ( values %tr ) {
@@ -177,7 +212,6 @@ sub run {
     };
     @list = sort { lc $a->{fileid} cmp lc $b->{fileid} } @list;
     say "prepped";
-    my @tr_keys = reverse sort { length $a <=> length $b } sort keys %tr;
     my %found;
     my %unmatched;
     my %hit;
@@ -200,12 +234,8 @@ sub run {
                         report_near_miss $file_hit, $hit, $enc, $jp, $content;
                         next;
                     }
-                    my $tr = $obj{tr_mapped}{$enc};
-                    substr( $content, $hit, length $tr ) = $tr;
-                    $tr =~ s/\x$_/■/g for 0 .. 9;
-                    my $msg = "hit '$file_hit' done - '$jp' as '$obj{tr}' mapped to '$tr'";
-                    $msg =~ s/\n/\\n/g;
-                    say $msg;
+                    next if !$do_blank and !length $obj{tr};
+                    substr( $content, $hit, length $_ ) = $_ for $obj{tr_mapped}{$enc};
                     $found++;
                     $found{$jp}++;
                 }
@@ -222,11 +252,12 @@ sub run {
         io($target)->print($content);
     }
 
-    say join "\n", "", "strings not always identified confidently:",
-      map sprintf( "  %-" . ( 30 - length $_ ) . "s %-30s hit x %3s, nomatch x %3s, match x %3s", $_, $tr{$_}{tr}, $hit{$_}, $unmatched{$_}, $hit{$_} - $unmatched{$_} ),
+    my @maybe = map sprintf( "  %-" . ( 30 - length $_ ) . "s %-30s hit x %3s, nomatch x %3s, match x %3s", $_, $tr{$_}{tr}, $hit{$_}, $unmatched{$_}, $hit{$_} - $unmatched{$_} ),
       reverse sort { length $a <=> length $b } sort keys %unmatched;
-
-    say join "\n", "", "strings found nowhere:", map sprintf( "  %-" . ( 30 - length $_ ) . "s $tr{$_}{tr}", $_ ), grep +( !$found{$_} and !$unmatched{$_} ), @tr_keys;
+    my @nowhere = map sprintf( "  %-" . ( 30 - length $_ ) . "s $tr{$_}{tr}", $_ ), grep +( !$found{$_} and !$unmatched{$_} ), @tr_keys;
+    s/\n/\\n/g for @maybe, @nowhere;
+    s/\r/\\r/g for @maybe, @nowhere;
+    say join "\n", "", "strings not always identified confidently:", @maybe, "", "strings found nowhere:", @nowhere;
 
     say "\ndone";
     return;
