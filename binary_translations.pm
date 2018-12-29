@@ -63,22 +63,22 @@ sub data {
         "予想獲得資源" => { tr => "Expected Gain", desc => "Expected acquisition resources (Daily Resource Generation) Fuel, Ammo, Steel, Bauxite per map hex" },
         "海上護衛艦隊" => { tr => "Escort fleet",  desc => "Maritime Escort Fleet", skip => [ 'a-csharp 4604319', 'a-csharp 4604361' ] },                           #  part of larger strings
         "回航中"          => { tr => "At Sea",        desc => "map screen, tankers at sea, apparently, but also used elsewhere" },
-        "未配備"          => { tr => "Undeployed",    desc => "Undeployed - one char too long, really need to add glyph aliasing here too" },
+        "未配備"          => { tr => "No Escort",    desc => "Undeployed - one char too long, really need to add glyph aliasing here too" },
 
         # 艦隊   状態   艦種   艦船名    Lv    耐久   火力   対空   速カ
         # ship table headers
         "艦隊"    => { tr => "Fleet",     desc => "Fleet Number. Defines which fleet the ship is assigned to. try with adding space at begin for formatting. further adjustements pending results." },
-        "状態"    => { tr => "State",     desc => "Status/Condition of current fleet (red is has acted, blue is on expedition, blue is (maybe) 'on deployment', and blue is at sea again)" },
-        "艦種"    => { tr => "Class",     desc => "Ship Class - maybe 'Hull'" },
-        "艦船名" => { tr => "Ship Name", desc => 'prefer "Ship Name" over "name" - requires font substitution.' },
+        "状態"    => { tr => "?",     desc => "Status/Condition of current fleet (red is has acted, blue is on expedition, blue is (maybe) 'on deployment', and blue is at sea again)" },
+        "艦種"    => { tr => "Type",     desc => "Ship Type - maybe 'Hull'" },
+        "艦船名" => { tr => "Name", desc => 'prefer "Ship Name" over "name" - requires font substitution.' },
         # Lv - Obviously no need to translate
         "耐久" => {
-            tr   => "Health",
+            tr   => "HP",
             desc => 'Use Health for clarity as it is already used in other locations. is easier to use "Health" if we can resize it slightly than it would be for changing all the previous uses.'
         },
         "火力" => { tr => "ATK",   desc => "Firepower or ATK, I am still shying from FP or ATK though - Seriosuly this should be easy. The Kanji is literally Fire and Power" },
         "対空" => { tr => "AA",    desc => "Anti-air or Air Defense" },
-        "速力" => { tr => "Speed", desc => "Try Speed instead of SPD as I would like to check table formatting." },
+        "速力" => { tr => "SPD", desc => "Try Speed instead of SPD as I would like to check table formatting." },
 
         "火力 -10" => {},
 
@@ -161,9 +161,9 @@ sub data {
         "単横陣" =>
           { tr => "Line\nAbreast", ok => 'a-csharp 4501458', desc => "these are all the accepted translations already. so yes. See if you can do a carriage return after Line ina all of these." },
 
-        "獲得可能資材" => { tr => "Materials Available",      desc => '[OC] that means out of context and i reserve the right to edit later.' },
+        "獲得可能資材" => { tr => "Material Available",      desc => '[OC] that means out of context and i reserve the right to edit later.' },
         "残り輸送船数" => { tr => "Ships Remaining",          desc => '[OC]' },
-        "必要輸送船数" => { tr => "Required Number of Ships", desc => '[OC]', skip => 'a-csharp 4603172', },                                       # part of a larger string
+        "必要輸送船数" => { tr => "Ships Possible",           desc => '[OC]', ok => 'a-csharp 4603172', },                                       # part of a larger string
 
         # Compass fairy with magic hat
         # https://cdn.discordapp.com/attachments/235919493686231051/523259704890097675/2018-12-05-071704.png
@@ -200,21 +200,21 @@ sub data {
         # Compass fairy who is sleepy
         # https://cdn.discordapp.com/attachments/235919493686231051/523259716009328658/2018-12-14-010022.png
         "えー？らしんばん、まわすのー？" => {
-            tr   => "Uh? You want me to spin the compass?",
+            tr   => "Uh? You want to spin the compass?",
             desc => 'or "Spin The Compass Please" - this is extremely localized. for a more literal use, "What? Spin the compass." or maybe, "What? Spin The Compass Already."',
             ok   => 'a-csharp 4564589'
         },
         # https://cdn.discordapp.com/attachments/235919493686231051/523021829737283585/2018-12-14-010344.png
         "……ん" =>
-          { tr => "...un!", desc => 'grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]', ok => 'a-csharp 4564867' },
+          { tr => "......un!", desc => 'grunt like sound - [Previous is Depriciated - and context matters : "Huh?" -  Literally "....n." - Maybe use "Wha?" [t intentioanlly omitted]]', ok => 'a-csharp 4564867' },
         # https://cdn.discordapp.com/attachments/235919493686231051/523021901270876172/2018-12-14-010056.png
         "……あい" => { tr => "...huhn", desc => 'Literally "...ai" - Or, maybe she is just making a sound. I am going to play with this some.', ok => 'a-csharp 4564875' },
 
         "この艦隊で出撃しますか？" => { tr => "Sortie this fleet?", ok => [ 'a-csharp 4567317', 'sharedassets5/sharedassets5_00551.-4 196', 'level4/level4_00309.-15 196' ] },
         "※艦娘保有数が上限に近いため、新しい艦娘と邂逅できない可能性があります。" =>
-          { tr => "※If you have too many Ship Girls, there is a possibility of not getting a Ship Girl reward.", desc => 'Edited for consistency.', ok => "a-csharp 4567477" },
+          { tr => "※If you have too many Fleet Girls, there is a possibility of not getting one as a reward.", desc => 'Edited for consistency.', ok => "a-csharp 4567477" },
         "※艦娘保有数が上限に達しているため、新しい艦娘との邂逅はできません。" =>
-          { tr => "※You have reached your limit of Ship Girls and can not accept your reward.", desc => 'red, ships full', ok => 'a-csharp 4567407' },
+          { tr => "※You have reached your limit of Fleet Girls and can not accept your reward.", desc => 'red, ships full', ok => 'a-csharp 4567407' },
 
         # https://cdn.discordapp.com/attachments/235919493686231051/523300790283272234/2018-12-14-194114.png
         # I want to point out, the symbol ※ is used as a Bullet Point Mark.
@@ -225,7 +225,7 @@ sub data {
         "航空攻撃"              => { tr => "Aerial Attack", desc => 'Air Strike' },
         "砲撃"                    => { tr => "Shelling", desc => 'Bombard could work as well. ' },
         "対潜攻撃"              => { tr => "ASW\x{200B}", desc => 'Anti-submarine attack or Anti-submarine warfare(ASW)' },
-        "突撃（接近+砲撃）" => { tr => "Assault (Approach + Shelling)", desc => 'Charge, increase accuracy while decreasing evasion' },
+        "突撃（接近+砲撃）" => { tr => "Charge (Approach + Shelling)", desc => 'Charge, increase accuracy while decreasing evasion' },
         "雷撃"                    => { tr => "Torpedo", desc => 'can be opener and closer if ships have right equipment or are high-level subs' },
         "回避"                    => { tr => "Evade", desc => 'no attack, Evasion' },
         "統射" => {
@@ -234,15 +234,15 @@ sub data {
         },
         #           ** I have updated these to reflect \resources\Textures\info6_set.tex.png ** these are final translations between 接近 and 統射
 
-        "制空権確保" => { tr => "Air Secured",      desc => 'Air Supremacy or Air Superiority Ensured' },
-        "航空優勢"    => { tr => "Air Advantage",    desc => 'Air Superiority' },
-        "制空権喪失" => { tr => "Air Disadvantage", desc => 'Air Incapability or Air Superiority Lost' },
+        "制空権確保" => { tr => "Air Supremacy",      desc => 'Air Supremacy or Air Superiority Ensured' },
+        "航空優勢"    => { tr => "Air Superiority",    desc => 'Air Superiority' },
+        "制空権喪失" => { tr => "Air Incapability", desc => 'Air Incapability or Air Superiority Lost' },
 
         "装備数が保有上限に達し開発できません" =>
           { tr => "Equipment storage full, can not develop any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501118' },
         "装備の保有上限に達しています" => { tr => "Equipment storage full.", desc => 'warning message when claiming ships', ok => 'a-csharp 4501184' },
         "艦が保有上限に達し建造できません" =>
-          { tr => "Ship Girl storage full, can not construct any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501084' },
+          { tr => "Ship storage full, can not construct any more.", desc => 'warning message when constructing ships', ok => 'a-csharp 4501084' },
 
         "[E2E2E2][12c112]旗艦提督室[-]への移動[-]" => { desc => 'flagship admirals |map screen tutorial' },
         "      ボタンで\n旗艦提督室へ移動せよ！" =>
@@ -258,11 +258,11 @@ sub data {
         "[e2e2e2]はじめての[12c112]配備[-][-]" =>
           { desc => 'tutorial text found via text matching, the achievements indicate this should have an exclamation mark' },
         "[E2E2E2]はじめての[12c112]建造[-]！[-]" => { desc => 'tutorial text found via text matching' },
-        "任務を受託せよ！"                    => { desc => 'admiral room tutorial for factory', ok => 'resources/resources_00790.-10 196' },
-        "新規に       任務を受託可能です" => { desc => 'quests' },
-        "任務内容確認"                          => { desc => 'quests' },
-        "設定"                                      => { desc => 'settings', ok => 'a-csharp 4851256' },
-        "操作ガイド"                             => { desc => 'settings' },
+        "任務を受託せよ！"                        => { desc => 'admiral room tutorial for factory', ok => 'resources/resources_00790.-10 196' },
+        "新規に       任務を受託可能です"           => { tr => "      more quests can be accepted", desc => 'quests' },
+        "任務内容確認"                          => { tr => "Quest details",    desc => 'quests' },
+        "設定"                                      => { tr => "Settings",                   desc => 'settings', ok => 'a-csharp 4851256' },
+        "操作ガイド"                              => { tr => "Button tooltips OFF/ON",            desc => 'settings' },
         "残り"                                      => { desc => 'factory time cost' },
         "日数"                                      => { desc => 'factory time cost' },
         "ロック"                                   => { desc => 'ship list', ok => 'a-csharp 4532088' },
@@ -409,7 +409,7 @@ sub data {
         "補給してよろしいですか？" => { tr => "Resupply with the following?", desc => 'this is more localized.', ok => 'sharedassets5/sharedassets5_01265.-4 196' },
         "必要燃料数\r"                      => { tr => "Fuel Required",                desc => 'maybe "Needed"?' },
         "必要弾薬数\r"                      => {
-            tr   => "Ammunition Required",
+            tr   => "Ammo Required",
             desc => 'maybe "Needed". If after testing "Ammunition Required" does not fit well, switch to "Ammo Required". I would prefer to not be sloppy if we do not have to be though.'
         },
         "必要鋼材数\r\n\r必要燃料数\r\n修 復 日 数                    日\r\n\r\r高速修復材\r"
@@ -456,7 +456,7 @@ sub data {
         "U-511改" => { tr => "U-511 Kai",      desc => '改 means Revision'},
         "W島攻略作戦" => {ok=>'sharedassets5/sharedassets5_01334.-4 196'},
         "Z1改" => { tr => "Z1 Kai",      desc => '改 means Revision'},
-        "Z3改" => { tr => "z3 Kai",      desc => '改 means Revision'},
+        "Z3改" => { tr => "Z3 Kai",      desc => '改 means Revision'},
         "[000000][0055aa]戦略ポイント[-]について" => {},
         "[000000][0055aa]資源獲得[-]について" => {},
         "[000000][0055aa]輸送船団[-]による[0055aa]資源獲得[-]には、上限が\r\nあります。備蓄の上限は、提督レベルの\n上昇に\rよって、少しずつ増加していきます。\n\n各[0055aa]資源[-]は備蓄の上限に達すると、数字が[FFCC00]黄色[-]\nで表示されます。[-]" => {},
@@ -522,8 +522,8 @@ sub data {
         "アイテム名" => { tr => "Item Name",      desc => '' },
         "アイテム名アイテム名アイテム名" => { tr => "Item Name Item Name Item Name",      desc => '' },
         "アイテム詳細アイテム詳細アイテム詳細アイテム" => { tr => "Item Details Item Details Item Details Item",      desc => '' },
-        "カーテン" => { tr => "Cutrain",      desc => 'i think this is a shop thing' },
-        "ケッコン書類一式を手に入れました。" => { tr => "Got Complete Set Of Kekkon Documents",      desc => 'Mariage paperwork' },
+        "カーテン" => { tr => "Curtain",      desc => 'i think this is a shop thing' },
+        "ケッコン書類一式を手に入れました。" => { tr => "Got Complete Set Of Marriage Papers",      desc => 'Mariage paperwork' },
         "コマンドメニュー" => { tr => "Command Menu",      desc => '' },
         "コモン" => { tr => "Common",      desc => '' },
         "ステータス" => { tr => "Status",      desc => '' },
@@ -534,7 +534,7 @@ sub data {
         "デバッグモードB" => { tr => "Debug Mode B",      desc => 'wait, what? two debug modes?' },
         "データ保存中..." => { tr => "Saving Data...",      desc => '' },
         "ドックを開放しますか？" => { tr => "Would you like to release the dock?",      desc => '' },
-        "ドックを開放できません" => { tr => "Can not release the dock.",      desc => '... open the dock' },
+        "ドックを開放できません" => { tr => "Cannot release the dock.",      desc => '... open the dock' },
         "ドック開放" => { tr => "Dock Release",      desc => 'as in make open to public' },
         "ナイトメアモード" => {ok=>'a-csharp 4493624'},
         "プリセットデータ\n（タッチで選択してください）" => { tr => "Preset Data\n(Please select using touch)",      desc => '' },
@@ -564,21 +564,21 @@ sub data {
         "以下のアイテムを購入しますか？" => { tr => "Would you like to purchase the following items?",      desc => '' },
         "以下の内容で入渠を開始します" => { tr => "Contents begin with the following.",      desc => 'rough translation - may need polish' },
         "以下の内容で開始しますか？" => { tr => "Start with the following?",      desc => 'Do you wish to start with the following contents?' },
-        "伊168" => { tr => "I168",      desc => 'submarine' },
-        "伊168改" => { tr => "I168 Kai",      desc => '' },
-        "伊19" => { tr => "I19",      desc => 'submarine' },
-        "伊19改" => { tr => "I19 Kai",      desc => '' },
-        "伊401" => { tr => "I401",      desc => 'submarine' },
-        "伊401改" => { tr => "I401 Kai",      desc => '' },
-        "伊58" => { tr => "I58",      desc => 'submarine' },
-        "伊58改" => { tr => "I58 Kai",      desc => '' },
-        "伊8" => { tr => "I8",      desc => 'submarine' },
-        "伊8改" => { tr => "I8 Kai",      desc => '' },
+        "伊168" => { tr => "I-168",      desc => 'submarine' },
+        "伊168改" => { tr => "I-168 Kai",      desc => '' },
+        "伊19" => { tr => "I-19",      desc => 'submarine' },
+        "伊19改" => { tr => "I-19 Kai",      desc => '' },
+        "伊401" => { tr => "I-401",      desc => 'submarine' },
+        "伊401改" => { tr => "I-401 Kai",      desc => '' },
+        "伊58" => { tr => "I-58",      desc => 'submarine' },
+        "伊58改" => { tr => "I-58 Kai",      desc => '' },
+        "伊8" => { tr => "I-8",      desc => 'submarine' },
+        "伊8改" => { tr => "I-8 Kai",      desc => '' },
         "伊勢" => { tr => "Ise",      desc => 'battleship' },
         "伊勢改" => { tr => "Ise Kai",      desc => '' },
         "作戦" => { tr => "Strategy",      desc => '' },
         "作戦名作戦名作戦名" => { tr => "Operation Name Operation Name Operation Name",      desc => '' },
-        "作戦海域 攻略完了!" => { tr => "Operation in this area complete.",      desc => '' },
+        "作戦海域 攻略完了!" => { tr => "Operation in this area complete!",      desc => '' },
         "使用しない" => { tr => "Do Not Use",      desc => '' },
         "保存せずにタイトルに戻ります。\nよろしいですか？" => { tr => "Are you sure you wish to return to the title screen without saving?",      desc => '' },
         "保有アイテム一覧 " => { tr => "Item List",      desc => '' },
@@ -588,10 +588,10 @@ sub data {
         "優先しない" => { tr => "Do not prioritize",      desc => '' },
         "入手する資材" => { tr => "Acquired resources",      desc => 'i do not know the tense of this entry, subject to change by tense' },
         "入渠" => { tr => "Entering Dock",      desc => '' },
-        "入渠を開始しますか？" => { tr => "Commense docking?",      desc => '' },
+        "入渠を開始しますか？" => { tr => "Commence docking?",      desc => '' },
         "全てはずす" => { tr => "Remove All",      desc => '' },
         "全アイテム  +" => { tr => "All Items +",      desc => '' },
-        "全艦補給" => { tr => "Replenish all supplies",      desc => '' },
+        "全艦補給" => { tr => "Replenish All",      desc => '' },
         "内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容" => {},
         "出撃\r\n\n演習" => {},
         "出撃数\n\r\n勝利数\n\r\n迎撃成功\n\n勝率\n\n\n\n演習数\n\n対抗演習数\r\n" => {},
